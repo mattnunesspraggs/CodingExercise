@@ -30,6 +30,6 @@ struct User: Codable {
     let email: String
     let phoneNumbers: PhoneNumbers
     let pictures: Pictures
-    let nationality: String
+    let nationality: Nationality
 
 }
