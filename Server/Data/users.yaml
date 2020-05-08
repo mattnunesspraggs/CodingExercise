@@ -1,0 +1,5751 @@
+---
+- !ruby/object:User
+  id: 0
+  name:
+    :title: Miss
+    :first: Eliza
+    :last: Hicks
+  username: ehicks
+  location: !ruby/object:User::Location
+    street: 1981 Patrick Street
+    city: Tullow
+    state: Westmeath
+    country: Ireland
+    postcode: 58274
+    tz_offset: "-5:00"
+  email: eliza.hicks@example.com
+  phone:
+    :home: 021-739-5423
+    :cell: '081-770-2879'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/84.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/84.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/84.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 1
+  name:
+    :title: Mrs
+    :first: Carol
+    :last: Fitzpatrick
+  username: cfitzpatrick
+  location: !ruby/object:User::Location
+    street: 7608 Patrick Street
+    city: Wexford
+    state: Kilkenny
+    country: Ireland
+    postcode: 60303
+    tz_offset: "+9:30"
+  email: carol.fitzpatrick@example.com
+  phone:
+    :home: 021-530-8257
+    :cell: '081-376-5191'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/77.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/77.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/77.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 2
+  name:
+    :title: Ms
+    :first: Silvéria
+    :last: Moreira
+  username: smoreira
+  location: !ruby/object:User::Location
+    street: Rua Mato Grosso  1992
+    city: Nova Iguaçu
+    state: São Paulo
+    country: Brazil
+    postcode: 19722
+    tz_offset: "+5:45"
+  email: silveria.moreira@example.com
+  phone:
+    :home: "(34) 8304-7066"
+    :cell: "(82) 4471-3824"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/94.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/94.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/94.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 3
+  name:
+    :title: Miss
+    :first: Olivia
+    :last: Tervo
+  username: otervo
+  location: !ruby/object:User::Location
+    street: Pispalan Valtatie 2830
+    city: Merikarvia
+    state: Northern Ostrobothnia
+    country: Finland
+    postcode: 11701
+    tz_offset: "+1:00"
+  email: olivia.tervo@example.com
+  phone:
+    :home: '09-276-729'
+    :cell: '048-460-18-61'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/39.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/39.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/39.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 4
+  name:
+    :title: Ms
+    :first: Guro
+    :last: Dalene
+  username: gdalene
+  location: !ruby/object:User::Location
+    street: Postdamveien 6769
+    city: Vikøy
+    state: Vestfold
+    country: Norway
+    postcode: '0279'
+    tz_offset: "-9:00"
+  email: guro.dalene@example.com
+  phone:
+    :home: '86926500'
+    :cell: '92051103'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/9.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/9.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/9.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 5
+  name:
+    :title: Miss
+    :first: Julia
+    :last: Stewart
+  username: jstewart
+  location: !ruby/object:User::Location
+    street: 5430 The Drive
+    city: Leixlip
+    state: Donegal
+    country: Ireland
+    postcode: 52499
+    tz_offset: "-2:00"
+  email: julia.stewart@example.com
+  phone:
+    :home: 041-999-7476
+    :cell: '081-277-5715'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/51.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/51.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/51.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 6
+  name:
+    :title: Mrs
+    :first: Linda
+    :last: Mccoy
+  username: lmccoy
+  location: !ruby/object:User::Location
+    street: 3745 Mockingbird Ln
+    city: Bowral
+    state: Queensland
+    country: Australia
+    postcode: 2829
+    tz_offset: "-2:00"
+  email: linda.mccoy@example.com
+  phone:
+    :home: 00-1137-8008
+    :cell: '0485-425-046'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/89.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/89.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/89.jpg
+  nationality: AU
+- !ruby/object:User
+  id: 7
+  name:
+    :title: Mr
+    :first: Ben
+    :last: Wallace
+  username: bwallace
+  location: !ruby/object:User::Location
+    street: 723 Main Street
+    city: Cobh
+    state: Cavan
+    country: Ireland
+    postcode: 62298
+    tz_offset: "-12:00"
+  email: ben.wallace@example.com
+  phone:
+    :home: 011-956-2996
+    :cell: '081-588-6235'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/53.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/53.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/53.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 8
+  name:
+    :title: Miss
+    :first: Estelle
+    :last: Dumont
+  username: edumont
+  location: !ruby/object:User::Location
+    street: 9383, Place de L'Abbé-Jean-Lebeuf
+    city: Le Mans
+    state: Jura
+    country: France
+    postcode: 61016
+    tz_offset: "-2:00"
+  email: estelle.dumont@example.com
+  phone:
+    :home: 03-44-73-61-80
+    :cell: 06-31-17-66-54
+  picture:
+    :large: https://randomuser.me/api/portraits/women/48.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/48.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/48.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 9
+  name:
+    :title: Monsieur
+    :first: Jakob
+    :last: Denis
+  username: jdenis
+  location: !ruby/object:User::Location
+    street: Rue de Gerland 9683
+    city: Knonau
+    state: Basel-Stadt
+    country: Switzerland
+    postcode: 7988
+    tz_offset: "-3:30"
+  email: jakob.denis@example.com
+  phone:
+    :home: 075 370 58 01
+    :cell: 077 089 91 52
+  picture:
+    :large: https://randomuser.me/api/portraits/men/56.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/56.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/56.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 10
+  name:
+    :title: Mr
+    :first: Don
+    :last: Bell
+  username: dbell
+  location: !ruby/object:User::Location
+    street: 5471 Hillcrest Rd
+    city: Santa Ana
+    state: Arkansas
+    country: United States
+    postcode: 21548
+    tz_offset: "-3:30"
+  email: don.bell@example.com
+  phone:
+    :home: "(475)-996-5966"
+    :cell: "(362)-156-5661"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/17.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/17.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/17.jpg
+  nationality: US
+- !ruby/object:User
+  id: 11
+  name:
+    :title: Miss
+    :first: Marie
+    :last: Mortensen
+  username: mmortensen
+  location: !ruby/object:User::Location
+    street: Strandengen 1874
+    city: Saltum
+    state: Sjælland
+    country: Denmark
+    postcode: 19530
+    tz_offset: "+9:00"
+  email: marie.mortensen@example.com
+  phone:
+    :home: '87986967'
+    :cell: '95102749'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/77.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/77.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/77.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 12
+  name:
+    :title: Mr
+    :first: Marceau
+    :last: Hubert
+  username: mhubert
+  location: !ruby/object:User::Location
+    street: 5810, Rue de L'Église
+    city: Orléans
+    state: Guyane
+    country: France
+    postcode: 77408
+    tz_offset: "+6:00"
+  email: marceau.hubert@example.com
+  phone:
+    :home: 02-13-39-81-90
+    :cell: 06-91-56-14-88
+  picture:
+    :large: https://randomuser.me/api/portraits/men/94.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/94.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/94.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 13
+  name:
+    :title: Miss
+    :first: Rúbia
+    :last: Rodrigues
+  username: rrodrigues
+  location: !ruby/object:User::Location
+    street: Rua Paraná  3449
+    city: Pelotas
+    state: Sergipe
+    country: Brazil
+    postcode: 58341
+    tz_offset: "-11:00"
+  email: rubia.rodrigues@example.com
+  phone:
+    :home: "(38) 8633-2524"
+    :cell: "(00) 5521-8115"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/50.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/50.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/50.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 14
+  name:
+    :title: Mrs
+    :first: Sheryl
+    :last: Fox
+  username: sfox
+  location: !ruby/object:User::Location
+    street: 5365 Herbert Road
+    city: Trim
+    state: Clare
+    country: Ireland
+    postcode: 25792
+    tz_offset: "+5:00"
+  email: sheryl.fox@example.com
+  phone:
+    :home: 031-389-8637
+    :cell: '081-719-4942'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/29.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/29.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/29.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 15
+  name:
+    :title: Monsieur
+    :first: Alois
+    :last: Charles
+  username: acharles
+  location: !ruby/object:User::Location
+    street: Rue Dubois 397
+    city: Safnern
+    state: Zürich
+    country: Switzerland
+    postcode: 3889
+    tz_offset: "+3:00"
+  email: alois.charles@example.com
+  phone:
+    :home: 076 050 16 50
+    :cell: 075 669 46 00
+  picture:
+    :large: https://randomuser.me/api/portraits/men/17.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/17.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/17.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 16
+  name:
+    :title: Miss
+    :first: Emilie
+    :last: Poulsen
+  username: epoulsen
+  location: !ruby/object:User::Location
+    street: Kystvej 96
+    city: Nørre Sundby
+    state: Nordjylland
+    country: Denmark
+    postcode: 60440
+    tz_offset: "-3:30"
+  email: emilie.poulsen@example.com
+  phone:
+    :home: '49633929'
+    :cell: '96154944'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/68.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/68.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/68.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 17
+  name:
+    :title: Mr
+    :first: Frederikke
+    :last: Kristensen
+  username: fkristensen
+  location: !ruby/object:User::Location
+    street: Nørreskovvej 2778
+    city: Odense Sv
+    state: Danmark
+    country: Denmark
+    postcode: 50938
+    tz_offset: "+9:00"
+  email: frederikke.kristensen@example.com
+  phone:
+    :home: '96623501'
+    :cell: '33889812'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/65.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/65.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/65.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 18
+  name:
+    :title: Mr
+    :first: Fernando
+    :last: Marin
+  username: fmarin
+  location: !ruby/object:User::Location
+    street: Calle del Prado 528
+    city: Pozuelo de Alarcón
+    state: Castilla la Mancha
+    country: Spain
+    postcode: 52889
+    tz_offset: "-10:00"
+  email: fernando.marin@example.com
+  phone:
+    :home: 937-310-634
+    :cell: 676-764-747
+  picture:
+    :large: https://randomuser.me/api/portraits/men/85.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/85.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/85.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 19
+  name:
+    :title: Mr
+    :first: Danilson
+    :last: Haast
+  username: dhaast
+  location: !ruby/object:User::Location
+    street: Escudohof 511
+    city: Opeinde
+    state: Zuid-Holland
+    country: Netherlands
+    postcode: 14768
+    tz_offset: "+11:00"
+  email: danilson.haast@example.com
+  phone:
+    :home: "(109)-998-6298"
+    :cell: "(779)-590-0117"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/89.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/89.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/89.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 20
+  name:
+    :title: Ms
+    :first: Emily
+    :last: Lone
+  username: elone
+  location: !ruby/object:User::Location
+    street: Skjønnhaugveien 8807
+    city: Ferkingstad
+    state: Aust-Agder
+    country: Norway
+    postcode: '0474'
+    tz_offset: "-5:00"
+  email: emily.lone@example.com
+  phone:
+    :home: '61185741'
+    :cell: '42609518'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/0.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/0.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/0.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 21
+  name:
+    :title: Mr
+    :first: Madail
+    :last: Alves
+  username: malves
+  location: !ruby/object:User::Location
+    street: Beco dos Namorados 4404
+    city: Sete Lagoas
+    state: Mato Grosso
+    country: Brazil
+    postcode: 78662
+    tz_offset: "-3:30"
+  email: madail.alves@example.com
+  phone:
+    :home: "(60) 0429-0496"
+    :cell: "(07) 7412-0063"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/12.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/12.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/12.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 22
+  name:
+    :title: Ms
+    :first: Ella
+    :last: Polon
+  username: epolon
+  location: !ruby/object:User::Location
+    street: Pirkankatu 2860
+    city: Seinäjoki
+    state: Southern Savonia
+    country: Finland
+    postcode: 13659
+    tz_offset: "-7:00"
+  email: ella.polon@example.com
+  phone:
+    :home: 04-325-495
+    :cell: 047-613-87-24
+  picture:
+    :large: https://randomuser.me/api/portraits/women/92.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/92.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/92.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 23
+  name:
+    :title: Ms
+    :first: Rose
+    :last: Jackson
+  username: rjackson
+  location: !ruby/object:User::Location
+    street: 3535 North Street
+    city: Whangarei
+    state: Wellington
+    country: New Zealand
+    postcode: 42087
+    tz_offset: "-3:30"
+  email: rose.jackson@example.com
+  phone:
+    :home: "(088)-078-0622"
+    :cell: "(992)-606-7181"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/46.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/46.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/46.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 24
+  name:
+    :title: Mr
+    :first: Harley
+    :last: Moore
+  username: hmoore
+  location: !ruby/object:User::Location
+    street: 4458 Bealey Avenue
+    city: Auckland
+    state: Wellington
+    country: New Zealand
+    postcode: 33965
+    tz_offset: "+4:30"
+  email: harley.moore@example.com
+  phone:
+    :home: "(552)-410-4303"
+    :cell: "(479)-974-4339"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/50.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/50.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/50.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 25
+  name:
+    :title: Mr
+    :first: Blake
+    :last: Gauthier
+  username: bgauthier
+  location: !ruby/object:User::Location
+    street: 8415 Tecumseh Rd
+    city: St. Antoine
+    state: Yukon
+    country: Canada
+    postcode: Y5T 8P2
+    tz_offset: "+9:00"
+  email: blake.gauthier@example.com
+  phone:
+    :home: 726-654-9492
+    :cell: 394-355-2438
+  picture:
+    :large: https://randomuser.me/api/portraits/men/93.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/93.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/93.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 26
+  name:
+    :title: Ms
+    :first: Mikaela
+    :last: Meidell
+  username: mmeidell
+  location: !ruby/object:User::Location
+    street: Flesåsveien 3521
+    city: Velde
+    state: Sogn og Fjordane
+    country: Norway
+    postcode: '6903'
+    tz_offset: "+3:30"
+  email: mikaela.meidell@example.com
+  phone:
+    :home: '82670989'
+    :cell: '41558844'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/16.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/16.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/16.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 27
+  name:
+    :title: Mr
+    :first: Miodrag
+    :last: Duda
+  username: mduda
+  location: !ruby/object:User::Location
+    street: Danziger Straße 6988
+    city: Wesselburen
+    state: Schleswig-Holstein
+    country: Germany
+    postcode: 42520
+    tz_offset: "+3:00"
+  email: miodrag.duda@example.com
+  phone:
+    :home: 0330-8422384
+    :cell: '0179-7738807'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/26.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/26.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/26.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 28
+  name:
+    :title: Mr
+    :first: Karl-Otto
+    :last: Stadler
+  username: kstadler
+  location: !ruby/object:User::Location
+    street: Mittelstraße 7754
+    city: Geilenkirchen
+    state: Sachsen-Anhalt
+    country: Germany
+    postcode: 31718
+    tz_offset: '0:00'
+  email: karl-otto.stadler@example.com
+  phone:
+    :home: 0603-9474551
+    :cell: 0175-4287393
+  picture:
+    :large: https://randomuser.me/api/portraits/men/55.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/55.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/55.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 29
+  name:
+    :title: Mr
+    :first: Bastien
+    :last: Gauthier
+  username: bgauthier
+  location: !ruby/object:User::Location
+    street: 8461, Rue de L'Abbaye
+    city: Mulhouse
+    state: Ille-et-Vilaine
+    country: France
+    postcode: 71379
+    tz_offset: "+7:00"
+  email: bastien.gauthier@example.com
+  phone:
+    :home: 03-61-56-30-75
+    :cell: 06-61-95-15-03
+  picture:
+    :large: https://randomuser.me/api/portraits/men/16.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/16.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/16.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 30
+  name:
+    :title: Mr
+    :first: Carlos
+    :last: Nichols
+  username: cnichols
+  location: !ruby/object:User::Location
+    street: 9981 Spring St
+    city: Eugene
+    state: Mississippi
+    country: United States
+    postcode: 31886
+    tz_offset: "-8:00"
+  email: carlos.nichols@example.com
+  phone:
+    :home: "(021)-426-5576"
+    :cell: "(763)-433-7591"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/7.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/7.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/7.jpg
+  nationality: US
+- !ruby/object:User
+  id: 31
+  name:
+    :title: Ms
+    :first: Sally
+    :last: Wilson
+  username: swilson
+  location: !ruby/object:User::Location
+    street: 3431 Groveland Terrace
+    city: Van Alstyne
+    state: Arizona
+    country: United States
+    postcode: 40831
+    tz_offset: "-11:00"
+  email: sally.wilson@example.com
+  phone:
+    :home: "(453)-107-1891"
+    :cell: "(052)-320-8829"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/37.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/37.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/37.jpg
+  nationality: US
+- !ruby/object:User
+  id: 32
+  name:
+    :title: Ms
+    :first: Maria
+    :last: Thompson
+  username: mthompson
+  location: !ruby/object:User::Location
+    street: 1342 Wairakei Road
+    city: Timaru
+    state: Southland
+    country: New Zealand
+    postcode: 22084
+    tz_offset: "+3:30"
+  email: maria.thompson@example.com
+  phone:
+    :home: "(871)-110-5530"
+    :cell: "(106)-781-2568"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/47.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/47.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/47.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 33
+  name:
+    :title: Mr
+    :first: Randy
+    :last: Long
+  username: rlong
+  location: !ruby/object:User::Location
+    street: 6145 Windsor Road
+    city: Stirling
+    state: Avon
+    country: United Kingdom
+    postcode: KM8A 8SP
+    tz_offset: "-4:00"
+  email: randy.long@example.com
+  phone:
+    :home: '015394 58693'
+    :cell: 0710-205-945
+  picture:
+    :large: https://randomuser.me/api/portraits/men/2.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/2.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/2.jpg
+  nationality: GB
+- !ruby/object:User
+  id: 34
+  name:
+    :title: Ms
+    :first: Charlotte
+    :last: Wheeler
+  username: cwheeler
+  location: !ruby/object:User::Location
+    street: 8187 Woodland St
+    city: Brisbane
+    state: Victoria
+    country: Australia
+    postcode: 4299
+    tz_offset: "-2:00"
+  email: charlotte.wheeler@example.com
+  phone:
+    :home: 05-2698-5066
+    :cell: 0475-866-898
+  picture:
+    :large: https://randomuser.me/api/portraits/women/47.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/47.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/47.jpg
+  nationality: AU
+- !ruby/object:User
+  id: 35
+  name:
+    :title: Mr
+    :first: Matas
+    :last: Xu
+  username: mxu
+  location: !ruby/object:User::Location
+    street: Jorines vei 937
+    city: Gata
+    state: Vestfold
+    country: Norway
+    postcode: '6062'
+    tz_offset: "-4:00"
+  email: matas.xu@example.com
+  phone:
+    :home: '30017747'
+    :cell: '42483652'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/54.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/54.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/54.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 36
+  name:
+    :title: Mr
+    :first: Gerardo
+    :last: Ibañez
+  username: gibañez
+  location: !ruby/object:User::Location
+    street: Calle del Prado 6907
+    city: Santander
+    state: La Rioja
+    country: Spain
+    postcode: 52332
+    tz_offset: "+11:00"
+  email: gerardo.ibanez@example.com
+  phone:
+    :home: 900-981-255
+    :cell: 681-079-482
+  picture:
+    :large: https://randomuser.me/api/portraits/men/81.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/81.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/81.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 37
+  name:
+    :title: Mr
+    :first: Blake
+    :last: Johnson
+  username: bjohnson
+  location: !ruby/object:User::Location
+    street: 6426 Karamu Road
+    city: Upper Hutt
+    state: Taranaki
+    country: New Zealand
+    postcode: 91486
+    tz_offset: "-6:00"
+  email: blake.johnson@example.com
+  phone:
+    :home: "(962)-209-7320"
+    :cell: "(092)-453-9567"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/78.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/78.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/78.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 38
+  name:
+    :title: Mr
+    :first: Mathias
+    :last: Vögele
+  username: mvögele
+  location: !ruby/object:User::Location
+    street: Blumenstraße 1685
+    city: Naumburg
+    state: Hamburg
+    country: Germany
+    postcode: 19673
+    tz_offset: "+9:30"
+  email: mathias.vogele@example.com
+  phone:
+    :home: '0391-7453171'
+    :cell: '0178-6777952'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/28.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/28.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/28.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 39
+  name:
+    :title: Mr
+    :first: Macit
+    :last: Beşok
+  username: mbeşok
+  location: !ruby/object:User::Location
+    street: Filistin Cd 2619
+    city: Batman
+    state: Malatya
+    country: Turkey
+    postcode: 19162
+    tz_offset: "+8:00"
+  email: macit.besok@example.com
+  phone:
+    :home: "(257)-372-2164"
+    :cell: "(683)-926-9464"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/31.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/31.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/31.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 40
+  name:
+    :title: Mr
+    :first: Aiden
+    :last: Jackson
+  username: ajackson
+  location: !ruby/object:User::Location
+    street: 2550 York Road
+    city: Inverness
+    state: Merseyside
+    country: United Kingdom
+    postcode: E81 6HL
+    tz_offset: "+4:00"
+  email: aiden.jackson@example.com
+  phone:
+    :home: '015395 74033'
+    :cell: '0749-481-785'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/2.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/2.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/2.jpg
+  nationality: GB
+- !ruby/object:User
+  id: 41
+  name:
+    :title: Mr
+    :first: Roope
+    :last: Wallo
+  username: rwallo
+  location: !ruby/object:User::Location
+    street: Hämeenkatu 2351
+    city: Ylöjärvi
+    state: Uusimaa
+    country: Finland
+    postcode: 31445
+    tz_offset: "+5:00"
+  email: roope.wallo@example.com
+  phone:
+    :home: 04-689-779
+    :cell: '049-714-19-32'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/44.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/44.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/44.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 42
+  name:
+    :title: Mr
+    :first: Pablo
+    :last: Castillo
+  username: pcastillo
+  location: !ruby/object:User::Location
+    street: Calle de Bravo Murillo 2677
+    city: Vigo
+    state: País Vasco
+    country: Spain
+    postcode: 73146
+    tz_offset: "+4:30"
+  email: pablo.castillo@example.com
+  phone:
+    :home: 976-177-816
+    :cell: 666-444-355
+  picture:
+    :large: https://randomuser.me/api/portraits/men/23.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/23.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/23.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 43
+  name:
+    :title: Mrs
+    :first: Marilde
+    :last: das Neves
+  username: mdas neves
+  location: !ruby/object:User::Location
+    street: Rua Dezenove de Outubro 5237
+    city: Araras
+    state: Maranhão
+    country: Brazil
+    postcode: 49116
+    tz_offset: "-12:00"
+  email: marilde.dasneves@example.com
+  phone:
+    :home: "(01) 2939-0328"
+    :cell: "(54) 6169-8058"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/87.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/87.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/87.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 44
+  name:
+    :title: Ms
+    :first: Ellen
+    :last: Oja
+  username: eoja
+  location: !ruby/object:User::Location
+    street: Hermiankatu 6769
+    city: Eurajoki
+    state: Lapland
+    country: Finland
+    postcode: 38791
+    tz_offset: "+2:00"
+  email: ellen.oja@example.com
+  phone:
+    :home: 07-779-399
+    :cell: 046-645-49-85
+  picture:
+    :large: https://randomuser.me/api/portraits/women/59.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/59.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/59.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 45
+  name:
+    :title: Mr
+    :first: Jesse
+    :last: Nevala
+  username: jnevala
+  location: !ruby/object:User::Location
+    street: Tehtaankatu 4981
+    city: Haapavesi
+    state: Southern Savonia
+    country: Finland
+    postcode: 94234
+    tz_offset: "-12:00"
+  email: jesse.nevala@example.com
+  phone:
+    :home: 05-850-774
+    :cell: 046-930-83-13
+  picture:
+    :large: https://randomuser.me/api/portraits/men/19.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/19.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/19.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 46
+  name:
+    :title: Mrs
+    :first: Hanife
+    :last: Merk
+  username: hmerk
+  location: !ruby/object:User::Location
+    street: Rosenweg 3066
+    city: Gersfeld (Rhön)
+    state: Bayern
+    country: Germany
+    postcode: 23388
+    tz_offset: "-10:00"
+  email: hanife.merk@example.com
+  phone:
+    :home: '0965-2806270'
+    :cell: 0171-6284727
+  picture:
+    :large: https://randomuser.me/api/portraits/women/39.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/39.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/39.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 47
+  name:
+    :title: Mr
+    :first: Christopher
+    :last: Miles
+  username: cmiles
+  location: !ruby/object:User::Location
+    street: 7370 Dane St
+    city: Peoria
+    state: Maine
+    country: United States
+    postcode: 77490
+    tz_offset: "-7:00"
+  email: christopher.miles@example.com
+  phone:
+    :home: "(956)-298-5697"
+    :cell: "(330)-268-9361"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/93.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/93.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/93.jpg
+  nationality: US
+- !ruby/object:User
+  id: 48
+  name:
+    :title: Mr
+    :first: Frederikke
+    :last: Hansen
+  username: fhansen
+  location: !ruby/object:User::Location
+    street: Bakken 8072
+    city: Randers Nø
+    state: Sjælland
+    country: Denmark
+    postcode: 39060
+    tz_offset: "+4:30"
+  email: frederikke.hansen@example.com
+  phone:
+    :home: '31876084'
+    :cell: '50361638'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/35.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/35.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/35.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 49
+  name:
+    :title: Mr
+    :first: Daniel
+    :last: Salminen
+  username: dsalminen
+  location: !ruby/object:User::Location
+    street: Bulevardi 5042
+    city: Tyrnävä
+    state: Åland
+    country: Finland
+    postcode: 67883
+    tz_offset: "-5:00"
+  email: daniel.salminen@example.com
+  phone:
+    :home: 05-911-574
+    :cell: '048-801-74-95'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/7.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/7.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/7.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 50
+  name:
+    :title: Mr
+    :first: Phoenix
+    :last: Turner
+  username: pturner
+  location: !ruby/object:User::Location
+    street: 2847 East Coast Road
+    city: Auckland
+    state: Hawke'S Bay
+    country: New Zealand
+    postcode: 66994
+    tz_offset: "+1:00"
+  email: phoenix.turner@example.com
+  phone:
+    :home: "(051)-518-9683"
+    :cell: "(836)-460-2828"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/75.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/75.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/75.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 51
+  name:
+    :title: Mr
+    :first: Dominykas
+    :last: Hovda
+  username: dhovda
+  location: !ruby/object:User::Location
+    street: Kirkeristen 5114
+    city: Kråkstad
+    state: Nordland
+    country: Norway
+    postcode: '1533'
+    tz_offset: "-11:00"
+  email: dominykas.hovda@example.com
+  phone:
+    :home: '76599585'
+    :cell: '42770323'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/64.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/64.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/64.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 52
+  name:
+    :title: Mademoiselle
+    :first: Dijana
+    :last: Robin
+  username: drobin
+  location: !ruby/object:User::Location
+    street: Rue Barrème 4894
+    city: Brugg
+    state: Thurgau
+    country: Switzerland
+    postcode: 3524
+    tz_offset: "-8:00"
+  email: dijana.robin@example.com
+  phone:
+    :home: 075 784 40 68
+    :cell: 077 648 34 85
+  picture:
+    :large: https://randomuser.me/api/portraits/women/74.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/74.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/74.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 53
+  name:
+    :title: Mrs
+    :first: Kerttu
+    :last: Salminen
+  username: ksalminen
+  location: !ruby/object:User::Location
+    street: Korkeavuorenkatu 9782
+    city: Posio
+    state: Northern Savonia
+    country: Finland
+    postcode: 88897
+    tz_offset: "+5:00"
+  email: kerttu.salminen@example.com
+  phone:
+    :home: 03-980-913
+    :cell: 046-143-45-04
+  picture:
+    :large: https://randomuser.me/api/portraits/women/17.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/17.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/17.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 54
+  name:
+    :title: Ms
+    :first: Maryam
+    :last: Mellum
+  username: mmellum
+  location: !ruby/object:User::Location
+    street: Furulundtoppen 4248
+    city: Vingrom
+    state: Rogaland
+    country: Norway
+    postcode: '5036'
+    tz_offset: "-2:00"
+  email: maryam.mellum@example.com
+  phone:
+    :home: '77108316'
+    :cell: '96443991'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/38.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/38.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/38.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 55
+  name:
+    :title: Mr
+    :first: Arnas
+    :last: Issa
+  username: aissa
+  location: !ruby/object:User::Location
+    street: Karen Platous vei 1543
+    city: Fredrikstad
+    state: Oppland
+    country: Norway
+    postcode: '3053'
+    tz_offset: "+9:00"
+  email: arnas.issa@example.com
+  phone:
+    :home: '83415019'
+    :cell: '46527688'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/82.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/82.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/82.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 56
+  name:
+    :title: Mr
+    :first: Joshua
+    :last: Gonzalez
+  username: jgonzalez
+  location: !ruby/object:User::Location
+    street: 1456 The Green
+    city: Armagh
+    state: Staffordshire
+    country: United Kingdom
+    postcode: C6I 5HT
+    tz_offset: "-3:30"
+  email: joshua.gonzalez@example.com
+  phone:
+    :home: '013873 81818'
+    :cell: 0737-689-991
+  picture:
+    :large: https://randomuser.me/api/portraits/men/57.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/57.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/57.jpg
+  nationality: GB
+- !ruby/object:User
+  id: 57
+  name:
+    :title: Mr
+    :first: Lorenzo
+    :last: Medina
+  username: lmedina
+  location: !ruby/object:User::Location
+    street: Avenida de La Albufera 3725
+    city: Ferrol
+    state: Ceuta
+    country: Spain
+    postcode: 14945
+    tz_offset: "-11:00"
+  email: lorenzo.medina@example.com
+  phone:
+    :home: 939-214-254
+    :cell: 642-602-244
+  picture:
+    :large: https://randomuser.me/api/portraits/men/7.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/7.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/7.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 58
+  name:
+    :title: Ms
+    :first: Marie
+    :last: Miles
+  username: mmiles
+  location: !ruby/object:User::Location
+    street: 471 New Road
+    city: Armagh
+    state: Hertfordshire
+    country: United Kingdom
+    postcode: Z84 6AY
+    tz_offset: "+7:00"
+  email: marie.miles@example.com
+  phone:
+    :home: 0111177 001 8975
+    :cell: 0741-523-021
+  picture:
+    :large: https://randomuser.me/api/portraits/women/73.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/73.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/73.jpg
+  nationality: GB
+- !ruby/object:User
+  id: 59
+  name:
+    :title: Mrs
+    :first: Margie
+    :last: Welch
+  username: mwelch
+  location: !ruby/object:User::Location
+    street: 6179 Crockett St
+    city: Geelong
+    state: New South Wales
+    country: Australia
+    postcode: 8360
+    tz_offset: "+3:00"
+  email: margie.welch@example.com
+  phone:
+    :home: 02-3532-3642
+    :cell: '0459-310-608'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/17.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/17.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/17.jpg
+  nationality: AU
+- !ruby/object:User
+  id: 60
+  name:
+    :title: Miss
+    :first: Fatma
+    :last: Akgül
+  username: fakgül
+  location: !ruby/object:User::Location
+    street: Şehitler Cd 6591
+    city: Sinop
+    state: Sakarya
+    country: Turkey
+    postcode: 81057
+    tz_offset: "-8:00"
+  email: fatma.akgul@example.com
+  phone:
+    :home: "(947)-875-2493"
+    :cell: "(631)-260-6007"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/84.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/84.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/84.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 61
+  name:
+    :title: Mrs
+    :first: Florence
+    :last: Novak
+  username: fnovak
+  location: !ruby/object:User::Location
+    street: 1289 Parliament St
+    city: Lasalle
+    state: Ontario
+    country: Canada
+    postcode: F5L 7W3
+    tz_offset: "-11:00"
+  email: florence.novak@example.com
+  phone:
+    :home: 698-796-5849
+    :cell: 462-102-3573
+  picture:
+    :large: https://randomuser.me/api/portraits/women/76.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/76.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/76.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 62
+  name:
+    :title: Miss
+    :first: Firmina
+    :last: Farias
+  username: ffarias
+  location: !ruby/object:User::Location
+    street: Rua Santa Luzia  7648
+    city: Londrina
+    state: Tocantins
+    country: Brazil
+    postcode: 99077
+    tz_offset: "-5:00"
+  email: firmina.farias@example.com
+  phone:
+    :home: "(93) 5869-6198"
+    :cell: "(22) 9261-7522"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/90.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/90.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/90.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 63
+  name:
+    :title: Mrs
+    :first: Marina
+    :last: Greb
+  username: mgreb
+  location: !ruby/object:User::Location
+    street: Wiesenweg 7498
+    city: Schrozberg
+    state: Bremen
+    country: Germany
+    postcode: 51809
+    tz_offset: "-4:00"
+  email: marina.greb@example.com
+  phone:
+    :home: '0588-2828003'
+    :cell: 0174-9967961
+  picture:
+    :large: https://randomuser.me/api/portraits/women/75.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/75.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/75.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 64
+  name:
+    :title: Mr
+    :first: Rawien
+    :last: De Beijer
+  username: rde beijer
+  location: !ruby/object:User::Location
+    street: De Tjonger 5877
+    city: Grootegast
+    state: Groningen
+    country: Netherlands
+    postcode: 52602
+    tz_offset: '0:00'
+  email: rawien.debeijer@example.com
+  phone:
+    :home: "(157)-362-5383"
+    :cell: "(732)-286-9579"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/99.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/99.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/99.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 65
+  name:
+    :title: Miss
+    :first: Elizabeth
+    :last: Ryan
+  username: eryan
+  location: !ruby/object:User::Location
+    street: 6728 Manor Road
+    city: Sheffield
+    state: Hampshire
+    country: United Kingdom
+    postcode: V16 1YZ
+    tz_offset: "+3:30"
+  email: elizabeth.ryan@example.com
+  phone:
+    :home: '016977 48322'
+    :cell: 0726-121-850
+  picture:
+    :large: https://randomuser.me/api/portraits/women/26.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/26.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/26.jpg
+  nationality: GB
+- !ruby/object:User
+  id: 66
+  name:
+    :title: Monsieur
+    :first: Cosimo
+    :last: Perrin
+  username: cperrin
+  location: !ruby/object:User::Location
+    street: Rue D'Abbeville 3594
+    city: Warth-Weiningen
+    state: Schwyz
+    country: Switzerland
+    postcode: 7715
+    tz_offset: "+1:00"
+  email: cosimo.perrin@example.com
+  phone:
+    :home: '079 529 81 45'
+    :cell: '079 329 67 88'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/97.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/97.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/97.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 67
+  name:
+    :title: Mademoiselle
+    :first: Linda
+    :last: Dufour
+  username: ldufour
+  location: !ruby/object:User::Location
+    street: Rue Dugas-Montbel 6354
+    city: Versoix
+    state: Valais
+    country: Switzerland
+    postcode: 1220
+    tz_offset: "-11:00"
+  email: linda.dufour@example.com
+  phone:
+    :home: 076 202 69 79
+    :cell: 075 626 32 76
+  picture:
+    :large: https://randomuser.me/api/portraits/women/59.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/59.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/59.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 68
+  name:
+    :title: Ms
+    :first: Vicky
+    :last: Johnson
+  username: vjohnson
+  location: !ruby/object:User::Location
+    street: 5431 West Street
+    city: Gloucester
+    state: Borders
+    country: United Kingdom
+    postcode: TG2O 7SR
+    tz_offset: "-9:00"
+  email: vicky.johnson@example.com
+  phone:
+    :home: 015242 42284
+    :cell: 0720-686-249
+  picture:
+    :large: https://randomuser.me/api/portraits/women/48.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/48.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/48.jpg
+  nationality: GB
+- !ruby/object:User
+  id: 69
+  name:
+    :title: Mr
+    :first: Felix
+    :last: Sørensen
+  username: fsørensen
+  location: !ruby/object:User::Location
+    street: Grønnegade 4384
+    city: Sundby
+    state: Nordjylland
+    country: Denmark
+    postcode: 69056
+    tz_offset: "+10:00"
+  email: felix.sorensen@example.com
+  phone:
+    :home: '22468407'
+    :cell: '28133402'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/51.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/51.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/51.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 70
+  name:
+    :title: Ms
+    :first: Mercedes
+    :last: Suarez
+  username: msuarez
+  location: !ruby/object:User::Location
+    street: Avenida de América 2677
+    city: La Coruña
+    state: Ceuta
+    country: Spain
+    postcode: 14246
+    tz_offset: "-3:30"
+  email: mercedes.suarez@example.com
+  phone:
+    :home: 980-109-438
+    :cell: 657-621-270
+  picture:
+    :large: https://randomuser.me/api/portraits/women/91.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/91.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/91.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 71
+  name:
+    :title: Mr
+    :first: Adam
+    :last: Zhang
+  username: azhang
+  location: !ruby/object:User::Location
+    street: 5879 Moorhouse Avenue
+    city: Hamilton
+    state: West Coast
+    country: New Zealand
+    postcode: 24201
+    tz_offset: "+2:00"
+  email: adam.zhang@example.com
+  phone:
+    :home: "(386)-020-7549"
+    :cell: "(386)-578-0349"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/72.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/72.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/72.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 72
+  name:
+    :title: Mr
+    :first: James
+    :last: Roberts
+  username: jroberts
+  location: !ruby/object:User::Location
+    street: 1091 Depaul Dr
+    city: Fremont
+    state: Ohio
+    country: United States
+    postcode: 43594
+    tz_offset: "+4:00"
+  email: james.roberts@example.com
+  phone:
+    :home: "(234)-716-6779"
+    :cell: "(918)-010-9257"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/54.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/54.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/54.jpg
+  nationality: US
+- !ruby/object:User
+  id: 73
+  name:
+    :title: Mr
+    :first: Samuel
+    :last: Morales
+  username: smorales
+  location: !ruby/object:User::Location
+    street: Calle de La Almudena 5774
+    city: Orense
+    state: Asturias
+    country: Spain
+    postcode: 81822
+    tz_offset: "+9:00"
+  email: samuel.morales@example.com
+  phone:
+    :home: 947-144-663
+    :cell: 670-603-583
+  picture:
+    :large: https://randomuser.me/api/portraits/men/44.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/44.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/44.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 74
+  name:
+    :title: Mr
+    :first: Tobias
+    :last: Pedersen
+  username: tpedersen
+  location: !ruby/object:User::Location
+    street: Bekkasinvej 3043
+    city: København N
+    state: Danmark
+    country: Denmark
+    postcode: 21602
+    tz_offset: "-10:00"
+  email: tobias.pedersen@example.com
+  phone:
+    :home: '15158244'
+    :cell: '87546962'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/3.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/3.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/3.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 75
+  name:
+    :title: Monsieur
+    :first: Kurt
+    :last: Chevalier
+  username: kchevalier
+  location: !ruby/object:User::Location
+    street: Avenue de la Libération 9830
+    city: Comano
+    state: Luzern
+    country: Switzerland
+    postcode: 1752
+    tz_offset: "+5:45"
+  email: kurt.chevalier@example.com
+  phone:
+    :home: '078 517 85 51'
+    :cell: 076 069 57 09
+  picture:
+    :large: https://randomuser.me/api/portraits/men/19.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/19.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/19.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 76
+  name:
+    :title: Ms
+    :first: Kim
+    :last: Jackson
+  username: kjackson
+  location: !ruby/object:User::Location
+    street: 746 High Street
+    city: Portmarnock
+    state: Leitrim
+    country: Ireland
+    postcode: 14686
+    tz_offset: "-3:30"
+  email: kim.jackson@example.com
+  phone:
+    :home: 011-678-0356
+    :cell: '081-303-2534'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/9.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/9.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/9.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 77
+  name:
+    :title: Miss
+    :first: Susan
+    :last: Henry
+  username: shenry
+  location: !ruby/object:User::Location
+    street: 6573 The Grove
+    city: Skerries
+    state: Longford
+    country: Ireland
+    postcode: 61611
+    tz_offset: "-2:00"
+  email: susan.henry@example.com
+  phone:
+    :home: 041-830-2939
+    :cell: '081-422-8851'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/94.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/94.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/94.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 78
+  name:
+    :title: Miss
+    :first: Lucia
+    :last: Serrano
+  username: lserrano
+  location: !ruby/object:User::Location
+    street: Calle Nebrija 8624
+    city: Pozuelo de Alarcón
+    state: Región de Murcia
+    country: Spain
+    postcode: 94036
+    tz_offset: "-3:00"
+  email: lucia.serrano@example.com
+  phone:
+    :home: 981-745-696
+    :cell: 642-584-900
+  picture:
+    :large: https://randomuser.me/api/portraits/women/45.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/45.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/45.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 79
+  name:
+    :title: Mr
+    :first: Efe
+    :last: Yıldızoğlu
+  username: eyıldızoğlu
+  location: !ruby/object:User::Location
+    street: Talak Göktepe Cd 9063
+    city: Muş
+    state: Mardin
+    country: Turkey
+    postcode: 36675
+    tz_offset: "-6:00"
+  email: efe.yildizoglu@example.com
+  phone:
+    :home: "(054)-681-9914"
+    :cell: "(843)-361-9520"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/3.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/3.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/3.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 80
+  name:
+    :title: Mr
+    :first: Eeli
+    :last: Kivela
+  username: ekivela
+  location: !ruby/object:User::Location
+    street: Mannerheimintie 5718
+    city: Iisalmi
+    state: Pirkanmaa
+    country: Finland
+    postcode: 69908
+    tz_offset: "+9:00"
+  email: eeli.kivela@example.com
+  phone:
+    :home: '09-936-444'
+    :cell: 041-863-00-23
+  picture:
+    :large: https://randomuser.me/api/portraits/men/70.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/70.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/70.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 81
+  name:
+    :title: Miss
+    :first: Nanna
+    :last: Larsen
+  username: nlarsen
+  location: !ruby/object:User::Location
+    street: Brogårdsvej 6322
+    city: Hammel
+    state: Hovedstaden
+    country: Denmark
+    postcode: 70112
+    tz_offset: "+3:30"
+  email: nanna.larsen@example.com
+  phone:
+    :home: '64570113'
+    :cell: '57411823'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/35.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/35.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/35.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 82
+  name:
+    :title: Mrs
+    :first: Scarlett
+    :last: Young
+  username: syoung
+  location: !ruby/object:User::Location
+    street: 3873 Henry Street
+    city: Tullamore
+    state: Wicklow
+    country: Ireland
+    postcode: 98167
+    tz_offset: "+9:30"
+  email: scarlett.young@example.com
+  phone:
+    :home: 011-121-5949
+    :cell: '081-557-1163'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/28.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/28.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/28.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 83
+  name:
+    :title: Mr
+    :first: Gerhart
+    :last: Mayerhofer
+  username: gmayerhofer
+  location: !ruby/object:User::Location
+    street: Kiefernweg 1339
+    city: Döbern
+    state: Baden-Württemberg
+    country: Germany
+    postcode: 68585
+    tz_offset: "-7:00"
+  email: gerhart.mayerhofer@example.com
+  phone:
+    :home: '0909-9146578'
+    :cell: 0173-5349510
+  picture:
+    :large: https://randomuser.me/api/portraits/men/16.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/16.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/16.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 84
+  name:
+    :title: Ms
+    :first: Adelaide
+    :last: Cavalcanti
+  username: acavalcanti
+  location: !ruby/object:User::Location
+    street: Rua Paraíba  8837
+    city: São Bernardo do Campo
+    state: Amapá
+    country: Brazil
+    postcode: 46903
+    tz_offset: "+4:30"
+  email: adelaide.cavalcanti@example.com
+  phone:
+    :home: "(88) 6473-1456"
+    :cell: "(77) 9224-6824"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/34.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/34.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/34.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 85
+  name:
+    :title: Ms
+    :first: Alyssa
+    :last: Ramirez
+  username: aramirez
+  location: !ruby/object:User::Location
+    street: 8147 E Sandy Lake Rd
+    city: Aurora
+    state: Florida
+    country: United States
+    postcode: 36733
+    tz_offset: "-5:00"
+  email: alyssa.ramirez@example.com
+  phone:
+    :home: "(351)-529-2783"
+    :cell: "(250)-770-2766"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/25.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/25.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/25.jpg
+  nationality: US
+- !ruby/object:User
+  id: 86
+  name:
+    :title: Mr
+    :first: Téo
+    :last: Bonnet
+  username: tbonnet
+  location: !ruby/object:User::Location
+    street: 8483, Avenue du Fort-Caire
+    city: Mulhouse
+    state: Haut-Rhin
+    country: France
+    postcode: 70151
+    tz_offset: "+10:00"
+  email: teo.bonnet@example.com
+  phone:
+    :home: 01-20-76-80-94
+    :cell: 06-33-00-54-17
+  picture:
+    :large: https://randomuser.me/api/portraits/men/36.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/36.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/36.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 87
+  name:
+    :title: Mr
+    :first: Arturo
+    :last: Rojas
+  username: arojas
+  location: !ruby/object:User::Location
+    street: Avenida de Andalucía 408
+    city: Gandía
+    state: Castilla la Mancha
+    country: Spain
+    postcode: 27714
+    tz_offset: "-4:00"
+  email: arturo.rojas@example.com
+  phone:
+    :home: 919-309-092
+    :cell: 621-245-360
+  picture:
+    :large: https://randomuser.me/api/portraits/men/66.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/66.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/66.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 88
+  name:
+    :title: Ms
+    :first: Enni
+    :last: Nevala
+  username: enevala
+  location: !ruby/object:User::Location
+    street: Itsenäisyydenkatu 1961
+    city: Korsnäs
+    state: Åland
+    country: Finland
+    postcode: 34457
+    tz_offset: "-12:00"
+  email: enni.nevala@example.com
+  phone:
+    :home: '09-127-666'
+    :cell: 041-588-23-99
+  picture:
+    :large: https://randomuser.me/api/portraits/women/75.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/75.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/75.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 89
+  name:
+    :title: Mr
+    :first: Emile
+    :last: Sanchez
+  username: esanchez
+  location: !ruby/object:User::Location
+    street: 1025, Rue Abel
+    city: Saint-Étienne
+    state: Rhône
+    country: France
+    postcode: 47209
+    tz_offset: "-11:00"
+  email: emile.sanchez@example.com
+  phone:
+    :home: 03-82-00-56-32
+    :cell: 06-21-78-80-06
+  picture:
+    :large: https://randomuser.me/api/portraits/men/1.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/1.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/1.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 90
+  name:
+    :title: Mr
+    :first: Alfeu
+    :last: Martins
+  username: amartins
+  location: !ruby/object:User::Location
+    street: Rua Dois 5672
+    city: Bento Gonçalves
+    state: Distrito Federal
+    country: Brazil
+    postcode: 43101
+    tz_offset: "+5:45"
+  email: alfeu.martins@example.com
+  phone:
+    :home: "(01) 6608-1810"
+    :cell: "(16) 3798-9273"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/99.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/99.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/99.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 91
+  name:
+    :title: Mr
+    :first: Rupert
+    :last: Eberhardt
+  username: reberhardt
+  location: !ruby/object:User::Location
+    street: Birkenweg 6121
+    city: Oschatz
+    state: Hamburg
+    country: Germany
+    postcode: 57600
+    tz_offset: "+1:00"
+  email: rupert.eberhardt@example.com
+  phone:
+    :home: 0726-7994368
+    :cell: 0171-0882455
+  picture:
+    :large: https://randomuser.me/api/portraits/men/36.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/36.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/36.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 92
+  name:
+    :title: Mrs
+    :first: Ella
+    :last: Sakala
+  username: esakala
+  location: !ruby/object:User::Location
+    street: Siilitie 5525
+    city: Janakkala
+    state: Northern Ostrobothnia
+    country: Finland
+    postcode: 51295
+    tz_offset: "+10:00"
+  email: ella.sakala@example.com
+  phone:
+    :home: 03-964-997
+    :cell: '049-459-21-05'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/10.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/10.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/10.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 93
+  name:
+    :title: Mrs
+    :first: Blanca
+    :last: Rodriguez
+  username: brodriguez
+  location: !ruby/object:User::Location
+    street: Calle de Argumosa 6358
+    city: Almería
+    state: Región de Murcia
+    country: Spain
+    postcode: 65715
+    tz_offset: "+9:30"
+  email: blanca.rodriguez@example.com
+  phone:
+    :home: 904-175-222
+    :cell: 655-393-613
+  picture:
+    :large: https://randomuser.me/api/portraits/women/58.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/58.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/58.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 94
+  name:
+    :title: Mr
+    :first: Arnas
+    :last: Brudvik
+  username: abrudvik
+  location: !ruby/object:User::Location
+    street: Solfjellshøgda 4778
+    city: Lysøysund
+    state: Aust-Agder
+    country: Norway
+    postcode: '0863'
+    tz_offset: "-12:00"
+  email: arnas.brudvik@example.com
+  phone:
+    :home: '32895740'
+    :cell: '41155518'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/34.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/34.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/34.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 95
+  name:
+    :title: Mr
+    :first: Ethan
+    :last: Barnaby
+  username: ebarnaby
+  location: !ruby/object:User::Location
+    street: 4857 Pine Rd
+    city: Hampstead
+    state: Northwest Territories
+    country: Canada
+    postcode: R9K 6U2
+    tz_offset: "+6:00"
+  email: ethan.barnaby@example.com
+  phone:
+    :home: 208-762-5445
+    :cell: 401-995-0168
+  picture:
+    :large: https://randomuser.me/api/portraits/men/23.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/23.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/23.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 96
+  name:
+    :title: Mr
+    :first: Agustin
+    :last: Campos
+  username: acampos
+  location: !ruby/object:User::Location
+    street: Calle de Arganzuela 4378
+    city: Murcia
+    state: Extremadura
+    country: Spain
+    postcode: 30195
+    tz_offset: "-6:00"
+  email: agustin.campos@example.com
+  phone:
+    :home: 949-794-992
+    :cell: 650-708-785
+  picture:
+    :large: https://randomuser.me/api/portraits/men/30.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/30.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/30.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 97
+  name:
+    :title: Miss
+    :first: Seema
+    :last: Van de Kraats
+  username: svan de kraats
+  location: !ruby/object:User::Location
+    street: De Krom 1087
+    city: Heerewaarden
+    state: Utrecht
+    country: Netherlands
+    postcode: 74944
+    tz_offset: "-7:00"
+  email: seema.vandekraats@example.com
+  phone:
+    :home: "(552)-786-8992"
+    :cell: "(905)-558-0306"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/86.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/86.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/86.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 98
+  name:
+    :title: Ms
+    :first: Eléonore
+    :last: Louis
+  username: elouis
+  location: !ruby/object:User::Location
+    street: 2416, Rue des Écoles
+    city: Aix-En-Provence
+    state: Orne
+    country: France
+    postcode: 49068
+    tz_offset: "-1:00"
+  email: eleonore.louis@example.com
+  phone:
+    :home: 04-11-80-08-15
+    :cell: 06-07-29-25-62
+  picture:
+    :large: https://randomuser.me/api/portraits/women/84.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/84.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/84.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 99
+  name:
+    :title: Mrs
+    :first: Minttu
+    :last: Leino
+  username: mleino
+  location: !ruby/object:User::Location
+    street: Myllypuronkatu 3285
+    city: Jalasjärvi
+    state: Northern Savonia
+    country: Finland
+    postcode: 77083
+    tz_offset: "-1:00"
+  email: minttu.leino@example.com
+  phone:
+    :home: 02-591-930
+    :cell: 045-754-03-69
+  picture:
+    :large: https://randomuser.me/api/portraits/women/31.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/31.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/31.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 100
+  name:
+    :title: Mr
+    :first: Aventino
+    :last: da Cunha
+  username: ada cunha
+  location: !ruby/object:User::Location
+    street: Rua Paraná  5329
+    city: Carapicuíba
+    state: São Paulo
+    country: Brazil
+    postcode: 84385
+    tz_offset: "+2:00"
+  email: aventino.dacunha@example.com
+  phone:
+    :home: "(10) 2907-9415"
+    :cell: "(87) 1753-0919"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/76.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/76.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/76.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 101
+  name:
+    :title: Mr
+    :first: James
+    :last: Thomas
+  username: jthomas
+  location: !ruby/object:User::Location
+    street: 4148 Albany Expressway
+    city: Hastings
+    state: Bay of Plenty
+    country: New Zealand
+    postcode: 19033
+    tz_offset: "-7:00"
+  email: james.thomas@example.com
+  phone:
+    :home: "(278)-200-4367"
+    :cell: "(114)-070-2933"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/25.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/25.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/25.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 102
+  name:
+    :title: Mr
+    :first: Terje
+    :last: Sørdal
+  username: tsørdal
+  location: !ruby/object:User::Location
+    street: Hafslundveien 7734
+    city: Vestbygda
+    state: Rogaland
+    country: Norway
+    postcode: '7176'
+    tz_offset: "+7:00"
+  email: terje.sordal@example.com
+  phone:
+    :home: '31921676'
+    :cell: '96757228'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/68.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/68.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/68.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 103
+  name:
+    :title: Ms
+    :first: Annabelle
+    :last: Campbell
+  username: acampbell
+  location: !ruby/object:User::Location
+    street: 8786, West Ave
+    city: Burlington
+    state: Québec
+    country: Canada
+    postcode: P2B 7R3
+    tz_offset: "+6:00"
+  email: annabelle.campbell@example.com
+  phone:
+    :home: 769-956-9236
+    :cell: 758-120-6502
+  picture:
+    :large: https://randomuser.me/api/portraits/women/80.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/80.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/80.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 104
+  name:
+    :title: Miss
+    :first: Isabella
+    :last: Wilson
+  username: iwilson
+  location: !ruby/object:User::Location
+    street: 8763 Victoria Ave
+    city: Fountainbleu
+    state: Nunavut
+    country: Canada
+    postcode: F4G 6C8
+    tz_offset: "-7:00"
+  email: isabella.wilson@example.com
+  phone:
+    :home: 016-120-3676
+    :cell: 659-580-7410
+  picture:
+    :large: https://randomuser.me/api/portraits/women/91.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/91.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/91.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 105
+  name:
+    :title: Mr
+    :first: Marcus
+    :last: Montgomery
+  username: mmontgomery
+  location: !ruby/object:User::Location
+    street: 8146 The Drive
+    city: Cashel
+    state: Kerry
+    country: Ireland
+    postcode: 30972
+    tz_offset: "+7:00"
+  email: marcus.montgomery@example.com
+  phone:
+    :home: 071-853-5533
+    :cell: '081-844-6271'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/20.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/20.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/20.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 106
+  name:
+    :title: Mr
+    :first: Caesar
+    :last: Dubois
+  username: cdubois
+  location: !ruby/object:User::Location
+    street: It Smidsplein 6428
+    city: Lingewaal
+    state: Gelderland
+    country: Netherlands
+    postcode: 35721
+    tz_offset: "-1:00"
+  email: caesar.dubois@example.com
+  phone:
+    :home: "(432)-484-2493"
+    :cell: "(819)-103-1284"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/76.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/76.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/76.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 107
+  name:
+    :title: Mr
+    :first: John
+    :last: Vollrath
+  username: jvollrath
+  location: !ruby/object:User::Location
+    street: Poststraße 6869
+    city: Freiburg im Breisgau
+    state: Schleswig-Holstein
+    country: Germany
+    postcode: 51613
+    tz_offset: "+3:30"
+  email: john.vollrath@example.com
+  phone:
+    :home: '0816-0157882'
+    :cell: '0179-4224271'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/1.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/1.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/1.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 108
+  name:
+    :title: Miss
+    :first: Ceylan
+    :last: Oraloğlu
+  username: coraloğlu
+  location: !ruby/object:User::Location
+    street: Istiklal Cd 3225
+    city: Isparta
+    state: Samsun
+    country: Turkey
+    postcode: 96471
+    tz_offset: "+1:00"
+  email: ceylan.oraloglu@example.com
+  phone:
+    :home: "(367)-103-0676"
+    :cell: "(659)-787-5032"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/27.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/27.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/27.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 109
+  name:
+    :title: Miss
+    :first: Ülkü
+    :last: Sözeri
+  username: üsözeri
+  location: !ruby/object:User::Location
+    street: Kushimoto Sk 8950
+    city: Yalova
+    state: Kırşehir
+    country: Turkey
+    postcode: 23754
+    tz_offset: "+9:00"
+  email: ulku.sozeri@example.com
+  phone:
+    :home: "(884)-051-5970"
+    :cell: "(256)-434-1247"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/32.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/32.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/32.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 110
+  name:
+    :title: Mr
+    :first: Emil
+    :last: Madsen
+  username: emadsen
+  location: !ruby/object:User::Location
+    street: Søndervangen 9204
+    city: Vipperød
+    state: Syddanmark
+    country: Denmark
+    postcode: 99945
+    tz_offset: "+11:00"
+  email: emil.madsen@example.com
+  phone:
+    :home: '97142502'
+    :cell: '12822622'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/97.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/97.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/97.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 111
+  name:
+    :title: Monsieur
+    :first: Mathis
+    :last: David
+  username: mdavid
+  location: !ruby/object:User::Location
+    street: Rue Gasparin 6274
+    city: Villigen
+    state: Schwyz
+    country: Switzerland
+    postcode: 2390
+    tz_offset: "-5:00"
+  email: mathis.david@example.com
+  phone:
+    :home: '078 894 30 01'
+    :cell: '079 397 71 24'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/99.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/99.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/99.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 112
+  name:
+    :title: Ms
+    :first: Rachel
+    :last: Bell
+  username: rbell
+  location: !ruby/object:User::Location
+    street: 7138 Wycliff Ave
+    city: Cairns
+    state: Australian Capital Territory
+    country: Australia
+    postcode: 3182
+    tz_offset: "+7:00"
+  email: rachel.bell@example.com
+  phone:
+    :home: '09-9037-1470'
+    :cell: 0422-512-546
+  picture:
+    :large: https://randomuser.me/api/portraits/women/51.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/51.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/51.jpg
+  nationality: AU
+- !ruby/object:User
+  id: 113
+  name:
+    :title: Mrs
+    :first: Romy
+    :last: Dubois
+  username: rdubois
+  location: !ruby/object:User::Location
+    street: 3466, Rue de la Barre
+    city: Toulouse
+    state: Val-de-Marne
+    country: France
+    postcode: 81826
+    tz_offset: "+1:00"
+  email: romy.dubois@example.com
+  phone:
+    :home: 04-39-93-97-53
+    :cell: 06-25-06-80-11
+  picture:
+    :large: https://randomuser.me/api/portraits/women/80.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/80.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/80.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 114
+  name:
+    :title: Mrs
+    :first: Ömür
+    :last: Kumcuoğlu
+  username: ökumcuoğlu
+  location: !ruby/object:User::Location
+    street: Filistin Cd 2257
+    city: Diyarbakır
+    state: Antalya
+    country: Turkey
+    postcode: 93664
+    tz_offset: "-11:00"
+  email: omur.kumcuoglu@example.com
+  phone:
+    :home: "(193)-154-1145"
+    :cell: "(253)-237-6681"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/6.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/6.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/6.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 115
+  name:
+    :title: Ms
+    :first: Amanda
+    :last: Hale
+  username: ahale
+  location: !ruby/object:User::Location
+    street: 9577 Richmond Road
+    city: City of London
+    state: Tyne and Wear
+    country: United Kingdom
+    postcode: XC2U 1UP
+    tz_offset: "-10:00"
+  email: amanda.hale@example.com
+  phone:
+    :home: '015396 94228'
+    :cell: '0789-237-331'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/78.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/78.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/78.jpg
+  nationality: GB
+- !ruby/object:User
+  id: 116
+  name:
+    :title: Mr
+    :first: Carter
+    :last: Patel
+  username: cpatel
+  location: !ruby/object:User::Location
+    street: 6050 22nd Ave
+    city: Port Elgin
+    state: Nova Scotia
+    country: Canada
+    postcode: K8B 7V0
+    tz_offset: '0:00'
+  email: carter.patel@example.com
+  phone:
+    :home: 806-882-8328
+    :cell: 180-288-7581
+  picture:
+    :large: https://randomuser.me/api/portraits/men/80.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/80.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/80.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 117
+  name:
+    :title: Miss
+    :first: Marilou
+    :last: Anderson
+  username: manderson
+  location: !ruby/object:User::Location
+    street: 9478 Concession Road 23
+    city: Lumsden
+    state: Manitoba
+    country: Canada
+    postcode: J4R 2Y3
+    tz_offset: "+11:00"
+  email: marilou.anderson@example.com
+  phone:
+    :home: 504-135-7320
+    :cell: 919-699-1936
+  picture:
+    :large: https://randomuser.me/api/portraits/women/92.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/92.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/92.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 118
+  name:
+    :title: Mr
+    :first: Marcos
+    :last: Marquez
+  username: mmarquez
+  location: !ruby/object:User::Location
+    street: Calle de Toledo 2575
+    city: Ferrol
+    state: Comunidad de Madrid
+    country: Spain
+    postcode: 98438
+    tz_offset: "+8:00"
+  email: marcos.marquez@example.com
+  phone:
+    :home: 903-142-188
+    :cell: 693-805-032
+  picture:
+    :large: https://randomuser.me/api/portraits/men/74.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/74.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/74.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 119
+  name:
+    :title: Mr
+    :first: Gueir
+    :last: Monteiro
+  username: gmonteiro
+  location: !ruby/object:User::Location
+    street: Rua João Xxiii 1880
+    city: Trindade
+    state: Rio de Janeiro
+    country: Brazil
+    postcode: 65983
+    tz_offset: "+5:30"
+  email: gueir.monteiro@example.com
+  phone:
+    :home: "(06) 9598-9121"
+    :cell: "(14) 4938-8972"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/58.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/58.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/58.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 120
+  name:
+    :title: Mademoiselle
+    :first: Diane
+    :last: Deschamps
+  username: ddeschamps
+  location: !ruby/object:User::Location
+    street: Rue Gasparin 9131
+    city: Arbedo-Castione
+    state: Schwyz
+    country: Switzerland
+    postcode: 5154
+    tz_offset: "+6:00"
+  email: diane.deschamps@example.com
+  phone:
+    :home: 076 092 36 91
+    :cell: 077 906 66 29
+  picture:
+    :large: https://randomuser.me/api/portraits/women/52.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/52.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/52.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 121
+  name:
+    :title: Mr
+    :first: Felipe
+    :last: Vidal
+  username: fvidal
+  location: !ruby/object:User::Location
+    street: Avenida de Burgos 4271
+    city: San Sebastián
+    state: País Vasco
+    country: Spain
+    postcode: 26171
+    tz_offset: '0:00'
+  email: felipe.vidal@example.com
+  phone:
+    :home: 903-151-033
+    :cell: 628-360-511
+  picture:
+    :large: https://randomuser.me/api/portraits/men/84.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/84.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/84.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 122
+  name:
+    :title: Mrs
+    :first: Destina
+    :last: Driehuis
+  username: ddriehuis
+  location: !ruby/object:User::Location
+    street: Burgemeester van Riemsdijkstraat 1735
+    city: Idaerd
+    state: Gelderland
+    country: Netherlands
+    postcode: 47513
+    tz_offset: "+9:00"
+  email: destina.driehuis@example.com
+  phone:
+    :home: "(787)-768-8094"
+    :cell: "(869)-504-7195"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/88.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/88.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/88.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 123
+  name:
+    :title: Mr
+    :first: Louis
+    :last: Walker
+  username: lwalker
+  location: !ruby/object:User::Location
+    street: 8203 Maraekakaho Road
+    city: Tauranga
+    state: Southland
+    country: New Zealand
+    postcode: 89097
+    tz_offset: "-8:00"
+  email: louis.walker@example.com
+  phone:
+    :home: "(323)-981-3877"
+    :cell: "(993)-101-6379"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/33.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/33.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/33.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 124
+  name:
+    :title: Miss
+    :first: Remedios
+    :last: Vargas
+  username: rvargas
+  location: !ruby/object:User::Location
+    street: Calle de La Democracia 3076
+    city: Lorca
+    state: Extremadura
+    country: Spain
+    postcode: 47672
+    tz_offset: "+10:00"
+  email: remedios.vargas@example.com
+  phone:
+    :home: 994-273-325
+    :cell: 652-827-916
+  picture:
+    :large: https://randomuser.me/api/portraits/women/23.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/23.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/23.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 125
+  name:
+    :title: Mr
+    :first: Arndt
+    :last: Figge
+  username: afigge
+  location: !ruby/object:User::Location
+    street: Neue Straße 8372
+    city: Altenburg
+    state: Nordrhein-Westfalen
+    country: Germany
+    postcode: 98600
+    tz_offset: "-12:00"
+  email: arndt.figge@example.com
+  phone:
+    :home: '0093-3880989'
+    :cell: 0171-7449844
+  picture:
+    :large: https://randomuser.me/api/portraits/men/99.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/99.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/99.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 126
+  name:
+    :title: Miss
+    :first: Beverley
+    :last: Simpson
+  username: bsimpson
+  location: !ruby/object:User::Location
+    street: 9408 Lovers Ln
+    city: Beaumont
+    state: North Carolina
+    country: United States
+    postcode: 77765
+    tz_offset: "+3:30"
+  email: beverley.simpson@example.com
+  phone:
+    :home: "(460)-261-1182"
+    :cell: "(225)-827-4004"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/94.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/94.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/94.jpg
+  nationality: US
+- !ruby/object:User
+  id: 127
+  name:
+    :title: Mrs
+    :first: Geni
+    :last: Ramos
+  username: gramos
+  location: !ruby/object:User::Location
+    street: Rua Das Flores  7065
+    city: Toledo
+    state: Sergipe
+    country: Brazil
+    postcode: 73685
+    tz_offset: "+3:00"
+  email: geni.ramos@example.com
+  phone:
+    :home: "(37) 8828-6771"
+    :cell: "(25) 4966-1074"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/24.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/24.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/24.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 128
+  name:
+    :title: Miss
+    :first: Tineke
+    :last: Roffel
+  username: troffel
+  location: !ruby/object:User::Location
+    street: Dries van der Vlerkstraat 984
+    city: Dongen
+    state: Zeeland
+    country: Netherlands
+    postcode: 47979
+    tz_offset: '0:00'
+  email: tineke.roffel@example.com
+  phone:
+    :home: "(781)-099-2113"
+    :cell: "(633)-220-9726"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/53.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/53.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/53.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 129
+  name:
+    :title: Miss
+    :first: Melodie
+    :last: Lévesque
+  username: mlévesque
+  location: !ruby/object:User::Location
+    street: 4351 Dundas Rd
+    city: Brockton
+    state: Ontario
+    country: Canada
+    postcode: A5W 2A8
+    tz_offset: "-6:00"
+  email: melodie.levesque@example.com
+  phone:
+    :home: 870-379-8401
+    :cell: 858-405-6358
+  picture:
+    :large: https://randomuser.me/api/portraits/women/94.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/94.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/94.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 130
+  name:
+    :title: Miss
+    :first: Mary
+    :last: Byrd
+  username: mbyrd
+  location: !ruby/object:User::Location
+    street: 9528 Killarney Road
+    city: Dundalk
+    state: Dún Laoghaire–Rathdown
+    country: Ireland
+    postcode: 14582
+    tz_offset: "+11:00"
+  email: mary.byrd@example.com
+  phone:
+    :home: 041-075-6474
+    :cell: '081-688-3199'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/73.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/73.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/73.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 131
+  name:
+    :title: Mr
+    :first: Élio
+    :last: Pinto
+  username: épinto
+  location: !ruby/object:User::Location
+    street: Rua São Francisco  5618
+    city: Betim
+    state: Paraná
+    country: Brazil
+    postcode: 30901
+    tz_offset: "-5:00"
+  email: elio.pinto@example.com
+  phone:
+    :home: "(81) 2861-8268"
+    :cell: "(69) 9631-9645"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/97.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/97.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/97.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 132
+  name:
+    :title: Mrs
+    :first: Damla
+    :last: Tuerlings
+  username: dtuerlings
+  location: !ruby/object:User::Location
+    street: Korf 4263
+    city: Startenhuizen
+    state: Drenthe
+    country: Netherlands
+    postcode: 42215
+    tz_offset: "-9:00"
+  email: damla.tuerlings@example.com
+  phone:
+    :home: "(865)-608-3869"
+    :cell: "(564)-678-7315"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/40.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/40.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/40.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 133
+  name:
+    :title: Mr
+    :first: Patric
+    :last: Peter
+  username: ppeter
+  location: !ruby/object:User::Location
+    street: Waldstraße 2529
+    city: Leimen
+    state: Hamburg
+    country: Germany
+    postcode: 42830
+    tz_offset: "-7:00"
+  email: patric.peter@example.com
+  phone:
+    :home: '0308-7555778'
+    :cell: '0178-0987747'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/64.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/64.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/64.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 134
+  name:
+    :title: Mrs
+    :first: Cherly
+    :last: Smith
+  username: csmith
+  location: !ruby/object:User::Location
+    street: 9881 Homestead Rd
+    city: Hobart
+    state: Australian Capital Territory
+    country: Australia
+    postcode: 4701
+    tz_offset: "-6:00"
+  email: cherly.smith@example.com
+  phone:
+    :home: '09-2153-6466'
+    :cell: 0427-415-443
+  picture:
+    :large: https://randomuser.me/api/portraits/women/93.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/93.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/93.jpg
+  nationality: AU
+- !ruby/object:User
+  id: 135
+  name:
+    :title: Mademoiselle
+    :first: Jolanda
+    :last: Leroux
+  username: jleroux
+  location: !ruby/object:User::Location
+    street: Rue de L'Abbé-Soulange-Bodin 6917
+    city: Zunzgen
+    state: Genève
+    country: Switzerland
+    postcode: 2897
+    tz_offset: "+4:30"
+  email: jolanda.leroux@example.com
+  phone:
+    :home: 076 006 13 94
+    :cell: '079 324 62 98'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/13.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/13.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/13.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 136
+  name:
+    :title: Mrs
+    :first: Iida
+    :last: Kemppainen
+  username: ikemppainen
+  location: !ruby/object:User::Location
+    street: Mechelininkatu 4981
+    city: Ypäjä
+    state: Uusimaa
+    country: Finland
+    postcode: 67261
+    tz_offset: "+7:00"
+  email: iida.kemppainen@example.com
+  phone:
+    :home: '09-538-029'
+    :cell: 046-170-95-85
+  picture:
+    :large: https://randomuser.me/api/portraits/women/2.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/2.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/2.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 137
+  name:
+    :title: Mr
+    :first: Hector
+    :last: Diez
+  username: hdiez
+  location: !ruby/object:User::Location
+    street: Calle de Arganzuela 222
+    city: Alcobendas
+    state: Islas Baleares
+    country: Spain
+    postcode: 46251
+    tz_offset: "+4:00"
+  email: hector.diez@example.com
+  phone:
+    :home: 951-621-265
+    :cell: 609-591-487
+  picture:
+    :large: https://randomuser.me/api/portraits/men/47.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/47.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/47.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 138
+  name:
+    :title: Mademoiselle
+    :first: Annelies
+    :last: Denis
+  username: adenis
+  location: !ruby/object:User::Location
+    street: Rue Desaix 5185
+    city: Poschiavo
+    state: Obwalden
+    country: Switzerland
+    postcode: 7974
+    tz_offset: "-6:00"
+  email: annelies.denis@example.com
+  phone:
+    :home: '079 874 00 31'
+    :cell: 075 627 79 58
+  picture:
+    :large: https://randomuser.me/api/portraits/women/85.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/85.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/85.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 139
+  name:
+    :title: Mr
+    :first: Levi
+    :last: Brown
+  username: lbrown
+  location: !ruby/object:User::Location
+    street: 1795 Lone Wolf Trail
+    city: Irvine
+    state: Connecticut
+    country: United States
+    postcode: 39941
+    tz_offset: "+5:45"
+  email: levi.brown@example.com
+  phone:
+    :home: "(330)-586-3408"
+    :cell: "(193)-456-6628"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/38.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/38.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/38.jpg
+  nationality: US
+- !ruby/object:User
+  id: 140
+  name:
+    :title: Ms
+    :first: Ariana
+    :last: Lande
+  username: alande
+  location: !ruby/object:User::Location
+    street: Dalsnaret 4238
+    city: Kirkebygden
+    state: Finnmark - Finnmárku
+    country: Norway
+    postcode: '1911'
+    tz_offset: "-6:00"
+  email: ariana.lande@example.com
+  phone:
+    :home: '29168043'
+    :cell: '99222372'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/19.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/19.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/19.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 141
+  name:
+    :title: Mr
+    :first: Archie
+    :last: Thompson
+  username: athompson
+  location: !ruby/object:User::Location
+    street: 6098 Nelson Quay
+    city: Lower Hutt
+    state: Canterbury
+    country: New Zealand
+    postcode: 26090
+    tz_offset: "+7:00"
+  email: archie.thompson@example.com
+  phone:
+    :home: "(967)-407-1841"
+    :cell: "(329)-467-3467"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/42.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/42.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/42.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 142
+  name:
+    :title: Mr
+    :first: Jesse
+    :last: Craig
+  username: jcraig
+  location: !ruby/object:User::Location
+    street: 996 The Avenue
+    city: Cobh
+    state: Fingal
+    country: Ireland
+    postcode: 69787
+    tz_offset: "-6:00"
+  email: jesse.craig@example.com
+  phone:
+    :home: 061-524-7099
+    :cell: '081-802-9461'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/9.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/9.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/9.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 143
+  name:
+    :title: Mr
+    :first: Cristobal
+    :last: Bravo
+  username: cbravo
+  location: !ruby/object:User::Location
+    street: Avenida del Planetario 1599
+    city: Talavera de la Reina
+    state: Canarias
+    country: Spain
+    postcode: 50489
+    tz_offset: "+7:00"
+  email: cristobal.bravo@example.com
+  phone:
+    :home: 999-488-981
+    :cell: 654-717-405
+  picture:
+    :large: https://randomuser.me/api/portraits/men/34.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/34.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/34.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 144
+  name:
+    :title: Mr
+    :first: Angus
+    :last: Turner
+  username: aturner
+  location: !ruby/object:User::Location
+    street: 271 Totara Avenue
+    city: Tauranga
+    state: Nelson
+    country: New Zealand
+    postcode: 43527
+    tz_offset: "-12:00"
+  email: angus.turner@example.com
+  phone:
+    :home: "(553)-737-5978"
+    :cell: "(551)-377-0237"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/12.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/12.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/12.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 145
+  name:
+    :title: Mr
+    :first: Etienne
+    :last: Roy
+  username: eroy
+  location: !ruby/object:User::Location
+    street: 3533 Charles St
+    city: St. Antoine
+    state: New Brunswick
+    country: Canada
+    postcode: U7L 7E2
+    tz_offset: "+5:00"
+  email: etienne.roy@example.com
+  phone:
+    :home: 367-040-6870
+    :cell: 691-523-3837
+  picture:
+    :large: https://randomuser.me/api/portraits/men/80.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/80.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/80.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 146
+  name:
+    :title: Ms
+    :first: Phyllis
+    :last: Ray
+  username: pray
+  location: !ruby/object:User::Location
+    street: 1938 E Center St
+    city: Mobile
+    state: Kentucky
+    country: United States
+    postcode: 19176
+    tz_offset: "-5:00"
+  email: phyllis.ray@example.com
+  phone:
+    :home: "(237)-195-4829"
+    :cell: "(686)-924-7241"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/0.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/0.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/0.jpg
+  nationality: US
+- !ruby/object:User
+  id: 147
+  name:
+    :title: Miss
+    :first: Ariana
+    :last: Li
+  username: ali
+  location: !ruby/object:User::Location
+    street: 1481 Hereford Street
+    city: Whangarei
+    state: Waikato
+    country: New Zealand
+    postcode: 89873
+    tz_offset: "+3:30"
+  email: ariana.li@example.com
+  phone:
+    :home: "(838)-580-4748"
+    :cell: "(675)-388-8038"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/45.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/45.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/45.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 148
+  name:
+    :title: Ms
+    :first: Capucine
+    :last: Vidal
+  username: cvidal
+  location: !ruby/object:User::Location
+    street: 9025, Rue de la Charité
+    city: Champigny-sur-Marne
+    state: Aveyron
+    country: France
+    postcode: 71921
+    tz_offset: "+3:00"
+  email: capucine.vidal@example.com
+  phone:
+    :home: 04-74-26-92-58
+    :cell: 06-61-89-88-85
+  picture:
+    :large: https://randomuser.me/api/portraits/women/67.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/67.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/67.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 149
+  name:
+    :title: Mr
+    :first: Jairo
+    :last: Haisma
+  username: jhaisma
+  location: !ruby/object:User::Location
+    street: Hennekijnstraat 8337
+    city: Vaals
+    state: Limburg
+    country: Netherlands
+    postcode: 60371
+    tz_offset: '0:00'
+  email: jairo.haisma@example.com
+  phone:
+    :home: "(870)-019-3533"
+    :cell: "(525)-517-0237"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/83.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/83.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/83.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 150
+  name:
+    :title: Mrs
+    :first: Afşar
+    :last: Köylüoğlu
+  username: aköylüoğlu
+  location: !ruby/object:User::Location
+    street: Mevlana Cd 4480
+    city: Artvin
+    state: Malatya
+    country: Turkey
+    postcode: 93826
+    tz_offset: "+9:30"
+  email: afsar.koyluoglu@example.com
+  phone:
+    :home: "(376)-787-3849"
+    :cell: "(543)-194-3139"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/44.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/44.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/44.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 151
+  name:
+    :title: Mrs
+    :first: Zenta
+    :last: Arlt
+  username: zarlt
+  location: !ruby/object:User::Location
+    street: Uhlandstraße 850
+    city: Rochlitz
+    state: Thüringen
+    country: Germany
+    postcode: 91647
+    tz_offset: "+1:00"
+  email: zenta.arlt@example.com
+  phone:
+    :home: '0119-8947251'
+    :cell: 0172-0420958
+  picture:
+    :large: https://randomuser.me/api/portraits/women/4.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/4.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/4.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 152
+  name:
+    :title: Miss
+    :first: Jolanda
+    :last: Ligtenberg
+  username: jligtenberg
+  location: !ruby/object:User::Location
+    street: Kievitsheideweg 5564
+    city: Elkenrade
+    state: Groningen
+    country: Netherlands
+    postcode: 15604
+    tz_offset: "+10:00"
+  email: jolanda.ligtenberg@example.com
+  phone:
+    :home: "(697)-098-6217"
+    :cell: "(508)-474-4643"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/39.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/39.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/39.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 153
+  name:
+    :title: Mrs
+    :first: Aada
+    :last: Halonen
+  username: ahalonen
+  location: !ruby/object:User::Location
+    street: Hatanpään Valtatie 1624
+    city: Lemland
+    state: Pirkanmaa
+    country: Finland
+    postcode: 83375
+    tz_offset: "-9:00"
+  email: aada.halonen@example.com
+  phone:
+    :home: 05-575-606
+    :cell: 040-705-45-83
+  picture:
+    :large: https://randomuser.me/api/portraits/women/31.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/31.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/31.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 154
+  name:
+    :title: Ms
+    :first: Katalin
+    :last: Taube
+  username: ktaube
+  location: !ruby/object:User::Location
+    street: Amselweg 2384
+    city: Sigmaringen
+    state: Saarland
+    country: Germany
+    postcode: 13088
+    tz_offset: "-8:00"
+  email: katalin.taube@example.com
+  phone:
+    :home: '0920-1915876'
+    :cell: 0173-5308629
+  picture:
+    :large: https://randomuser.me/api/portraits/women/40.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/40.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/40.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 155
+  name:
+    :title: Mr
+    :first: Joona
+    :last: Kalm
+  username: jkalm
+  location: !ruby/object:User::Location
+    street: Pyynikintie 2333
+    city: Orivesi
+    state: Southern Ostrobothnia
+    country: Finland
+    postcode: 26170
+    tz_offset: "-10:00"
+  email: joona.kalm@example.com
+  phone:
+    :home: 04-384-350
+    :cell: '048-428-54-27'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/60.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/60.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/60.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 156
+  name:
+    :title: Miss
+    :first: Jennifer
+    :last: Mason
+  username: jmason
+  location: !ruby/object:User::Location
+    street: 456 School Lane
+    city: Coventry
+    state: Leicestershire
+    country: United Kingdom
+    postcode: W02 9PS
+    tz_offset: "+11:00"
+  email: jennifer.mason@example.com
+  phone:
+    :home: '019467 10569'
+    :cell: 0730-472-375
+  picture:
+    :large: https://randomuser.me/api/portraits/women/79.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/79.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/79.jpg
+  nationality: GB
+- !ruby/object:User
+  id: 157
+  name:
+    :title: Mrs
+    :first: Allie
+    :last: Price
+  username: aprice
+  location: !ruby/object:User::Location
+    street: 1810 O'Connell Street
+    city: Shannon
+    state: Kerry
+    country: Ireland
+    postcode: 39697
+    tz_offset: "+1:00"
+  email: allie.price@example.com
+  phone:
+    :home: 021-309-8393
+    :cell: '081-806-6495'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/10.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/10.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/10.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 158
+  name:
+    :title: Mr
+    :first: Theo
+    :last: Jackson
+  username: tjackson
+  location: !ruby/object:User::Location
+    street: 2957 Ponsonby Road
+    city: Blenheim
+    state: Nelson
+    country: New Zealand
+    postcode: 41152
+    tz_offset: "+3:00"
+  email: theo.jackson@example.com
+  phone:
+    :home: "(761)-902-4110"
+    :cell: "(104)-220-8812"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/1.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/1.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/1.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 159
+  name:
+    :title: Ms
+    :first: Mestan
+    :last: Süleymanoğlu
+  username: msüleymanoğlu
+  location: !ruby/object:User::Location
+    street: Necatibey Cd 5914
+    city: Giresun
+    state: Burdur
+    country: Turkey
+    postcode: 43064
+    tz_offset: "+1:00"
+  email: mestan.suleymanoglu@example.com
+  phone:
+    :home: "(008)-555-5176"
+    :cell: "(562)-856-9033"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/11.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/11.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/11.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 160
+  name:
+    :title: Mr
+    :first: Lachlan
+    :last: Li
+  username: lli
+  location: !ruby/object:User::Location
+    street: 7754 George Street
+    city: Palmerston North
+    state: Tasman
+    country: New Zealand
+    postcode: 55693
+    tz_offset: "-5:00"
+  email: lachlan.li@example.com
+  phone:
+    :home: "(185)-205-0222"
+    :cell: "(411)-422-1486"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/73.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/73.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/73.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 161
+  name:
+    :title: Mr
+    :first: Robin
+    :last: Pierre
+  username: rpierre
+  location: !ruby/object:User::Location
+    street: 7918, Place de L'Abbé-Jean-Lebeuf
+    city: Rueil-Malmaison
+    state: Haute-Savoie
+    country: France
+    postcode: 47330
+    tz_offset: "-9:00"
+  email: robin.pierre@example.com
+  phone:
+    :home: 01-22-15-11-77
+    :cell: 06-07-07-78-72
+  picture:
+    :large: https://randomuser.me/api/portraits/men/15.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/15.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/15.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 162
+  name:
+    :title: Mrs
+    :first: Inmaculada
+    :last: Cabrera
+  username: icabrera
+  location: !ruby/object:User::Location
+    street: Calle de Ángel García 8337
+    city: Arrecife
+    state: Castilla la Mancha
+    country: Spain
+    postcode: 62476
+    tz_offset: "-12:00"
+  email: inmaculada.cabrera@example.com
+  phone:
+    :home: 940-811-334
+    :cell: 604-479-924
+  picture:
+    :large: https://randomuser.me/api/portraits/women/33.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/33.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/33.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 163
+  name:
+    :title: Mr
+    :first: James
+    :last: Morin
+  username: jmorin
+  location: !ruby/object:User::Location
+    street: 5364 Vimy St
+    city: Oakville
+    state: Nova Scotia
+    country: Canada
+    postcode: J9X 1T8
+    tz_offset: "-7:00"
+  email: james.morin@example.com
+  phone:
+    :home: 869-255-8382
+    :cell: 445-010-1335
+  picture:
+    :large: https://randomuser.me/api/portraits/men/13.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/13.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/13.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 164
+  name:
+    :title: Miss
+    :first: Franca
+    :last: Lopes
+  username: flopes
+  location: !ruby/object:User::Location
+    street: Rua Duque de Caxias  7099
+    city: Santos
+    state: Amazonas
+    country: Brazil
+    postcode: 35536
+    tz_offset: "+9:00"
+  email: franca.lopes@example.com
+  phone:
+    :home: "(93) 7884-4423"
+    :cell: "(10) 4905-7016"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/20.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/20.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/20.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 165
+  name:
+    :title: Miss
+    :first: Liesa
+    :last: Kluth
+  username: lkluth
+  location: !ruby/object:User::Location
+    street: Danziger Straße 3398
+    city: Linnich
+    state: Berlin
+    country: Germany
+    postcode: 23708
+    tz_offset: "-7:00"
+  email: liesa.kluth@example.com
+  phone:
+    :home: '0839-7673950'
+    :cell: 0172-4165301
+  picture:
+    :large: https://randomuser.me/api/portraits/women/0.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/0.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/0.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 166
+  name:
+    :title: Mr
+    :first: Felix
+    :last: Meyer
+  username: fmeyer
+  location: !ruby/object:User::Location
+    street: 5964 Broadway
+    city: Aberdeen
+    state: County Fermanagh
+    country: United Kingdom
+    postcode: TI90 9UE
+    tz_offset: "-3:00"
+  email: felix.meyer@example.com
+  phone:
+    :home: '017684 27660'
+    :cell: '0791-621-629'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/68.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/68.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/68.jpg
+  nationality: GB
+- !ruby/object:User
+  id: 167
+  name:
+    :title: Mrs
+    :first: Evie
+    :last: Li
+  username: eli
+  location: !ruby/object:User::Location
+    street: 4344 Dyers Road
+    city: Napier
+    state: Bay of Plenty
+    country: New Zealand
+    postcode: 65251
+    tz_offset: "+6:00"
+  email: evie.li@example.com
+  phone:
+    :home: "(990)-291-4385"
+    :cell: "(976)-867-1272"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/61.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/61.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/61.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 168
+  name:
+    :title: Mrs
+    :first: Bernice
+    :last: Hernandez
+  username: bhernandez
+  location: !ruby/object:User::Location
+    street: 949 Crockett St
+    city: Bunbury
+    state: Northern Territory
+    country: Australia
+    postcode: 4673
+    tz_offset: "+8:00"
+  email: bernice.hernandez@example.com
+  phone:
+    :home: 01-6157-5945
+    :cell: 0477-002-889
+  picture:
+    :large: https://randomuser.me/api/portraits/women/65.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/65.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/65.jpg
+  nationality: AU
+- !ruby/object:User
+  id: 169
+  name:
+    :title: Miss
+    :first: Sofia
+    :last: Kari
+  username: skari
+  location: !ruby/object:User::Location
+    street: Korkeavuorenkatu 3630
+    city: Harjavalta
+    state: Åland
+    country: Finland
+    postcode: 37353
+    tz_offset: "-4:00"
+  email: sofia.kari@example.com
+  phone:
+    :home: 04-398-186
+    :cell: 046-580-42-11
+  picture:
+    :large: https://randomuser.me/api/portraits/women/75.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/75.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/75.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 170
+  name:
+    :title: Mr
+    :first: Adis
+    :last: Anker
+  username: aanker
+  location: !ruby/object:User::Location
+    street: Korte Beestenmarkt 1031
+    city: Woubrugge
+    state: Groningen
+    country: Netherlands
+    postcode: 94736
+    tz_offset: "+2:00"
+  email: adis.anker@example.com
+  phone:
+    :home: "(934)-231-5574"
+    :cell: "(680)-881-9139"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/77.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/77.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/77.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 171
+  name:
+    :title: Mr
+    :first: Julien
+    :last: Deschamps
+  username: jdeschamps
+  location: !ruby/object:User::Location
+    street: 1501, Rue Dugas-Montbel
+    city: Clermont-Ferrand
+    state: Isère
+    country: France
+    postcode: 58526
+    tz_offset: "-5:00"
+  email: julien.deschamps@example.com
+  phone:
+    :home: 01-31-20-93-54
+    :cell: 06-90-99-37-50
+  picture:
+    :large: https://randomuser.me/api/portraits/men/11.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/11.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/11.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 172
+  name:
+    :title: Miss
+    :first: Olivia
+    :last: Marie
+  username: omarie
+  location: !ruby/object:User::Location
+    street: 2697, Place de L'Église
+    city: Lyon
+    state: Côtes-D'Armor
+    country: France
+    postcode: 64532
+    tz_offset: "+6:00"
+  email: olivia.marie@example.com
+  phone:
+    :home: 05-79-31-85-80
+    :cell: 06-99-06-31-95
+  picture:
+    :large: https://randomuser.me/api/portraits/women/14.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/14.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/14.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 173
+  name:
+    :title: Mr
+    :first: Burkhard
+    :last: Esch
+  username: besch
+  location: !ruby/object:User::Location
+    street: Jahnstraße 2782
+    city: Querfurt
+    state: Sachsen
+    country: Germany
+    postcode: 76153
+    tz_offset: "-11:00"
+  email: burkhard.esch@example.com
+  phone:
+    :home: '0935-2729315'
+    :cell: '0179-9295557'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/51.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/51.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/51.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 174
+  name:
+    :title: Mr
+    :first: Neil
+    :last: Bell
+  username: nbell
+  location: !ruby/object:User::Location
+    street: 7387 Poplar Dr
+    city: Geelong
+    state: Tasmania
+    country: Australia
+    postcode: 9590
+    tz_offset: "+3:00"
+  email: neil.bell@example.com
+  phone:
+    :home: 01-2203-4109
+    :cell: 0426-172-702
+  picture:
+    :large: https://randomuser.me/api/portraits/men/36.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/36.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/36.jpg
+  nationality: AU
+- !ruby/object:User
+  id: 175
+  name:
+    :title: Mr
+    :first: Albertino
+    :last: Costa
+  username: acosta
+  location: !ruby/object:User::Location
+    street: Rua São Paulo  7455
+    city: Lages
+    state: Distrito Federal
+    country: Brazil
+    postcode: 77424
+    tz_offset: "-6:00"
+  email: albertino.costa@example.com
+  phone:
+    :home: "(51) 4231-4235"
+    :cell: "(77) 2349-7990"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/27.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/27.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/27.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 176
+  name:
+    :title: Mr
+    :first: Flynn
+    :last: Hughes
+  username: fhughes
+  location: !ruby/object:User::Location
+    street: 7742 Tamaki Drive
+    city: Whanganui
+    state: Otago
+    country: New Zealand
+    postcode: 52809
+    tz_offset: "+10:00"
+  email: flynn.hughes@example.com
+  phone:
+    :home: "(955)-939-8267"
+    :cell: "(516)-188-4587"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/23.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/23.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/23.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 177
+  name:
+    :title: Mademoiselle
+    :first: Christiane
+    :last: Roger
+  username: croger
+  location: !ruby/object:User::Location
+    street: Rue des Ecrivains 8729
+    city: Bretzwil
+    state: Vaud
+    country: Switzerland
+    postcode: 5467
+    tz_offset: "+8:00"
+  email: christiane.roger@example.com
+  phone:
+    :home: 075 776 23 46
+    :cell: '078 013 87 89'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/83.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/83.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/83.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 178
+  name:
+    :title: Mr
+    :first: Benjamin
+    :last: Hughes
+  username: bhughes
+  location: !ruby/object:User::Location
+    street: 9033 Wellesley Street
+    city: Blenheim
+    state: Otago
+    country: New Zealand
+    postcode: 51360
+    tz_offset: "+3:00"
+  email: benjamin.hughes@example.com
+  phone:
+    :home: "(531)-477-1672"
+    :cell: "(937)-776-9140"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/0.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/0.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/0.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 179
+  name:
+    :title: Mr
+    :first: Sytze
+    :last: Van de Riet
+  username: svan de riet
+  location: !ruby/object:User::Location
+    street: Ijzertijdstraat 9219
+    city: Neer
+    state: Friesland
+    country: Netherlands
+    postcode: 23367
+    tz_offset: "-2:00"
+  email: sytze.vanderiet@example.com
+  phone:
+    :home: "(138)-639-6361"
+    :cell: "(216)-091-1976"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/20.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/20.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/20.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 180
+  name:
+    :title: Miss
+    :first: Allie
+    :last: Robinson
+  username: arobinson
+  location: !ruby/object:User::Location
+    street: 4355 Dublin Road
+    city: Letterkenny
+    state: Kerry
+    country: Ireland
+    postcode: 36275
+    tz_offset: "+4:30"
+  email: allie.robinson@example.com
+  phone:
+    :home: 011-132-1382
+    :cell: '081-989-9975'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/83.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/83.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/83.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 181
+  name:
+    :title: Miss
+    :first: Karla
+    :last: Christensen
+  username: kchristensen
+  location: !ruby/object:User::Location
+    street: Villavej 4952
+    city: Sundby/Erslev
+    state: Syddanmark
+    country: Denmark
+    postcode: 97240
+    tz_offset: "-2:00"
+  email: karla.christensen@example.com
+  phone:
+    :home: '23826378'
+    :cell: '13797340'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/79.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/79.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/79.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 182
+  name:
+    :title: Mr
+    :first: Giray
+    :last: Kunt
+  username: gkunt
+  location: !ruby/object:User::Location
+    street: Istiklal Cd 3194
+    city: Diyarbakır
+    state: Kastamonu
+    country: Turkey
+    postcode: 30373
+    tz_offset: "-2:00"
+  email: giray.kunt@example.com
+  phone:
+    :home: "(888)-969-5968"
+    :cell: "(010)-696-0510"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/77.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/77.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/77.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 183
+  name:
+    :title: Mr
+    :first: Alexander
+    :last: Jensen
+  username: ajensen
+  location: !ruby/object:User::Location
+    street: Fyrrevej 7630
+    city: Frederiksberg
+    state: Syddanmark
+    country: Denmark
+    postcode: 23862
+    tz_offset: "+5:00"
+  email: alexander.jensen@example.com
+  phone:
+    :home: '68807179'
+    :cell: '59704551'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/55.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/55.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/55.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 184
+  name:
+    :title: Mr
+    :first: Andres
+    :last: Navarro
+  username: anavarro
+  location: !ruby/object:User::Location
+    street: Calle del Arenal 2955
+    city: Cartagena
+    state: País Vasco
+    country: Spain
+    postcode: 77413
+    tz_offset: "+4:30"
+  email: andres.navarro@example.com
+  phone:
+    :home: 932-778-684
+    :cell: 668-583-070
+  picture:
+    :large: https://randomuser.me/api/portraits/men/89.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/89.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/89.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 185
+  name:
+    :title: Mr
+    :first: Cafer
+    :last: Vervuurt
+  username: cvervuurt
+  location: !ruby/object:User::Location
+    street: De Beek 9379
+    city: Echten Dr
+    state: Limburg
+    country: Netherlands
+    postcode: 53238
+    tz_offset: "-5:00"
+  email: cafer.vervuurt@example.com
+  phone:
+    :home: "(501)-739-3917"
+    :cell: "(669)-694-8575"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/49.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/49.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/49.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 186
+  name:
+    :title: Ms
+    :first: Cathy
+    :last: Wilson
+  username: cwilson
+  location: !ruby/object:User::Location
+    street: 8574 Mill Road
+    city: Belfast
+    state: Bedfordshire
+    country: United Kingdom
+    postcode: WX66 4JE
+    tz_offset: "-3:00"
+  email: cathy.wilson@example.com
+  phone:
+    :home: '017684 13525'
+    :cell: 0723-824-516
+  picture:
+    :large: https://randomuser.me/api/portraits/women/68.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/68.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/68.jpg
+  nationality: GB
+- !ruby/object:User
+  id: 187
+  name:
+    :title: Mr
+    :first: Jason
+    :last: Ramos
+  username: jramos
+  location: !ruby/object:User::Location
+    street: 989 Northaven Rd
+    city: Billings
+    state: Hawaii
+    country: United States
+    postcode: 91853
+    tz_offset: "+4:30"
+  email: jason.ramos@example.com
+  phone:
+    :home: "(741)-015-9990"
+    :cell: "(961)-382-2502"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/63.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/63.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/63.jpg
+  nationality: US
+- !ruby/object:User
+  id: 188
+  name:
+    :title: Mr
+    :first: Özkan
+    :last: Çetin
+  username: öçetin
+  location: !ruby/object:User::Location
+    street: Şehitler Cd 154
+    city: Manisa
+    state: Sinop
+    country: Turkey
+    postcode: 36404
+    tz_offset: "-1:00"
+  email: ozkan.cetin@example.com
+  phone:
+    :home: "(611)-143-6739"
+    :cell: "(419)-616-4851"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/85.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/85.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/85.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 189
+  name:
+    :title: Mrs
+    :first: Erotildes
+    :last: Ribeiro
+  username: eribeiro
+  location: !ruby/object:User::Location
+    street: Rua Maranhão  7841
+    city: Conselheiro Lafaiete
+    state: Bahia
+    country: Brazil
+    postcode: 83379
+    tz_offset: "-10:00"
+  email: erotildes.ribeiro@example.com
+  phone:
+    :home: "(86) 4892-5102"
+    :cell: "(75) 2147-6971"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/62.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/62.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/62.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 190
+  name:
+    :title: Miss
+    :first: Lauryn
+    :last: Hazewinkel
+  username: lhazewinkel
+  location: !ruby/object:User::Location
+    street: Extersslop 8522
+    city: Bloemendaal
+    state: Zeeland
+    country: Netherlands
+    postcode: 85585
+    tz_offset: "+5:00"
+  email: lauryn.hazewinkel@example.com
+  phone:
+    :home: "(561)-423-8699"
+    :cell: "(014)-303-2061"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/36.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/36.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/36.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 191
+  name:
+    :title: Mrs
+    :first: Louise
+    :last: Barros
+  username: lbarros
+  location: !ruby/object:User::Location
+    street: Avenida da Democracia 9397
+    city: Paço do Lumiar
+    state: Amapá
+    country: Brazil
+    postcode: 16200
+    tz_offset: "-3:00"
+  email: louise.barros@example.com
+  phone:
+    :home: "(51) 4324-5139"
+    :cell: "(76) 2380-1366"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/38.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/38.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/38.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 192
+  name:
+    :title: Miss
+    :first: Kate
+    :last: Davies
+  username: kdavies
+  location: !ruby/object:User::Location
+    street: 8702 Memorial Avenue
+    city: Taupo
+    state: Auckland
+    country: New Zealand
+    postcode: 62108
+    tz_offset: "+5:30"
+  email: kate.davies@example.com
+  phone:
+    :home: "(346)-799-2738"
+    :cell: "(206)-456-7864"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/47.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/47.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/47.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 193
+  name:
+    :title: Ms
+    :first: Isabella
+    :last: Tremblay
+  username: itremblay
+  location: !ruby/object:User::Location
+    street: 5135 Main St
+    city: Killarney
+    state: New Brunswick
+    country: Canada
+    postcode: Z7Q 5X9
+    tz_offset: "-1:00"
+  email: isabella.tremblay@example.com
+  phone:
+    :home: 802-563-1410
+    :cell: 280-529-4024
+  picture:
+    :large: https://randomuser.me/api/portraits/women/85.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/85.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/85.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 194
+  name:
+    :title: Mr
+    :first: Damiën
+    :last: Merks
+  username: dmerks
+  location: !ruby/object:User::Location
+    street: Engel de Ruijterstraat 2255
+    city: Hoofddorp
+    state: Noord-Brabant
+    country: Netherlands
+    postcode: 29280
+    tz_offset: "-4:00"
+  email: damien.merks@example.com
+  phone:
+    :home: "(544)-326-5019"
+    :cell: "(304)-717-2613"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/32.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/32.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/32.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 195
+  name:
+    :title: Madame
+    :first: Matilde
+    :last: Rey
+  username: mrey
+  location: !ruby/object:User::Location
+    street: Avenue Jean-Jaurès 1690
+    city: Schwyz
+    state: Solothurn
+    country: Switzerland
+    postcode: 5919
+    tz_offset: "-1:00"
+  email: matilde.rey@example.com
+  phone:
+    :home: 075 917 02 91
+    :cell: 075 122 74 79
+  picture:
+    :large: https://randomuser.me/api/portraits/women/68.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/68.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/68.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 196
+  name:
+    :title: Mr
+    :first: Liberto
+    :last: Moreira
+  username: lmoreira
+  location: !ruby/object:User::Location
+    street: Rua Principal 4444
+    city: Macaé
+    state: Rondônia
+    country: Brazil
+    postcode: 45944
+    tz_offset: "-9:00"
+  email: liberto.moreira@example.com
+  phone:
+    :home: "(17) 6802-0085"
+    :cell: "(85) 8234-5398"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/3.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/3.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/3.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 197
+  name:
+    :title: Mr
+    :first: Louis
+    :last: Turner
+  username: lturner
+  location: !ruby/object:User::Location
+    street: 3302 Customs Street
+    city: Whangarei
+    state: Southland
+    country: New Zealand
+    postcode: 86583
+    tz_offset: "-9:00"
+  email: louis.turner@example.com
+  phone:
+    :home: "(546)-605-9819"
+    :cell: "(321)-064-0192"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/15.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/15.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/15.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 198
+  name:
+    :title: Mrs
+    :first: Léa
+    :last: Lecomte
+  username: llecomte
+  location: !ruby/object:User::Location
+    street: 9944, Place du 8 Février 1962
+    city: Champigny-sur-Marne
+    state: Tarn
+    country: France
+    postcode: 74593
+    tz_offset: "-2:00"
+  email: lea.lecomte@example.com
+  phone:
+    :home: 01-50-14-06-01
+    :cell: 06-83-36-88-85
+  picture:
+    :large: https://randomuser.me/api/portraits/women/42.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/42.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/42.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 199
+  name:
+    :title: Madame
+    :first: Ilona
+    :last: Dupuis
+  username: idupuis
+  location: !ruby/object:User::Location
+    street: Rue Abel-Gance 1816
+    city: Wil (Sg)
+    state: St. Gallen
+    country: Switzerland
+    postcode: 9893
+    tz_offset: "-3:00"
+  email: ilona.dupuis@example.com
+  phone:
+    :home: 075 635 67 28
+    :cell: 077 406 37 74
+  picture:
+    :large: https://randomuser.me/api/portraits/women/71.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/71.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/71.jpg
+  nationality: CH
+- !ruby/object:User
+  id: 200
+  name:
+    :title: Miss
+    :first: Emily
+    :last: Mæhlum
+  username: emæhlum
+  location: !ruby/object:User::Location
+    street: Spireaveien 7060
+    city: Torget
+    state: Sogn og Fjordane
+    country: Norway
+    postcode: '8514'
+    tz_offset: "-12:00"
+  email: emily.maehlum@example.com
+  phone:
+    :home: '25446386'
+    :cell: '90059850'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/19.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/19.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/19.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 201
+  name:
+    :title: Mr
+    :first: Noah
+    :last: Olsen
+  username: nolsen
+  location: !ruby/object:User::Location
+    street: Hirsevænget 2061
+    city: Stoevring
+    state: Midtjylland
+    country: Denmark
+    postcode: 66708
+    tz_offset: "-6:00"
+  email: noah.olsen@example.com
+  phone:
+    :home: '80832316'
+    :cell: '73282986'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/5.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/5.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/5.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 202
+  name:
+    :title: Ms
+    :first: Mila
+    :last: Harris
+  username: mharris
+  location: !ruby/object:User::Location
+    street: 307 Cavendish Drive
+    city: Palmerston North
+    state: Waikato
+    country: New Zealand
+    postcode: 75331
+    tz_offset: "+9:00"
+  email: mila.harris@example.com
+  phone:
+    :home: "(993)-348-9065"
+    :cell: "(065)-717-3682"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/62.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/62.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/62.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 203
+  name:
+    :title: Mr
+    :first: Miguel
+    :last: Hidalgo
+  username: mhidalgo
+  location: !ruby/object:User::Location
+    street: Calle de Arturo Soria 9501
+    city: Torrejón de Ardoz
+    state: Canarias
+    country: Spain
+    postcode: 26591
+    tz_offset: "-8:00"
+  email: miguel.hidalgo@example.com
+  phone:
+    :home: 976-586-667
+    :cell: 686-137-658
+  picture:
+    :large: https://randomuser.me/api/portraits/men/30.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/30.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/30.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 204
+  name:
+    :title: Ms
+    :first: Judy
+    :last: Neal
+  username: jneal
+  location: !ruby/object:User::Location
+    street: 4769 Manor Road
+    city: Ratoath
+    state: Wicklow
+    country: Ireland
+    postcode: 11795
+    tz_offset: "+11:00"
+  email: judy.neal@example.com
+  phone:
+    :home: 071-436-5501
+    :cell: '081-739-3863'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/50.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/50.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/50.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 205
+  name:
+    :title: Mr
+    :first: Tony
+    :last: David
+  username: tdavid
+  location: !ruby/object:User::Location
+    street: 8184, Place de L'Abbé-Jean-Lebeuf
+    city: Poitiers
+    state: Hauts-de-Seine
+    country: France
+    postcode: 52077
+    tz_offset: "-3:30"
+  email: tony.david@example.com
+  phone:
+    :home: 05-51-50-16-55
+    :cell: 06-31-56-20-39
+  picture:
+    :large: https://randomuser.me/api/portraits/men/72.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/72.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/72.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 206
+  name:
+    :title: Mr
+    :first: Malik
+    :last: Harcourt
+  username: mharcourt
+  location: !ruby/object:User::Location
+    street: 1129 King St
+    city: Windsor
+    state: Prince Edward Island
+    country: Canada
+    postcode: Q4P 5G4
+    tz_offset: "-5:00"
+  email: malik.harcourt@example.com
+  phone:
+    :home: 279-634-4701
+    :cell: 143-265-7528
+  picture:
+    :large: https://randomuser.me/api/portraits/men/88.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/88.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/88.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 207
+  name:
+    :title: Ms
+    :first: Justine
+    :last: Lefebvre
+  username: jlefebvre
+  location: !ruby/object:User::Location
+    street: 7451, Rue de L'Abbé-Carton
+    city: Orléans
+    state: Haute-Savoie
+    country: France
+    postcode: 66942
+    tz_offset: "-1:00"
+  email: justine.lefebvre@example.com
+  phone:
+    :home: 02-83-41-49-44
+    :cell: 06-93-78-21-02
+  picture:
+    :large: https://randomuser.me/api/portraits/women/52.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/52.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/52.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 208
+  name:
+    :title: Ms
+    :first: Ege
+    :last: Abacı
+  username: eabacı
+  location: !ruby/object:User::Location
+    street: Necatibey Cd 1331
+    city: Bayburt
+    state: Yozgat
+    country: Turkey
+    postcode: 31289
+    tz_offset: "-10:00"
+  email: ege.abaci@example.com
+  phone:
+    :home: "(032)-921-0891"
+    :cell: "(369)-763-1088"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/20.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/20.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/20.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 209
+  name:
+    :title: Mr
+    :first: Roberto
+    :last: Lee
+  username: rlee
+  location: !ruby/object:User::Location
+    street: 7503 E Sandy Lake Rd
+    city: Columbia
+    state: New Mexico
+    country: United States
+    postcode: 28071
+    tz_offset: "+7:00"
+  email: roberto.lee@example.com
+  phone:
+    :home: "(641)-591-2926"
+    :cell: "(710)-774-0662"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/47.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/47.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/47.jpg
+  nationality: US
+- !ruby/object:User
+  id: 210
+  name:
+    :title: Mr
+    :first: Kenan
+    :last: Alpuğan
+  username: kalpuğan
+  location: !ruby/object:User::Location
+    street: Mevlana Cd 7144
+    city: Şırnak
+    state: Kocaeli
+    country: Turkey
+    postcode: 40072
+    tz_offset: "-3:30"
+  email: kenan.alpugan@example.com
+  phone:
+    :home: "(643)-868-7375"
+    :cell: "(139)-489-8954"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/49.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/49.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/49.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 211
+  name:
+    :title: Mr
+    :first: Juan
+    :last: Castillo
+  username: jcastillo
+  location: !ruby/object:User::Location
+    street: Calle de Toledo 2666
+    city: Pontevedra
+    state: Aragón
+    country: Spain
+    postcode: 38843
+    tz_offset: "+6:00"
+  email: juan.castillo@example.com
+  phone:
+    :home: 937-351-487
+    :cell: 697-844-510
+  picture:
+    :large: https://randomuser.me/api/portraits/men/98.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/98.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/98.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 212
+  name:
+    :title: Mr
+    :first: Tristan
+    :last: Andersen
+  username: tandersen
+  location: !ruby/object:User::Location
+    street: Nøddelunden 6497
+    city: Viby Sj.
+    state: Midtjylland
+    country: Denmark
+    postcode: 47392
+    tz_offset: "-6:00"
+  email: tristan.andersen@example.com
+  phone:
+    :home: '96651952'
+    :cell: '35442078'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/77.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/77.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/77.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 213
+  name:
+    :title: Miss
+    :first: Selma
+    :last: Møller
+  username: smøller
+  location: !ruby/object:User::Location
+    street: Egelunden 7963
+    city: Skaerbaek
+    state: Midtjylland
+    country: Denmark
+    postcode: 84155
+    tz_offset: "-6:00"
+  email: selma.moller@example.com
+  phone:
+    :home: '97675799'
+    :cell: '88300791'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/90.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/90.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/90.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 214
+  name:
+    :title: Ms
+    :first: Laura
+    :last: Carlson
+  username: lcarlson
+  location: !ruby/object:User::Location
+    street: 1666 Denny Street
+    city: Ballybofey-Stranorlar
+    state: Tipperary
+    country: Ireland
+    postcode: 56143
+    tz_offset: "-10:00"
+  email: laura.carlson@example.com
+  phone:
+    :home: 031-806-4962
+    :cell: '081-794-4379'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/38.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/38.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/38.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 215
+  name:
+    :title: Mrs
+    :first: Samanta
+    :last: Araújo
+  username: saraújo
+  location: !ruby/object:User::Location
+    street: Rua Santa Luzia  6641
+    city: Hortolândia
+    state: Amazonas
+    country: Brazil
+    postcode: 47661
+    tz_offset: "-12:00"
+  email: samanta.araujo@example.com
+  phone:
+    :home: "(77) 5180-9445"
+    :cell: "(02) 5979-2698"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/48.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/48.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/48.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 216
+  name:
+    :title: Ms
+    :first: Maria
+    :last: Jensen
+  username: mjensen
+  location: !ruby/object:User::Location
+    street: Gøgevej 670
+    city: Horsens
+    state: Danmark
+    country: Denmark
+    postcode: 51546
+    tz_offset: "+11:00"
+  email: maria.jensen@example.com
+  phone:
+    :home: '66671769'
+    :cell: '38587419'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/89.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/89.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/89.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 217
+  name:
+    :title: Ms
+    :first: Estelle
+    :last: Denis
+  username: edenis
+  location: !ruby/object:User::Location
+    street: 6589, Avenue Jean-Jaurès
+    city: Marseille
+    state: Gironde
+    country: France
+    postcode: 96630
+    tz_offset: "+5:00"
+  email: estelle.denis@example.com
+  phone:
+    :home: 02-65-78-20-64
+    :cell: 06-78-46-76-17
+  picture:
+    :large: https://randomuser.me/api/portraits/women/36.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/36.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/36.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 218
+  name:
+    :title: Mr
+    :first: Jordan
+    :last: Williams
+  username: jwilliams
+  location: !ruby/object:User::Location
+    street: 2479 Fergusson Drive
+    city: Whanganui
+    state: Waikato
+    country: New Zealand
+    postcode: 24890
+    tz_offset: "+8:00"
+  email: jordan.williams@example.com
+  phone:
+    :home: "(824)-219-7209"
+    :cell: "(121)-211-8484"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/32.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/32.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/32.jpg
+  nationality: NZ
+- !ruby/object:User
+  id: 219
+  name:
+    :title: Mr
+    :first: Volkan
+    :last: Akan
+  username: vakan
+  location: !ruby/object:User::Location
+    street: Bağdat Cd 8191
+    city: Tokat
+    state: Konya
+    country: Turkey
+    postcode: 99634
+    tz_offset: "-3:00"
+  email: volkan.akan@example.com
+  phone:
+    :home: "(968)-229-6917"
+    :cell: "(886)-139-8800"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/46.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/46.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/46.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 220
+  name:
+    :title: Mr
+    :first: Cody
+    :last: West
+  username: cwest
+  location: !ruby/object:User::Location
+    street: 8047 Camden Ave
+    city: Greensboro
+    state: Montana
+    country: United States
+    postcode: 27247
+    tz_offset: "+10:00"
+  email: cody.west@example.com
+  phone:
+    :home: "(367)-580-2017"
+    :cell: "(528)-350-3120"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/68.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/68.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/68.jpg
+  nationality: US
+- !ruby/object:User
+  id: 221
+  name:
+    :title: Mr
+    :first: Johan
+    :last: Jensen
+  username: jjensen
+  location: !ruby/object:User::Location
+    street: Nygårdterrasserne 4617
+    city: København Sv
+    state: Nordjylland
+    country: Denmark
+    postcode: 76985
+    tz_offset: "-4:00"
+  email: johan.jensen@example.com
+  phone:
+    :home: '41961103'
+    :cell: '15600142'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/69.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/69.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/69.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 222
+  name:
+    :title: Mrs
+    :first: Johanne
+    :last: Pedersen
+  username: jpedersen
+  location: !ruby/object:User::Location
+    street: Gøgevej 8888
+    city: Nr Åby
+    state: Midtjylland
+    country: Denmark
+    postcode: 68843
+    tz_offset: "-6:00"
+  email: johanne.pedersen@example.com
+  phone:
+    :home: '83017364'
+    :cell: '29303312'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/7.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/7.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/7.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 223
+  name:
+    :title: Miss
+    :first: Jamie
+    :last: Holland
+  username: jholland
+  location: !ruby/object:User::Location
+    street: 5637 W Belt Line Rd
+    city: Australian Capital Territory
+    state: Queensland
+    country: Australia
+    postcode: 9664
+    tz_offset: "+11:00"
+  email: jamie.holland@example.com
+  phone:
+    :home: '09-5190-7285'
+    :cell: 0412-015-255
+  picture:
+    :large: https://randomuser.me/api/portraits/women/7.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/7.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/7.jpg
+  nationality: AU
+- !ruby/object:User
+  id: 224
+  name:
+    :title: Miss
+    :first: Catalina
+    :last: Iglesias
+  username: ciglesias
+  location: !ruby/object:User::Location
+    street: Avenida de La Albufera 4925
+    city: Orihuela
+    state: Galicia
+    country: Spain
+    postcode: 43198
+    tz_offset: "-7:00"
+  email: catalina.iglesias@example.com
+  phone:
+    :home: 925-005-636
+    :cell: 685-757-841
+  picture:
+    :large: https://randomuser.me/api/portraits/women/4.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/4.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/4.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 225
+  name:
+    :title: Mr
+    :first: Gustav
+    :last: Poulsen
+  username: gpoulsen
+  location: !ruby/object:User::Location
+    street: Hulvejen 3501
+    city: København Sv
+    state: Nordjylland
+    country: Denmark
+    postcode: 35453
+    tz_offset: "-4:00"
+  email: gustav.poulsen@example.com
+  phone:
+    :home: '76165231'
+    :cell: '60348950'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/32.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/32.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/32.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 226
+  name:
+    :title: Miss
+    :first: Rosvita
+    :last: Castro
+  username: rcastro
+  location: !ruby/object:User::Location
+    street: Rua Sete de Setembro  6273
+    city: Uberaba
+    state: Distrito Federal
+    country: Brazil
+    postcode: 59859
+    tz_offset: "+5:00"
+  email: rosvita.castro@example.com
+  phone:
+    :home: "(63) 3902-6947"
+    :cell: "(30) 2188-4224"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/2.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/2.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/2.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 227
+  name:
+    :title: Miss
+    :first: Kristin
+    :last: Hoffman
+  username: khoffman
+  location: !ruby/object:User::Location
+    street: 6680 Manor Road
+    city: Wexford
+    state: Laois
+    country: Ireland
+    postcode: 91531
+    tz_offset: "-4:00"
+  email: kristin.hoffman@example.com
+  phone:
+    :home: 041-939-9465
+    :cell: '081-947-7228'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/67.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/67.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/67.jpg
+  nationality: IE
+- !ruby/object:User
+  id: 228
+  name:
+    :title: Mr
+    :first: Liam
+    :last: Fletcher
+  username: lfletcher
+  location: !ruby/object:User::Location
+    street: 5468 Hunters Creek Dr
+    city: Warrnambool
+    state: Northern Territory
+    country: Australia
+    postcode: 7232
+    tz_offset: "+4:00"
+  email: liam.fletcher@example.com
+  phone:
+    :home: 07-6162-7017
+    :cell: 0420-977-739
+  picture:
+    :large: https://randomuser.me/api/portraits/men/52.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/52.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/52.jpg
+  nationality: AU
+- !ruby/object:User
+  id: 229
+  name:
+    :title: Miss
+    :first: Abigail
+    :last: Li
+  username: ali
+  location: !ruby/object:User::Location
+    street: 7144 Alfred St
+    city: Borden
+    state: Alberta
+    country: Canada
+    postcode: M9X 5U4
+    tz_offset: "-12:00"
+  email: abigail.li@example.com
+  phone:
+    :home: 551-373-4481
+    :cell: 131-954-4070
+  picture:
+    :large: https://randomuser.me/api/portraits/women/43.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/43.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/43.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 230
+  name:
+    :title: Mr
+    :first: Everett
+    :last: Robertson
+  username: erobertson
+  location: !ruby/object:User::Location
+    street: 199 Homestead Rd
+    city: Albury
+    state: South Australia
+    country: Australia
+    postcode: 1108
+    tz_offset: '0:00'
+  email: everett.robertson@example.com
+  phone:
+    :home: 01-0944-6835
+    :cell: '0486-775-837'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/78.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/78.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/78.jpg
+  nationality: AU
+- !ruby/object:User
+  id: 231
+  name:
+    :title: Mr
+    :first: Victor
+    :last: Veldhuisen
+  username: vveldhuisen
+  location: !ruby/object:User::Location
+    street: Haitinkweg 4649
+    city: Albrandswaard
+    state: Friesland
+    country: Netherlands
+    postcode: 29781
+    tz_offset: "+4:00"
+  email: victor.veldhuisen@example.com
+  phone:
+    :home: "(326)-411-2485"
+    :cell: "(528)-038-8078"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/54.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/54.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/54.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 232
+  name:
+    :title: Ms
+    :first: Annerieke
+    :last: Ansems
+  username: aansems
+  location: !ruby/object:User::Location
+    street: Hoog Heukelom 7693
+    city: Lierop
+    state: Drenthe
+    country: Netherlands
+    postcode: 24526
+    tz_offset: "-2:00"
+  email: annerieke.ansems@example.com
+  phone:
+    :home: "(745)-126-8991"
+    :cell: "(265)-768-1439"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/85.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/85.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/85.jpg
+  nationality: NL
+- !ruby/object:User
+  id: 233
+  name:
+    :title: Miss
+    :first: Venla
+    :last: Ylitalo
+  username: vylitalo
+  location: !ruby/object:User::Location
+    street: Hatanpään Valtatie 8258
+    city: Siuntio
+    state: Kainuu
+    country: Finland
+    postcode: 43484
+    tz_offset: "+3:30"
+  email: venla.ylitalo@example.com
+  phone:
+    :home: 07-348-379
+    :cell: 041-068-82-76
+  picture:
+    :large: https://randomuser.me/api/portraits/women/80.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/80.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/80.jpg
+  nationality: FI
+- !ruby/object:User
+  id: 234
+  name:
+    :title: Mr
+    :first: Silas
+    :last: Hansen
+  username: shansen
+  location: !ruby/object:User::Location
+    street: Fredensvej 8709
+    city: Ryslinge
+    state: Syddanmark
+    country: Denmark
+    postcode: 31275
+    tz_offset: "+8:00"
+  email: silas.hansen@example.com
+  phone:
+    :home: '38566691'
+    :cell: '81315391'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/37.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/37.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/37.jpg
+  nationality: DK
+- !ruby/object:User
+  id: 235
+  name:
+    :title: Miss
+    :first: Lilly
+    :last: Corneliussen
+  username: lcorneliussen
+  location: !ruby/object:User::Location
+    street: Dråga 4688
+    city: Svelgen
+    state: Trøndelag
+    country: Norway
+    postcode: '1950'
+    tz_offset: "+4:30"
+  email: lilly.corneliussen@example.com
+  phone:
+    :home: '66081102'
+    :cell: '42383003'
+  picture:
+    :large: https://randomuser.me/api/portraits/women/51.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/51.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/51.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 236
+  name:
+    :title: Miss
+    :first: Emmy
+    :last: Giraud
+  username: egiraud
+  location: !ruby/object:User::Location
+    street: 4936, Place de L'Europe
+    city: Besançon
+    state: Eure-et-Loir
+    country: France
+    postcode: 71200
+    tz_offset: "-4:00"
+  email: emmy.giraud@example.com
+  phone:
+    :home: 01-42-92-79-68
+    :cell: 06-20-69-57-63
+  picture:
+    :large: https://randomuser.me/api/portraits/women/16.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/16.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/16.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 237
+  name:
+    :title: Mr
+    :first: Felix
+    :last: Thompson
+  username: fthompson
+  location: !ruby/object:User::Location
+    street: 5757 Dalhousie Ave
+    city: Radisson
+    state: Prince Edward Island
+    country: Canada
+    postcode: N2Y 4Q6
+    tz_offset: "+2:00"
+  email: felix.thompson@example.com
+  phone:
+    :home: 672-346-2366
+    :cell: 441-538-5711
+  picture:
+    :large: https://randomuser.me/api/portraits/men/49.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/49.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/49.jpg
+  nationality: CA
+- !ruby/object:User
+  id: 238
+  name:
+    :title: Mr
+    :first: Alvino
+    :last: das Neves
+  username: adas neves
+  location: !ruby/object:User::Location
+    street: Rua Onze  3887
+    city: São Vicente
+    state: Rondônia
+    country: Brazil
+    postcode: 45410
+    tz_offset: "-9:00"
+  email: alvino.dasneves@example.com
+  phone:
+    :home: "(82) 2027-4035"
+    :cell: "(65) 8315-2621"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/51.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/51.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/51.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 239
+  name:
+    :title: Mr
+    :first: Raul
+    :last: Stevens
+  username: rstevens
+  location: !ruby/object:User::Location
+    street: 4358 Spring St
+    city: The Colony
+    state: New York
+    country: United States
+    postcode: 20128
+    tz_offset: '0:00'
+  email: raul.stevens@example.com
+  phone:
+    :home: "(576)-518-6816"
+    :cell: "(748)-148-1744"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/47.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/47.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/47.jpg
+  nationality: US
+- !ruby/object:User
+  id: 240
+  name:
+    :title: Ms
+    :first: Eva
+    :last: Flores
+  username: eflores
+  location: !ruby/object:User::Location
+    street: Calle de La Almudena 7600
+    city: Arrecife
+    state: País Vasco
+    country: Spain
+    postcode: 42738
+    tz_offset: "+11:00"
+  email: eva.flores@example.com
+  phone:
+    :home: 967-195-889
+    :cell: 624-787-866
+  picture:
+    :large: https://randomuser.me/api/portraits/women/89.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/89.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/89.jpg
+  nationality: ES
+- !ruby/object:User
+  id: 241
+  name:
+    :title: Mr
+    :first: Umut
+    :last: Numanoğlu
+  username: unumanoğlu
+  location: !ruby/object:User::Location
+    street: Anafartalar Cd 780
+    city: Balıkesir
+    state: Erzincan
+    country: Turkey
+    postcode: 95548
+    tz_offset: "-6:00"
+  email: umut.numanoglu@example.com
+  phone:
+    :home: "(066)-480-8294"
+    :cell: "(179)-152-5812"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/1.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/1.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/1.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 242
+  name:
+    :title: Mr
+    :first: Clyde
+    :last: Bennett
+  username: cbennett
+  location: !ruby/object:User::Location
+    street: 8321 Highfield Road
+    city: Preston
+    state: Staffordshire
+    country: United Kingdom
+    postcode: B9Y 1XA
+    tz_offset: "+10:00"
+  email: clyde.bennett@example.com
+  phone:
+    :home: '016977 48561'
+    :cell: 0717-999-079
+  picture:
+    :large: https://randomuser.me/api/portraits/men/42.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/42.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/42.jpg
+  nationality: GB
+- !ruby/object:User
+  id: 243
+  name:
+    :title: Mr
+    :first: Birger
+    :last: Hintze
+  username: bhintze
+  location: !ruby/object:User::Location
+    street: Schlossstraße 9621
+    city: Gießen
+    state: Rheinland-Pfalz
+    country: Germany
+    postcode: 88282
+    tz_offset: "-9:00"
+  email: birger.hintze@example.com
+  phone:
+    :home: 0237-5625031
+    :cell: 0171-5597116
+  picture:
+    :large: https://randomuser.me/api/portraits/men/4.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/4.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/4.jpg
+  nationality: DE
+- !ruby/object:User
+  id: 244
+  name:
+    :title: Mr
+    :first: David
+    :last: Lefevre
+  username: dlefevre
+  location: !ruby/object:User::Location
+    street: 8614, Rue de L'Abbé-Migne
+    city: Tours
+    state: Aisne
+    country: France
+    postcode: 37436
+    tz_offset: "-9:00"
+  email: david.lefevre@example.com
+  phone:
+    :home: 02-66-50-49-82
+    :cell: 06-11-02-78-13
+  picture:
+    :large: https://randomuser.me/api/portraits/men/20.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/20.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/20.jpg
+  nationality: FR
+- !ruby/object:User
+  id: 245
+  name:
+    :title: Mr
+    :first: Herkus
+    :last: Sandersen
+  username: hsandersen
+  location: !ruby/object:User::Location
+    street: Martin Strandlis vei 4801
+    city: Løken
+    state: Vest-Agder
+    country: Norway
+    postcode: '1900'
+    tz_offset: "-10:00"
+  email: herkus.sandersen@example.com
+  phone:
+    :home: '86352361'
+    :cell: '44136426'
+  picture:
+    :large: https://randomuser.me/api/portraits/men/57.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/57.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/57.jpg
+  nationality: 'NO'
+- !ruby/object:User
+  id: 246
+  name:
+    :title: Ms
+    :first: Milena
+    :last: Viana
+  username: mviana
+  location: !ruby/object:User::Location
+    street: Rua Três 857
+    city: Teresina
+    state: Rio de Janeiro
+    country: Brazil
+    postcode: 39816
+    tz_offset: '0:00'
+  email: milena.viana@example.com
+  phone:
+    :home: "(99) 7073-3471"
+    :cell: "(93) 2687-0929"
+  picture:
+    :large: https://randomuser.me/api/portraits/women/70.jpg
+    :medium: https://randomuser.me/api/portraits/med/women/70.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/women/70.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 247
+  name:
+    :title: Mr
+    :first: Nísio
+    :last: Campos
+  username: ncampos
+  location: !ruby/object:User::Location
+    street: Rua Belo Horizonte  3219
+    city: Gravataí
+    state: Acre
+    country: Brazil
+    postcode: 77925
+    tz_offset: "+7:00"
+  email: nisio.campos@example.com
+  phone:
+    :home: "(34) 0389-6081"
+    :cell: "(66) 0475-6113"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/88.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/88.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/88.jpg
+  nationality: BR
+- !ruby/object:User
+  id: 248
+  name:
+    :title: Mr
+    :first: Coşkun
+    :last: Erberk
+  username: cerberk
+  location: !ruby/object:User::Location
+    street: Anafartalar Cd 9991
+    city: Antalya
+    state: Aydın
+    country: Turkey
+    postcode: 18709
+    tz_offset: "+5:45"
+  email: coskun.erberk@example.com
+  phone:
+    :home: "(840)-254-6058"
+    :cell: "(916)-765-3127"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/18.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/18.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/18.jpg
+  nationality: TR
+- !ruby/object:User
+  id: 249
+  name:
+    :title: Mr
+    :first: Brad
+    :last: Carter
+  username: bcarter
+  location: !ruby/object:User::Location
+    street: 2572 White Oak Dr
+    city: Bueblo
+    state: Utah
+    country: United States
+    postcode: 57356
+    tz_offset: "-5:00"
+  email: brad.carter@example.com
+  phone:
+    :home: "(163)-331-8138"
+    :cell: "(343)-376-8613"
+  picture:
+    :large: https://randomuser.me/api/portraits/men/10.jpg
+    :medium: https://randomuser.me/api/portraits/med/men/10.jpg
+    :thumbnail: https://randomuser.me/api/portraits/thumb/men/10.jpg
+  nationality: US
