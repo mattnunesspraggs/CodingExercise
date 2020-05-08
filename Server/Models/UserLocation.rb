@@ -48,7 +48,7 @@ class User
 			@city = hash[:city]
 			@state = hash[:state]
 			@country = hash[:country]
-			@postcode = hash[:postcode]
+			@postcode = hash[:postcode].to_s
 			@tz_offset = hash[:timezone][:offset]
 		end
 

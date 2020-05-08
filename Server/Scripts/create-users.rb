@@ -11,6 +11,7 @@
 require 'net/http'
 require 'json'
 require './Models/User'
+require 'securerandom'
 require 'yaml'
 
 uri = URI('https://randomuser.me/api/1.3')
@@ -30,16 +31,16 @@ end
 body_json = JSON::parse response.body, symbolize_names: true
 results = body_json[:results]
 
-users = results.each_with_index.map do |json, index|
+users = results.map do |json|
 	User.new(
-		id: index,
+		id: SecureRandom::uuid,
 		name: json[:name],
 		location: User::Location.new(
 			hash: json[:location],
 			nationality: json[:nat]),
 		email: json[:email],
-		phone: { home: json[:phone], cell: json[:cell] },
-		picture: json[:picture],
+		phone_numbers: { home: json[:phone], cell: json[:cell] },
+		pictures: json[:picture],
 		nationality: json[:nat])
 end
 

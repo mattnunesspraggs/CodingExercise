@@ -18,7 +18,7 @@ class SearchV1App < Sinatra::Base
 
 	##
 	# Performs a search for users.
-	get '/search' do
+	get '/users/search' do
 		halt 400, 'query must not be nil' unless params.has_key? "query"
 
 		query = params["query"]

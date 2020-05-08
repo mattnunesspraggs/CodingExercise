@@ -10,7 +10,7 @@ require 'json'
 class User
 
 	attr_reader :name, :username, :location, :email,	\
-		:phone, :picture, :nationality
+		:phone_numbers, :pictures, :nationality
 
 	##
 	# Generates a username from the user's name +Hash+, which
@@ -25,14 +25,14 @@ class User
 
 	##
 	# Initializes a `User`.
-	def initialize(id:, name:, location:, email:, phone:, picture:, nationality:)
+	def initialize(id:, name:, location:, email:, phone_numbers:, pictures:, nationality:)
 		@id = id
 		@name = name
 		@username = User::username_for_name(@name)
 		@location = location
 		@email = email
-		@phone = phone
-		@picture = picture
+		@phone_numbers = phone_numbers
+		@pictures = pictures
 		@nationality = nationality
 	end
 
@@ -54,8 +54,8 @@ class User
 			username: @username,
 			location: @location,
 			email: @email,
-			phone: @phone,
-			picture: @picture,
+			phone_numbers: @phone_numbers,
+			pictures: @pictures,
 			nationality: @nationality
 		}.to_json(*a)
 	end

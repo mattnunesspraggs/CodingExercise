@@ -26,7 +26,7 @@ class UserService
 	# - +name.values+
 	# - +display_name+
 	# - +email+
-	# - +phone.values+
+	# - +phone_numbers.values+
 	def users_matching(query)
 		regex = /^#{query}/i
 		@users.select do |user|
@@ -34,7 +34,7 @@ class UserService
 				|| user.name.values.any? { |c| c =~ regex }		\
 				|| user.display_name =~ regex					\
 				|| user.email =~ regex							\
-				|| user.phone.values.any? { |p| p =~ regex }
+				|| user.phone_numbers.values.any? { |p| p =~ regex }
 		end
 	end
 

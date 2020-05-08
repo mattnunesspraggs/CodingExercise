@@ -4,7 +4,7 @@ This is a very quick-and-dirty Ruby web service to provide a backend to the Codi
 
 ## V1.0 API Documentation
 
-The V1.0 API provides a single endpoint, `/1.0/search`, which takes a single query parameter, "`query`", which specifies the search query.
+The V1.0 API provides a single endpoint, `/1.0/users/search`, which takes a single query parameter, "`query`", which specifies the search query.
 
 The response object contains two fields: `ok` and `users`. `ok` will be `true` if the query generated at least one match, and `false` otherwise. The `users` field contains an array of objects representing the matched users.
 
@@ -12,40 +12,40 @@ The response object contains two fields: `ok` and `users`. `ok` will be `true` i
 
 Matched user:
 ```
-$ curl localhost:8080/1.0/search\?query=denys | jq
+$ curl localhost:8080/1.0/users/search\?query=denn | jq
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100   561  100   561    0     0   109k      0 --:--:-- --:--:-- --:--:--  109k
+100   619  100   619    0     0   120k      0 --:--:-- --:--:-- --:--:--  120k
 {
   "ok": true,
   "users": [
     {
-      "id": 152,
+      "id": "0d51423a-8a62-4e4f-8d72-09baca8031fd",
       "name": {
-        "title": "Mrs",
-        "first": "Charlie",
-        "last": "Denys"
+        "title": "Mr",
+        "first": "Dennis",
+        "last": "Jennings"
       },
-      "username": "cdenys",
+      "username": "djennings",
       "location": {
-        "street": "339, Charles St",
-        "city": "Springfield",
-        "state": "Québec",
-        "country": "Canada",
-        "postcode": "T5U 0G3",
-        "tz_offset": "+10:00"
+        "street": "8077 W Sherman Dr",
+        "city": "The Colony",
+        "state": "Pennsylvania",
+        "country": "United States",
+        "postcode": "53598",
+        "tz_offset": "+5:45"
       },
-      "email": "charlie.denys@example.com",
-      "phone": {
-        "home": "224-996-5481",
-        "cell": "245-122-9012"
+      "email": "dennis.jennings@example.com",
+      "phone_numbers": {
+        "home": "(729)-224-3922",
+        "cell": "(420)-216-6176"
       },
-      "picture": {
-        "large": "https://randomuser.me/api/portraits/women/42.jpg",
-        "medium": "https://randomuser.me/api/portraits/med/women/42.jpg",
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/42.jpg"
+      "pictures": {
+        "large": "https://randomuser.me/api/portraits/men/66.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/66.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/66.jpg"
       },
-      "nationality": "CA"
+      "nationality": "US"
     }
   ]
 }
@@ -53,7 +53,7 @@ $ curl localhost:8080/1.0/search\?query=denys | jq
 
 No matched users:
 ```
-$ curl localhost:8080/1.0/search\?query=foobar | jq 
+$ curl localhost:8080/1.0/users/search\?query=foobar | jq 
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100    23  100    23    0     0   5750      0 --:--:-- --:--:-- --:--:--  5750
