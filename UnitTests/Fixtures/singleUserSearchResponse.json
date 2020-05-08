@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "users": [
+    {
+      "id": "7202ee9c-2c98-445c-8a6c-015474dabb87",
+      "name": {
+        "title": "Mrs",
+        "first": "Sarah",
+        "last": "Clark"
+      },
+      "username": "sclark",
+      "location": {
+        "street": "630 Regent Ave",
+        "city": "Cornwall",
+        "state": "New Brunswick",
+        "country": "Canada",
+        "postcode": "K7S 0N5",
+        "tz_offset": "+3:30"
+      },
+      "email": "sarah.clark@example.com",
+      "phone_numbers": {
+        "home": "862-689-4866",
+        "cell": "102-995-3747"
+      },
+      "pictures": {
+        "large": "https://randomuser.me/api/portraits/women/46.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/46.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/46.jpg"
+      },
+      "nationality": "CA"
+    }
+  ]
+}
