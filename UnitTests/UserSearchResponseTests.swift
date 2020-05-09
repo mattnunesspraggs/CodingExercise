@@ -3,7 +3,6 @@
 // Copyright © 2020 Matt Nunes-Spraggs
 //
 
-
 import XCTest
 
 class UserSearchResponseTests: XCTestCase {
