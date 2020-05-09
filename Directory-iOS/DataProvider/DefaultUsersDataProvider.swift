@@ -21,7 +21,9 @@ class DefaultUsersDataProvider: UsersDataProvider {
     // MARK: - UsersDataProvider
 
     func search(query: String, completion: @escaping (Result<[User], Error>) -> ()) -> Progress {
-        return usersService.search(query: query, completion: completion)
+        return usersService.search(query: query) { result in
+            completion(result.map { $0.users })
+        }
     }
 
 }

@@ -40,6 +40,7 @@
 		34EC17E22466227100CA873F /* UsersSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17E12466227100CA873F /* UsersSearchViewModel.swift */; };
 		34EC17E72466259D00CA873F /* DefaultUsersDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17E62466259D00CA873F /* DefaultUsersDataProvider.swift */; };
 		34EC17E9246625C100CA873F /* HerokuV1UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17E8246625C100CA873F /* HerokuV1UsersService.swift */; };
+		34EC17EC24663BE500CA873F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17EB24663BE500CA873F /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		34EC17E12466227100CA873F /* UsersSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSearchViewModel.swift; sourceTree = "<group>"; };
 		34EC17E62466259D00CA873F /* DefaultUsersDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUsersDataProvider.swift; sourceTree = "<group>"; };
 		34EC17E8246625C100CA873F /* HerokuV1UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerokuV1UsersService.swift; sourceTree = "<group>"; };
+		34EC17EB24663BE500CA873F /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		34EC178B2466066900CA873F /* Directory-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				34EC17EA24663BD200CA873F /* Utilities */,
 				34EC17DD246621E100CA873F /* Services */,
 				34EC17DA246621A200CA873F /* DataProvider */,
 				34EC17A52466139A00CA873F /* Model */,
@@ -201,6 +204,14 @@
 				34EC17E12466227100CA873F /* UsersSearchViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		34EC17EA24663BD200CA873F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				34EC17EB24663BE500CA873F /* Error.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +327,7 @@
 				34EC17E72466259D00CA873F /* DefaultUsersDataProvider.swift in Sources */,
 				34EC17AD2466161300CA873F /* User+PhoneNumbers.swift in Sources */,
 				34EC179F246608C500CA873F /* SearchAutocompleteTableViewController.swift in Sources */,
+				34EC17EC24663BE500CA873F /* Error.swift in Sources */,
 				34EC17E22466227100CA873F /* UsersSearchViewModel.swift in Sources */,
 				34EC178D2466066900CA873F /* AppDelegate.swift in Sources */,
 				34EC17A7246613A400CA873F /* User.swift in Sources */,

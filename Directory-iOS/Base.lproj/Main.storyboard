@@ -22,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="151" y="38"/>
         </scene>
-        <!--Root View Controller-->
+        <!--User Search-->
         <scene sceneID="BL6-gP-dUW">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="Mx5-Fu-Gt0" customClass="SearchAutocompleteTableViewController" customModule="Directory" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +54,7 @@
                             <outlet property="delegate" destination="Mx5-Fu-Gt0" id="2Sb-4e-umd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="hE7-7Q-yJf"/>
+                    <navigationItem key="navigationItem" title="User Search" id="hE7-7Q-yJf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4Z-qM-y7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

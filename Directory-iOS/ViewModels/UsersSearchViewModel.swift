@@ -29,7 +29,9 @@ class UsersSearchViewModel {
     private var currentSearchProgress: Progress?
     private var results: [User] = [] {
         didSet {
-            delegate?.usersSearchViewModelHasUpdatedResults(self)
+            DispatchQueue.main.async {
+                self.delegate?.usersSearchViewModelHasUpdatedResults(self)
+            }
         }
     }
 
@@ -49,8 +51,9 @@ class UsersSearchViewModel {
 
     // MARK: - Public API
 
-    func resultAtIndex(_ index: Int) -> User {
-        return results[index]
+    func displayNameAtIndex(_ index: Int) -> String {
+        let user = results[index]
+        return user.name.first + " " + user.name.last
     }
 
     // MARK: - Private API
@@ -68,10 +71,20 @@ class UsersSearchViewModel {
                 self.results = users
 
             case .failure(let error):
-                self.results = []
-                self.delegate?.usersSearchViewModel(self, didEncounterError: error)
+                self.handleError(error)
             }
             self.currentSearchProgress = nil
+        }
+    }
+
+    private func handleError(_ error: Error) {
+        guard !error.isUrlCancelled else {
+            return
+        }
+
+        self.results = []
+        DispatchQueue.main.async {
+            self.delegate?.usersSearchViewModel(self, didEncounterError: error)
         }
     }
 

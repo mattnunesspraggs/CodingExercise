@@ -12,6 +12,6 @@ import Foundation
 
 protocol UsersService {
 
-    func search(query: String, completion: @escaping (Result<[User], Error>) -> ()) -> Progress
+    func search(query: String, completion: @escaping (Result<UserSearchResponse, Error>) -> ()) -> Progress
 
 }

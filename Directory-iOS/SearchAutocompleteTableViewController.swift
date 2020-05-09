@@ -29,6 +29,7 @@ class SearchAutocompleteTableViewController: UITableViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -66,10 +67,7 @@ class SearchAutocompleteTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
-        let user = usersSearchViewModel.resultAtIndex(indexPath.row)
-        cell.textLabel?.text = user.name.first + " " + user.name.last
-
+        cell.textLabel?.text = usersSearchViewModel.displayNameAtIndex(indexPath.row)
         return cell
     }
 
