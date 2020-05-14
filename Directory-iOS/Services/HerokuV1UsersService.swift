@@ -46,8 +46,11 @@ class HerokuV1UsersService: UsersService {
 
     // MARK: - Users Service
 
-    func search(query: String, completion: @escaping (Result<UserSearchResponse, Error>) -> ()) -> Progress {
-        return submitRequest(urlRequestForQuery(query), completion: completion)
+    func search(query: String, completion: @escaping (Result<[User], Error>) -> ()) -> Progress {
+        let request = urlRequestForQuery(query)
+        return submitRequest(request) { (result: Result<UserSearchResponse, Error>) in
+            completion(result.map { $0.users })
+        }
     }
 
     // MARK: - Private API

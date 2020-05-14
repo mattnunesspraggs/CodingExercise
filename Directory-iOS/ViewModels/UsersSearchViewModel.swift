@@ -15,6 +15,11 @@ protocol UsersSearchViewModelDelegate: class {
 
 // MARK: - View Model
 
+// TODO:
+//  - sort by CNContactSortOrder, username
+//  - expose sort controls
+//  - support UITableView sections + section indexes
+
 class UsersSearchViewModel {
 
     // MARK: - Initializers
@@ -27,13 +32,13 @@ class UsersSearchViewModel {
 
     private let usersDataProvider: UsersDataProvider
     private var currentSearchProgress: Progress?
-    private var results: [User] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                self.delegate?.usersSearchViewModelHasUpdatedResults(self)
-            }
-        }
+    private var results: [UserViewModel] = []
+
+    private var sort: (UserViewModel, UserViewModel) -> Bool = { lhs, rhs -> Bool in
+        return lhs.displayName < rhs.displayName
     }
+
+    private var filter: (UserViewModel) -> Bool = { _ in return true }
 
     // MARK: - Public Properties
 
@@ -51,9 +56,8 @@ class UsersSearchViewModel {
 
     // MARK: - Public API
 
-    func displayNameAtIndex(_ index: Int) -> String {
-        let user = results[index]
-        return user.name.first + " " + user.name.last
+    func userViewModelAtIndex(_ index: Int) -> UserViewModel {
+        return results[index]
     }
 
     // MARK: - Private API
@@ -61,19 +65,30 @@ class UsersSearchViewModel {
     private func searchTextDidUpdate(_ searchText: String?) {
         currentSearchProgress?.cancel()
         guard let searchText = searchText, !searchText.isEmpty else {
-            self.results = []
+            updateResults(withUsers: [])
             return
         }
 
         self.currentSearchProgress = usersDataProvider.search(query: searchText) { result in
             switch result {
             case .success(let users):
-                self.results = users
+                self.updateResults(withUsers: users)
 
             case .failure(let error):
                 self.handleError(error)
             }
             self.currentSearchProgress = nil
+        }
+    }
+
+    private func updateResults(withUsers users: [User]) {
+        let viewModels = users.map { UserViewModel(user: $0) }
+        let filteredViewModels = viewModels.filter(filter)
+        let sortedViewModels = filteredViewModels.sorted(by: sort)
+        self.results = sortedViewModels
+
+        DispatchQueue.main.async {
+            self.delegate?.usersSearchViewModelHasUpdatedResults(self)
         }
     }
 
@@ -83,6 +98,8 @@ class UsersSearchViewModel {
         }
 
         self.results = []
+        // TODO: Should we issue the HasUpdatedResults delegate call here?
+
         DispatchQueue.main.async {
             self.delegate?.usersSearchViewModel(self, didEncounterError: error)
         }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		345139342469F10300EE21D6 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345139332469F10300EE21D6 /* UserTableViewController.swift */; };
+		3451399D246DDB6400EE21D6 /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3451399C246DDB6400EE21D6 /* UIStoryboard.swift */; };
 		34EC178D2466066900CA873F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC178C2466066900CA873F /* AppDelegate.swift */; };
 		34EC178F2466066900CA873F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC178E2466066900CA873F /* SceneDelegate.swift */; };
 		34EC17912466066900CA873F /* SearchSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17902466066900CA873F /* SearchSplitViewController.swift */; };
@@ -41,6 +43,8 @@
 		34EC17E72466259D00CA873F /* DefaultUsersDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17E62466259D00CA873F /* DefaultUsersDataProvider.swift */; };
 		34EC17E9246625C100CA873F /* HerokuV1UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17E8246625C100CA873F /* HerokuV1UsersService.swift */; };
 		34EC17EC24663BE500CA873F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17EB24663BE500CA873F /* Error.swift */; };
+		34EC17EE2469BBAE00CA873F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17ED2469BBAE00CA873F /* SearchTableViewCell.swift */; };
+		34EC17F02469C3F800CA873F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17EF2469C3F800CA873F /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		345139332469F10300EE21D6 /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		3451399C246DDB6400EE21D6 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		34EC17892466066900CA873F /* Directory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Directory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34EC178C2466066900CA873F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34EC178E2466066900CA873F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +91,8 @@
 		34EC17E62466259D00CA873F /* DefaultUsersDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUsersDataProvider.swift; sourceTree = "<group>"; };
 		34EC17E8246625C100CA873F /* HerokuV1UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerokuV1UsersService.swift; sourceTree = "<group>"; };
 		34EC17EB24663BE500CA873F /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		34EC17ED2469BBAE00CA873F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		34EC17EF2469C3F800CA873F /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +141,10 @@
 				34EC17E02466225E00CA873F /* ViewModels */,
 				34EC178C2466066900CA873F /* AppDelegate.swift */,
 				34EC178E2466066900CA873F /* SceneDelegate.swift */,
+				34EC17ED2469BBAE00CA873F /* SearchTableViewCell.swift */,
 				34EC17902466066900CA873F /* SearchSplitViewController.swift */,
 				34EC179E246608C500CA873F /* SearchAutocompleteTableViewController.swift */,
+				345139332469F10300EE21D6 /* UserTableViewController.swift */,
 				34EC17922466066900CA873F /* Main.storyboard */,
 				34EC17952466066B00CA873F /* Assets.xcassets */,
 				34EC17972466066B00CA873F /* LaunchScreen.storyboard */,
@@ -201,6 +211,7 @@
 		34EC17E02466225E00CA873F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				34EC17EF2469C3F800CA873F /* UserViewModel.swift */,
 				34EC17E12466227100CA873F /* UsersSearchViewModel.swift */,
 			);
 			path = ViewModels;
@@ -210,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				34EC17EB24663BE500CA873F /* Error.swift */,
+				3451399C246DDB6400EE21D6 /* UIStoryboard.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -324,12 +336,16 @@
 				34EC17E9246625C100CA873F /* HerokuV1UsersService.swift in Sources */,
 				34EC17AB246615F900CA873F /* User+Name.swift in Sources */,
 				34EC17912466066900CA873F /* SearchSplitViewController.swift in Sources */,
+				3451399D246DDB6400EE21D6 /* UIStoryboard.swift in Sources */,
 				34EC17E72466259D00CA873F /* DefaultUsersDataProvider.swift in Sources */,
 				34EC17AD2466161300CA873F /* User+PhoneNumbers.swift in Sources */,
 				34EC179F246608C500CA873F /* SearchAutocompleteTableViewController.swift in Sources */,
+				34EC17EE2469BBAE00CA873F /* SearchTableViewCell.swift in Sources */,
+				345139342469F10300EE21D6 /* UserTableViewController.swift in Sources */,
 				34EC17EC24663BE500CA873F /* Error.swift in Sources */,
 				34EC17E22466227100CA873F /* UsersSearchViewModel.swift in Sources */,
 				34EC178D2466066900CA873F /* AppDelegate.swift in Sources */,
+				34EC17F02469C3F800CA873F /* UserViewModel.swift in Sources */,
 				34EC17A7246613A400CA873F /* User.swift in Sources */,
 				34EC178F2466066900CA873F /* SceneDelegate.swift in Sources */,
 				34EC17B12466164500CA873F /* User+Nationality.swift in Sources */,
