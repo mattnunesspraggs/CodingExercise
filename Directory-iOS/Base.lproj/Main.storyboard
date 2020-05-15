@@ -119,10 +119,50 @@
         <scene sceneID="Pyc-O2-zmk">
             <objects>
                 <tableViewController storyboardIdentifier="UserTableViewController" clearsSelectionOnViewWillAppear="NO" id="0QE-oo-ezx" customClass="UserTableViewController" customModule="Directory" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tU8-ep-PwD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="tU8-ep-PwD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailCell" id="B1k-B5-6Oy" customClass="UserTableViewCell" customModule="Directory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B1k-B5-6Oy" id="Iia-o2-56N">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJp-fq-pEU">
+                                            <rect key="frame" x="20" y="11" width="43" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGP-GW-Owf">
+                                            <rect key="frame" x="356.5" y="11" width="37.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="AGP-GW-Owf" firstAttribute="trailing" secondItem="Iia-o2-56N" secondAttribute="trailingMargin" id="3Gc-Tj-nBz"/>
+                                        <constraint firstItem="AGP-GW-Owf" firstAttribute="top" secondItem="Iia-o2-56N" secondAttribute="topMargin" id="553-3Z-kgI"/>
+                                        <constraint firstItem="oJp-fq-pEU" firstAttribute="top" secondItem="Iia-o2-56N" secondAttribute="topMargin" id="CpF-HF-RoU"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="AGP-GW-Owf" secondAttribute="bottom" id="PBT-RK-Nat"/>
+                                        <constraint firstItem="AGP-GW-Owf" firstAttribute="baseline" relation="greaterThanOrEqual" secondItem="oJp-fq-pEU" secondAttribute="firstBaseline" id="SoG-FL-veK"/>
+                                        <constraint firstItem="AGP-GW-Owf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oJp-fq-pEU" secondAttribute="trailing" constant="8" symbolic="YES" id="dbE-ZG-nh5"/>
+                                        <constraint firstItem="oJp-fq-pEU" firstAttribute="leading" secondItem="Iia-o2-56N" secondAttribute="leadingMargin" id="rSb-mg-1tz"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="oJp-fq-pEU" secondAttribute="bottom" constant="0.5" id="uwB-Vy-0i0"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="labelLabel" destination="oJp-fq-pEU" id="LNL-4b-aoD"/>
+                                    <outlet property="valueLabel" destination="AGP-GW-Owf" id="S9u-Is-bxM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="0QE-oo-ezx" id="qd5-ld-vjf"/>
                             <outlet property="delegate" destination="0QE-oo-ezx" id="Odb-PU-lI3"/>
@@ -133,7 +173,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEO-z7-BAo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1714" y="66"/>
+            <point key="canvasLocation" x="1713.0434782608697" y="65.625"/>
         </scene>
     </scenes>
     <resources>
