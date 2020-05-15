@@ -67,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="65.625"/>
         </scene>
-        <!--User Search-->
+        <!--Directory Search-->
         <scene sceneID="BL6-gP-dUW">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="Mx5-Fu-Gt0" customClass="SearchAutocompleteTableViewController" customModule="Directory" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,7 +80,7 @@
                             <outlet property="delegate" destination="Mx5-Fu-Gt0" id="2Sb-4e-umd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="User Search" id="hE7-7Q-yJf"/>
+                    <navigationItem key="navigationItem" title="Directory Search" id="hE7-7Q-yJf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4Z-qM-y7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,17 +115,40 @@
             </objects>
             <point key="canvasLocation" x="-917" y="363"/>
         </scene>
-        <!--Display Name-->
+        <!--User Table View-->
         <scene sceneID="Pyc-O2-zmk">
             <objects>
-                <tableViewController storyboardIdentifier="UserTableViewController" clearsSelectionOnViewWillAppear="NO" id="0QE-oo-ezx" customClass="UserTableViewController" customModule="Directory" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UserTableViewController" clearsSelectionOnViewWillAppear="NO" id="0QE-oo-ezx" userLabel="User Table View" customClass="UserTableViewController" customModule="Directory" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="tU8-ep-PwD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="fBl-78-0LL">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QhL-Jn-KmU">
+                                    <rect key="frame" x="143" y="1.5" width="128" height="125"/>
+                                    <color key="tintColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="128" id="pG7-kv-ZXW"/>
+                                        <constraint firstAttribute="width" secondItem="QhL-Jn-KmU" secondAttribute="height" id="yvg-hP-5mT"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="QhL-Jn-KmU" firstAttribute="bottom" secondItem="Sxs-67-0K0" secondAttribute="bottom" id="3CN-yG-JVx"/>
+                                <constraint firstItem="QhL-Jn-KmU" firstAttribute="centerX" secondItem="fBl-78-0LL" secondAttribute="centerX" id="CHO-0P-cRO"/>
+                                <constraint firstItem="Sxs-67-0K0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QhL-Jn-KmU" secondAttribute="trailing" constant="20" id="Th6-HM-V2E"/>
+                                <constraint firstItem="QhL-Jn-KmU" firstAttribute="top" secondItem="Sxs-67-0K0" secondAttribute="top" id="VCI-EQ-429"/>
+                                <constraint firstItem="QhL-Jn-KmU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Sxs-67-0K0" secondAttribute="leading" constant="20" id="ojW-VW-eeL"/>
+                            </constraints>
+                            <viewLayoutGuide key="safeArea" id="Sxs-67-0K0"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DetailCell" id="B1k-B5-6Oy" customClass="UserTableViewCell" customModule="Directory" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="183.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B1k-B5-6Oy" id="Iia-o2-56N">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -178,5 +201,6 @@
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>

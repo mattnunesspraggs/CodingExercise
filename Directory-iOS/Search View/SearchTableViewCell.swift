@@ -23,7 +23,8 @@ class SearchTableViewCell: UITableViewCell {
 
     private var avatarImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.systemGray6
+        imageView.image = UIImage(systemName: "person.fill")
+        imageView.tintColor = Constants.usernameLabelColor
         imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius = Constants.avatarImageCornerRadius
         imageView.translatesAutoresizingMaskIntoConstraints = false

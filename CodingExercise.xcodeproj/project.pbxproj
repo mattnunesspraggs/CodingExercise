@@ -122,8 +122,8 @@
 		340F5F4D246E21D5008342F2 /* Search View */ = {
 			isa = PBXGroup;
 			children = (
-				34EC17E12466227100CA873F /* UsersSearchViewModel.swift */,
 				34EC17ED2469BBAE00CA873F /* SearchTableViewCell.swift */,
+				34EC17E12466227100CA873F /* UsersSearchViewModel.swift */,
 				34EC179E246608C500CA873F /* SearchAutocompleteTableViewController.swift */,
 			);
 			path = "Search View";
