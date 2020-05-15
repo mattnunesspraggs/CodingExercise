@@ -13,9 +13,9 @@ class SearchTableViewCell: UITableViewCell {
     private struct Constants {
         static let avatarImageHeight: CGFloat = 32
         static let avatarImageCornerRadius: CGFloat = (avatarImageHeight / 4)
-        static let displayNameLabelColor: UIColor = .darkText
+        static let displayNameLabelColor: UIColor = .label
         static let displayNameLabelFont: UIFont = .boldSystemFont(ofSize: UIFont.systemFontSize)
-        static let usernameLabelColor: UIColor = .systemGray
+        static let usernameLabelColor: UIColor = .secondaryLabel
         static let usernameLabelFont: UIFont = .systemFont(ofSize: UIFont.systemFontSize, weight: .light)
     }
 
