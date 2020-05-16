@@ -9,31 +9,14 @@ import Contacts
 
 class UserViewModel {
 
-    // MARK: - Types
-
-    enum PhoneNumber {
-        case home(String)
-        case cell(String)
-        case other(String, String)
-    }
-
     // MARK: - Static Properties
 
-    static let defaultNameFormatter: PersonNameComponentsFormatter = {
-        var formatter = PersonNameComponentsFormatter()
-        formatter.style = .default
-        return formatter
-    }()
-
-    static let defaultPostalAddressFormatter: CNPostalAddressFormatter = {
-        var formatter = CNPostalAddressFormatter()
-        formatter.style = .mailingAddress
-        return formatter
-    }()
+    static let defaultPostalAddressFormatter = CNPostalAddressFormatter()
 
     // MARK: - Private Properties
 
     private let user: User
+    private let userDisplayNameFormatter = UserDisplayNameFormatter()
 
     // MARK: - Initializers
 
@@ -43,91 +26,172 @@ class UserViewModel {
 
     // MARK: - Public API
 
-    var username: String {
-        return user.username
-    }
-
-    var email: String {
-        return user.email
-    }
-
+    /// Returns the `User`'s display name.
     var displayName: String {
-        return displayName()
+        return userDisplayNameFormatter.displayName(for: user)
     }
 
-    var phoneNumbers: [PhoneNumber] {
-        return [
-            .home(user.phoneNumbers.home),
-            .cell(user.phoneNumbers.cell)
-        ]
+    /// Returns the `User`'s data in logical sections and rows.
+    var sectionViewModels: [SectionViewModel] {
+        var sections: [SectionViewModel] = []
+
+        // - - - - - CONTACT - - - - -
+        sections.append(
+            SectionViewModel(localizedTitle: .contactSectionTitle,
+                             rowViewModels: [
+                                RowViewModel(localizedLabel: .usernameFieldLabel,
+                                             valueProvider: self.user.username),
+                                RowViewModel(localizedLabel: .emailFieldLabel,
+                                             valueProvider: self.user.email,
+                                             accessoryType: .email)]))
+
+        // - - - - - PHONE NUMBERS - - - - -
+        sections.append(
+            SectionViewModel(localizedTitle: .phoneSectionTitle,
+                             rowViewModels: [
+                                RowViewModel(localizedLabel: .homePhoneLabel,
+                                             valueProvider: self.user.phoneNumbers.home,
+                                             accessoryType: .phone),
+                                RowViewModel(localizedLabel: .mobilePhoneLabel,
+                                             valueProvider: self.user.phoneNumbers.cell,
+                                             accessoryType: .phone)]))
+
+        // - - - - - ADDRESS - - - - -
+        sections.append(
+            SectionViewModel(localizedTitle: .addressFieldLabel,
+                             rowViewModels: [
+                                RowViewModel(localizedLabel: .addressFieldLabel,
+                                             valueProvider: self.formattedAddress()),
+                                RowViewModel(localizedLabel: .countryFieldLabel,
+                                             valueProvider: self.user.countryFlag + " " + self.localizedCountry)]))
+
+        // - - - - - TIME ZONE - - - - -
+        if let timezone = timezone {
+            sections.append(
+                SectionViewModel(localizedTitle: .timezoneFieldLabel,
+                                 rowViewModels: [
+                                    RowViewModel(localizedLabel: .timezoneFieldLabel,
+                                                 valueProvider: timezone.identifier),
+                                    RowViewModel(localizedLabel: .currentTimeFieldLabel,
+                                                 valueProvider: self.formattedCurrentTime()
+                                                        + "\n" + self.formattedCurrentDate(),
+                                                 wantsPeriodicUpdate: true)]))
+        }
+
+        return sections
     }
 
-    var formattedAddress: String {
-        return formattedAddress()
+    // MARK: - Private API
+
+    private var localizedCountry: String {
+        let isoCountryCode = user.nationality.isoCountryCode
+        let locale = NSLocale.current
+        return locale.localizedString(forRegionCode: isoCountryCode) ?? isoCountryCode
     }
 
-    var isoCountryCode: String {
-        return user.nationality.rawValue
+    private var timezone: TimeZone? {
+        return TimeZone(withOffset: user.location.timezoneOffset)
     }
 
-    var countryFlag: String {
-        return user.nationality.flagString
-    }
-
-    func displayName(formatter: PersonNameComponentsFormatter = UserViewModel.defaultNameFormatter) -> String {
-        return formatter.string(from: user.nameComponents)
-    }
-
-    func formattedAddress(formatter: CNPostalAddressFormatter = UserViewModel.defaultPostalAddressFormatter) -> String {
+    private func formattedAddress(formatter: CNPostalAddressFormatter = UserViewModel.defaultPostalAddressFormatter) -> String {
         return formatter.string(from: user.postalAddress)
     }
 
-}
-
-// MARK: - User Extensions
-
-extension User {
-
-    fileprivate var nameComponents: PersonNameComponents {
-        var components = PersonNameComponents()
-        components.givenName = name.first
-        components.familyName = name.last
-        return components
+    private func formattedCurrentTime(for style: DateFormatter.Style = .medium) -> String {
+        let timeFormatter = DateFormatter()
+        timeFormatter.timeZone = timezone
+        timeFormatter.timeStyle = .medium
+        return timeFormatter.string(from: Date())
     }
 
-    fileprivate var postalAddress: CNPostalAddress {
-        let address = CNMutablePostalAddress()
-        address.street = location.street
-        address.city = location.city
-        address.state = location.state
-        address.postalCode = location.postcode
-        address.country = location.country
-        address.isoCountryCode = nationality.isoCountryCode
-        return address
+    private func formattedCurrentDate(for style: DateFormatter.Style = .medium) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = timezone
+        dateFormatter.dateStyle = .medium
+        return dateFormatter.string(from: Date())
     }
 
-}
+    // MARK: - Types
 
-extension User.Nationality {
+    enum AccessoryType {
+        case email
+        case phone
+    }
 
-    var flagString: String {
-        switch self {
-        case .australia: return "🇦🇺"
-        case .brazil: return "🇧🇷"
-        case .canada: return "🇨🇦"
-        case .switzerland: return "🇨🇭"
-        case .germany: return "🇩🇪"
-        case .denmark: return "🇩🇰"
-        case .spain: return "🇪🇸"
-        case .finland: return "🇫🇮"
-        case .france: return "🇫🇷"
-        case .unitedKingdom: return "🇬🇧"
-        case .ireland: return "🇮🇪"
-        case .norway: return "🇳🇴"
-        case .netherlands: return "🇳🇱"
-        case .newZealand: return "🇳🇿"
-        case .turkey: return "🇹🇷"
-        case .unitedStates: return "🇺🇸"
+    /// Represents a logical section of a user's data, replete with rows.
+    struct SectionViewModel {
+        let localizedTitle: LocalizedString
+        let rowViewModels: [RowViewModel]
+    }
+
+    /// Represents a logical row of a user's data.
+    struct RowViewModel {
+        let localizedLabel: LocalizedString
+        let valueProvider: () -> String
+        let wantsPeriodicUpdate: Bool
+        let accessoryType: AccessoryType?
+
+        init(localizedLabel: LocalizedString,
+             valueProvider: @escaping @autoclosure () -> String,
+             wantsPeriodicUpdate: Bool = false,
+             accessoryType: AccessoryType? = nil) {
+            self.localizedLabel = localizedLabel
+            self.valueProvider = valueProvider
+            self.wantsPeriodicUpdate = wantsPeriodicUpdate
+            self.accessoryType = accessoryType
+        }
+    }
+
+    /// An `enum` representing entries in a localized string table. It's better
+    /// than peppering calls to `NSLocalizedString(_, comment: _)` everywhere.
+    enum LocalizedString {
+        case usernameFieldLabel
+        case emailFieldLabel
+        case mobilePhoneLabel
+        case homePhoneLabel
+        case addressFieldLabel
+        case countryFieldLabel
+        case timezoneFieldLabel
+        case currentTimeFieldLabel
+        case contactSectionTitle
+        case phoneSectionTitle
+        case addressSectionTitle
+        case timezoneSectionTitle
+
+        case country(String)
+        case notLocalized(String)
+
+        var stringValue: String {
+            switch self {
+            case .usernameFieldLabel:
+                return NSLocalizedString("Username", comment: "Username [Field Label]")
+            case .emailFieldLabel:
+                return NSLocalizedString("Email", comment: "Email [Field Label]")
+            case .mobilePhoneLabel:
+                return NSLocalizedString("Mobile", comment: "Mobile [Phone Number Field Label]")
+            case .homePhoneLabel:
+                return NSLocalizedString("Home", comment: "Home [Phone Number Field Label]")
+            case .addressFieldLabel:
+                return NSLocalizedString("Address", comment: "Address [Address Field Label]")
+            case .countryFieldLabel:
+                return NSLocalizedString("Country", comment: "Country [Address Field Label]")
+            case .timezoneFieldLabel:
+                return NSLocalizedString("Time Zone", comment: "Time Zone [Field Label]")
+            case .currentTimeFieldLabel:
+                return NSLocalizedString("Current Time", comment: "Current TIme [Field Label]")
+            case .contactSectionTitle:
+                return NSLocalizedString("Contact", comment: "Contact [Section Title]")
+            case .phoneSectionTitle:
+                return NSLocalizedString("Phone Numbers", comment: "Phone Numbers [Section Title]")
+            case .addressSectionTitle:
+                return NSLocalizedString("Address", comment: "Address [Section Title]")
+            case .timezoneSectionTitle:
+                return NSLocalizedString("Time Zone", comment: "Time Zone [Section Title]")
+            case .country(let isoCountryCode):
+                return NSLocale.current.localizedString(forRegionCode: isoCountryCode)!
+            case .notLocalized(let string):
+                return string
+            }
         }
     }
 

@@ -1,12 +1,12 @@
 //
-// SearchAutocompleteTableViewController.swift
+// UserSearchTableViewController.swift
 // Copyright © 2020 Matt Nunes-Spraggs
 //
 
 
 import UIKit
 
-class SearchAutocompleteTableViewController: UITableViewController {
+class UserSearchTableViewController: UITableViewController {
 
     // MARK: - Types
 
@@ -16,10 +16,10 @@ class SearchAutocompleteTableViewController: UITableViewController {
 
     // MARK: - Private Variables
 
-    private let usersSearchViewModel: UsersSearchViewModel = {
+    private let searchViewModel: UserSearchViewModel = {
         let service = HerokuV1UsersService()
         let provider = DefaultUsersDataProvider(service)
-        return UsersSearchViewModel(provider)
+        return UserSearchViewModel(provider)
     }()
 
     private let searchController: UISearchController! = {
@@ -34,13 +34,13 @@ class SearchAutocompleteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        usersSearchViewModel.delegate = self
+        searchViewModel.delegate = self
 
         searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = true
 
-        tableView.register(SearchTableViewCell.self,
+        tableView.register(UserSearchTableViewCell.self,
                            forCellReuseIdentifier: Constants.searchUserCellIdentifier)
     }
 
@@ -56,16 +56,16 @@ class SearchAutocompleteTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return usersSearchViewModel.numberOfResults
+        return searchViewModel.numberOfResults
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.searchUserCellIdentifier,
-                                                       for: indexPath) as? SearchTableViewCell else {
+                                                       for: indexPath) as? UserSearchTableViewCell else {
             fatalError("Unable to dequeue cell")
         }
 
-        cell.userViewModel = usersSearchViewModel.userViewModelAtIndex(indexPath.row)
+        cell.viewModel = searchViewModel.cellViewModelAtIndex(indexPath.row)
         cell.accessoryType = .disclosureIndicator
         return cell
     }
@@ -79,7 +79,7 @@ class SearchAutocompleteTableViewController: UITableViewController {
         }
 
         let userTableViewController = UserTableViewController.instantiateFromStoryboard()
-        userTableViewController.userViewModel = usersSearchViewModel.userViewModelAtIndex(indexPath.row)
+        userTableViewController.userViewModel = searchViewModel.userViewModelAtIndex(indexPath.row)
         detailNavigationController.pushViewController(userTableViewController, animated: true)
 
         splitViewController.showDetailViewController(detailNavigationController, sender: self)
@@ -110,23 +110,23 @@ class SearchAutocompleteTableViewController: UITableViewController {
 
 // MARK: - UISearchResultsUpdating
 
-extension SearchAutocompleteTableViewController: UISearchResultsUpdating {
+extension UserSearchTableViewController: UISearchResultsUpdating {
 
     func updateSearchResults(for searchController: UISearchController) {
-        usersSearchViewModel.searchText = searchController.searchBar.text
+        searchViewModel.searchText = searchController.searchBar.text
     }
 
 }
 
 // MARK: - UsersSearchViewModelDelegate
 
-extension SearchAutocompleteTableViewController: UsersSearchViewModelDelegate {
+extension UserSearchTableViewController: UserSearchViewModelDelegate {
 
-    func usersSearchViewModelHasUpdatedResults(_ viewModel: UsersSearchViewModel) {
+    func userSearchViewModelHasUpdatedResults(_ viewModel: UserSearchViewModel) {
         tableView.reloadData()
     }
 
-    func usersSearchViewModel(_ viewModel: UsersSearchViewModel, didEncounterError error: Error) {
+    func userSearchViewModel(_ viewModel: UserSearchViewModel, didEncounterError error: Error) {
         presentError(error)
     }
 

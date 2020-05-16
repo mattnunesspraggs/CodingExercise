@@ -1,5 +1,5 @@
 //
-// UsersSearchViewModel.swift
+// UserSearchViewModel.swift
 // Copyright © 2020 Matt Nunes-Spraggs
 //
 
@@ -8,9 +8,9 @@ import Foundation
 
 // MARK: - Delegate Protocol
 
-protocol UsersSearchViewModelDelegate: class {
-    func usersSearchViewModelHasUpdatedResults(_ viewModel: UserSearchViewModel)
-    func usersSearchViewModel(_ viewModel: UserSearchViewModel, didEncounterError error: Error)
+protocol UserSearchViewModelDelegate: class {
+    func userSearchViewModelHasUpdatedResults(_ viewModel: UserSearchViewModel)
+    func userSearchViewModel(_ viewModel: UserSearchViewModel, didEncounterError error: Error)
 }
 
 // MARK: - View Model
@@ -30,19 +30,14 @@ class UserSearchViewModel {
 
     // MARK: - Private Properties
 
+    private let userDisplayNameFormatter = UserDisplayNameFormatter()
     private let usersDataProvider: UsersDataProvider
     private var currentSearchProgress: Progress?
-    private var results: [UserSearchCellViewModel] = []
-
-    private var sort: (UserSearchCellViewModel, UserSearchCellViewModel) -> Bool = { lhs, rhs -> Bool in
-        return lhs.displayName < rhs.displayName
-    }
-
-    private var filter: (UserSearchCellViewModel) -> Bool = { _ in return true }
+    private var results: [User] = []
 
     // MARK: - Public Properties
 
-    weak var delegate: UsersSearchViewModelDelegate? = nil
+    weak var delegate: UserSearchViewModelDelegate? = nil
 
     var searchText: String? = nil {
         didSet {
@@ -57,7 +52,11 @@ class UserSearchViewModel {
     // MARK: - Public API
 
     func cellViewModelAtIndex(_ index: Int) -> UserSearchCellViewModel {
-        return results[index]
+        return UserSearchCellViewModel(user: results[index])
+    }
+
+    func userViewModelAtIndex(_ index: Int) -> UserViewModel {
+        return UserViewModel(user: results[index])
     }
 
     // MARK: - Private API
@@ -82,13 +81,14 @@ class UserSearchViewModel {
     }
 
     private func updateResults(withUsers users: [User]) {
-        let viewModels = users.map { UserSearchCellViewModel(user: $0) }
-        let filteredViewModels = viewModels.filter(filter)
-        let sortedViewModels = filteredViewModels.sorted(by: sort)
-        self.results = sortedViewModels
+        self.results = users.sorted() { (lhs, rhs) -> Bool in
+            let lhsName = userDisplayNameFormatter.displayName(for: lhs)
+            let rhsName = userDisplayNameFormatter.displayName(for: rhs)
+            return lhsName < rhsName
+        }
 
         DispatchQueue.main.async {
-            self.delegate?.usersSearchViewModelHasUpdatedResults(self)
+            self.delegate?.userSearchViewModelHasUpdatedResults(self)
         }
     }
 
@@ -99,7 +99,7 @@ class UserSearchViewModel {
 
         self.updateResults(withUsers: [])
         DispatchQueue.main.async {
-            self.delegate?.usersSearchViewModel(self, didEncounterError: error)
+            self.delegate?.userSearchViewModel(self, didEncounterError: error)
         }
     }
 

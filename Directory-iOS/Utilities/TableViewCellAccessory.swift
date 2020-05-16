@@ -7,11 +7,11 @@
 import UIKit
 
 struct TableViewCellAccessory {
-    let view: UIView
+    let image: UIImage
     let action: () -> ()
 
-    init(view: UIView, action: @escaping () -> ()) {
-        self.view = view
+    init(image: UIImage, action: @escaping () -> ()) {
+        self.image = image
         self.action = action
     }
 }

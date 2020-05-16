@@ -8,16 +8,15 @@ import UIKit
 
 class UserTableViewController: UITableViewController, UIStoryboardInstatiable {
 
+    typealias SectionViewModel = UserViewModel.SectionViewModel
+
     // MARK: - Types
 
     private struct Constants {
         static let storyboardIdentifier = "UserTableViewController"
         static let detailCellIdentifier = "DetailCell"
-    }
-
-    private enum AccessoryIcon: String {
-        case phone = "phone.circle"
-        case email = "envelope"
+        static let phoneAccessoryImage = UIImage(systemName: "phone.circle")!
+        static let emailAccessoryImage = UIImage(systemName: "envelope")!
     }
 
     // MARK: - UIStoryboardInstantiable
@@ -29,69 +28,38 @@ class UserTableViewController: UITableViewController, UIStoryboardInstatiable {
     var userViewModel: UserViewModel? = nil {
         didSet {
             navigationItem.title = userViewModel?.displayName ?? ""
-        }
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        if let userViewModel = userViewModel {
-            self.sections = tableViewSections(forViewModel: userViewModel)
-            tableView.reloadData()
+            self.sectionViewModels = userViewModel?.sectionViewModels ?? []
         }
     }
 
     // MARK: - Private Properties
 
-    private var sections: [Section] = []
-
-    // MARK: - Private API
-
-    private func accessoryView(for accessory: AccessoryIcon) -> UIView {
-        let imageView = UIImageView(frame: .init(x: 0, y: 0, width: 24, height: 24))
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(systemName: accessory.rawValue)
-        return imageView
-    }
-
-    private func row(for phoneNumber: UserViewModel.PhoneNumber) -> Row {
-        switch phoneNumber {
-        case .cell(let number):
-            return Row(label: .mobilePhoneLabel, value: number,
-                       accessory: phoneAccessory(for: number))
-
-        case .home(let number):
-            return Row(label: .homePhoneLabel, value: number,
-                       accessory: phoneAccessory(for: number))
-
-        case .other(let label, let number):
-            return Row(label: label, value: number,
-                       accessory: phoneAccessory(for: number))
+    private var sectionViewModels: [SectionViewModel] = [] {
+        didSet {
+            sectionViewModelsDidChange(sectionViewModels)
         }
     }
 
-    private func countryString(forViewModel viewModel: UserViewModel) -> String {
-        return viewModel.countryFlag + " " + LocalizedString.country(viewModel.isoCountryCode).stringValue
+    private var periodicUpdateTimer: Timer? = nil
+    private var indexPathsWantingPeriodicReload: [IndexPath] = []
+
+    // MARK: - UIViewController
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        startPeriodicUpdateTimer()
     }
 
-    private func tableViewSections(forViewModel viewModel: UserViewModel) -> [Section] {
-        return [
-            Section(title: .contactSectionTitle,
-                    rows: [
-                        Row(label: .usernameFieldLabel,
-                            value: viewModel.username),
-                        Row(label: .emailFieldLabel,
-                            value: viewModel.email,
-                            accessory: emailAccessory(for: viewModel.email))]),
-            Section(title: .phoneSectionTitle,
-                    rows: viewModel.phoneNumbers.map { row(for: $0) }),
-            Section(title: .addressSectionTitle,
-                    rows: [
-                        Row(label: .addressFieldLabel,
-                            value: viewModel.formattedAddress),
-                        Row(label: .countryFieldLabel,
-                            value: countryString(forViewModel: viewModel))])
-        ]
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopPeriodicUpdateTimer()
+    }
+
+    // MARK: - Private API
+
+    func sectionViewModelsDidChange(_ sectionViewModels: [SectionViewModel]) {
+        indexPathsWantingPeriodicReload = []
+        tableView.reloadData()
     }
 
     private func emailAccessory(for email: String) -> TableViewCellAccessory? {
@@ -99,11 +67,8 @@ class UserTableViewController: UITableViewController, UIStoryboardInstatiable {
             return nil
         }
 
-        return TableViewCellAccessory(view: accessoryView(for: .email)) {
-            guard let url = URL(string: "mailto:\(email)") else {
-                return
-            }
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        return TableViewCellAccessory(image: Constants.emailAccessoryImage) {
+            UIApplication.shared.openMailTo(email)
         }
     }
 
@@ -112,112 +77,70 @@ class UserTableViewController: UITableViewController, UIStoryboardInstatiable {
             return nil
         }
 
-        return TableViewCellAccessory(view: accessoryView(for: .phone)) {
-            guard let url = URL(string: "tel:\(phoneNumber)") else {
-                return
-            }
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        return TableViewCellAccessory(image: Constants.phoneAccessoryImage) {
+            UIApplication.shared.openTelTo(phoneNumber)
         }
+    }
+
+    private func startPeriodicUpdateTimer() {
+        guard periodicUpdateTimer == nil else {
+            return
+        }
+        self.periodicUpdateTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+            let selectedRows = self.tableView.indexPathsForSelectedRows
+            self.tableView.reloadRows(at: self.indexPathsWantingPeriodicReload, with: .none)
+            selectedRows?.forEach { indexPath in
+                self.tableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
+            }
+        }
+    }
+
+    private func stopPeriodicUpdateTimer() {
+        periodicUpdateTimer?.invalidate()
+        self.periodicUpdateTimer = nil
     }
 
     // MARK: - UITableViewDataSource
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return sectionViewModels.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].rows.count
+        let sectionViewModel = sectionViewModels[section]
+        return sectionViewModel.rowViewModels.count
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section].title
+        let sectionViewModel = sectionViewModels[section]
+        return sectionViewModel.localizedTitle.stringValue
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.detailCellIdentifier, for: indexPath) as! UserTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.detailCellIdentifier,
+                                                 for: indexPath) as! UserTableViewCell
 
-        let section = sections[indexPath.section]
-        let row = section.rows[indexPath.row]
+        let sectionViewModel = sectionViewModels[indexPath.section]
+        let rowViewModel = sectionViewModel.rowViewModels[indexPath.row]
 
-        cell.labelLabel.text = row.label
-        cell.valueLabel.text = row.value
-        cell.accessory = row.accessory
+        cell.viewModel = rowViewModel
+
+        if rowViewModel.wantsPeriodicUpdate {
+            indexPathsWantingPeriodicReload.append(indexPath)
+        }
+
+        cell.accessory = rowViewModel.accessoryType.flatMap { accessoryType -> TableViewCellAccessory? in
+            let string = rowViewModel.valueProvider()
+            switch accessoryType {
+            case .email:
+                return self.emailAccessory(for: string)
+
+            case .phone:
+                return self.phoneAccessory(for: string)
+            }
+        }
 
         return cell
     }
 
-}
-
-extension UserTableViewController {
-
-    fileprivate struct Row {
-        let label: String
-        let value: String
-        let accessory: TableViewCellAccessory?
-
-        init(label: LocalizedString, value: String,
-             accessory: TableViewCellAccessory? = nil) {
-            self.label = label.stringValue
-            self.value = value
-            self.accessory = accessory
-        }
-
-        init(label: String, value: String,
-             accessory: TableViewCellAccessory? = nil) {
-            self.label = label
-            self.value = value
-            self.accessory = accessory
-        }
-    }
-
-    fileprivate struct Section {
-        let title: String
-        let rows: [Row]
-
-        init(title: LocalizedString, rows: [Row]) {
-            self.title = title.stringValue
-            self.rows = rows
-        }
-    }
-
-}
-
-fileprivate enum LocalizedString {
-    case usernameFieldLabel
-    case emailFieldLabel
-    case mobilePhoneLabel
-    case homePhoneLabel
-    case addressFieldLabel
-    case countryFieldLabel
-    case contactSectionTitle
-    case phoneSectionTitle
-    case addressSectionTitle
-
-    case country(String)
-
-    var stringValue: String {
-        switch self {
-        case .usernameFieldLabel:
-            return NSLocalizedString("Username", comment: "Username [Field Label]")
-        case .emailFieldLabel:
-            return NSLocalizedString("Email", comment: "Email [Field Label]")
-        case .mobilePhoneLabel:
-            return NSLocalizedString("Mobile", comment: "Mobile [Phone Number Field Label]")
-        case .homePhoneLabel:
-            return NSLocalizedString("Home", comment: "Home [Phone Number Field Label]")
-        case .addressFieldLabel:
-            return NSLocalizedString("Address", comment: "Address [Address Field Label]")
-        case .countryFieldLabel:
-            return NSLocalizedString("Country", comment: "Country [Address Field Label]")
-        case .contactSectionTitle:
-            return NSLocalizedString("Contact", comment: "Contact [Section Title]")
-        case .phoneSectionTitle:
-            return NSLocalizedString("Phone Numbers", comment: "Phone Numbers [Section Title]")
-        case .addressSectionTitle:
-            return NSLocalizedString("Address", comment: "Address [Section Title]")
-        case .country(let isoCountryCode):
-            return NSLocale.current.localizedString(forRegionCode: isoCountryCode)!
-        }
-    }
 }

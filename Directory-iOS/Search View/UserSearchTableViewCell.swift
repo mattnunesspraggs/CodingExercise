@@ -1,10 +1,19 @@
 //
-// SearchTableViewCell.swift
+// UserSearchTableViewCell.swift
 // Copyright © 2020 Matt Nunes-Spraggs
 //
 
 
 import UIKit
+
+/**
+ A `UITableViewCell` subclass representing a row in the user search results.
+
+ This cell is entirely laid out (including Autolayout constraints) in code,
+ to demonstrate what it can look like. Normally, I'd do it in a Storyboard,
+ but this isn't so bad - it's certainly easier to collaborate on and to
+ track changes over time in.
+ */
 
 class UserSearchTableViewCell: UITableViewCell {
 
