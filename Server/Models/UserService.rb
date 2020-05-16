@@ -30,12 +30,19 @@ class UserService
 	def users_matching(query)
 		regex = /^#{query}/i
 		@users.select do |user|
-			user.username =~ regex								\
-				|| user.name.values.any? { |c| c =~ regex }		\
-				|| user.display_name =~ regex					\
-				|| user.email =~ regex							\
+			user.username =~ regex                              \
+				|| user.name[:first] =~ regex                   \
+				|| user.name[:last] =~ regex                    \
+				|| user.display_name =~ regex                   \
+				|| user.email =~ regex                          \
 				|| user.phone_numbers.values.any? { |p| p =~ regex }
 		end
+	end
+
+	##
+	# Returns the +User+ for a given identifier, or +nil+.
+	def user_with_id(identifier)
+		@users.select { |u| u.id == identifier }.first
 	end
 
 end

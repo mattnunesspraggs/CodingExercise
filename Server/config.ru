@@ -1,3 +1,3 @@
-require_relative './Apps/SearchV1App'
+require_relative './Apps/UsersV1App'
 
-map('/1.0') { run SearchV1App }
+map('/1.0') { run UsersV1App }

@@ -9,7 +9,7 @@ require 'json'
 # Class representing a `User` object.
 class User
 
-	attr_reader :name, :username, :location, :email,	\
+	attr_reader :id, :name, :username, :location, :email,	\
 		:phone_numbers, :pictures, :nationality
 
 	##
@@ -55,7 +55,6 @@ class User
 			location: @location,
 			email: @email,
 			phone_numbers: @phone_numbers,
-			pictures: @pictures,
 			nationality: @nationality
 		}.to_json(*a)
 	end

@@ -4,7 +4,12 @@ This is a very quick-and-dirty Ruby web service to provide a backend to the Codi
 
 ## V1.0 API Documentation
 
-The V1.0 API provides a single endpoint, `/1.0/users/search`, which takes a single query parameter, "`query`", which specifies the search query.
+The V1.0 API provides three endpoints:
+- `/1.0/users/search`, which takes a single query parameter, "`query`", which specifies the search query;
+- `/1.0/users/:id`, which takes a single parameter "`id`", which is the user's id; and
+- `/1.0/users/:id/pictures/:size`, which takes a parameter "`id`", which is the user's id, and a parameter "`size`", which is one of ["`large`", "`medium`", "`thumbnail`"] and specifies the size of the image to be returned.
+
+### `/1.0/users/search`
 
 The response object contains two fields: `ok` and `users`. `ok` will be `true` if the query generated at least one match, and `false` otherwise. The `users` field contains an array of objects representing the matched users.
 
@@ -40,11 +45,6 @@ $ curl localhost:8080/1.0/users/search\?query=denn | jq
         "home": "(729)-224-3922",
         "cell": "(420)-216-6176"
       },
-      "pictures": {
-        "large": "https://randomuser.me/api/portraits/men/66.jpg",
-        "medium": "https://randomuser.me/api/portraits/med/men/66.jpg",
-        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/66.jpg"
-      },
       "nationality": "US"
     }
   ]
@@ -61,6 +61,68 @@ $ curl localhost:8080/1.0/users/search\?query=foobar | jq
   "ok": false,
   "users": []
 }
+```
+
+`/1.0/users/:id`
+
+```
+$ curl localhost:8080/1.0/users/0d51423a-8a62-4e4f-8d72-09baca8031fd | jq 
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   398  100   398    0     0  99500      0 --:--:-- --:--:-- --:--:-- 99500
+{
+  "id": "0d51423a-8a62-4e4f-8d72-09baca8031fd",
+  "name": {
+    "title": "Mr",
+    "first": "Dennis",
+    "last": "Jennings"
+  },
+  "username": "djennings",
+  "location": {
+    "street": "8077 W Sherman Dr",
+    "city": "The Colony",
+    "state": "Pennsylvania",
+    "country": "United States",
+    "postcode": "53598",
+    "tz_offset": "+5:45"
+  },
+  "email": "dennis.jennings@example.com",
+  "phone_numbers": {
+    "home": "(729)-224-3922",
+    "cell": "(420)-216-6176"
+  },
+  "nationality": "US"
+}
+```
+
+### `/1.0/users/:id/pictures/:size`
+
+**N.B.** This endpoint actually returns a redirect, so be sure to enable your client to follow redirects, or else you'll be stuck with `3xx` responses.
+
+_Without Following Redirect:_
+```
+$ curl -v localhost:8080/1.0/users/0d51423a-8a62-4e4f-8d72-09baca8031fd/pictures/thumbnail
+*   Trying ::1:8080...
+* TCP_NODELAY set
+* Connected to localhost (::1) port 8080 (#0)
+> GET /1.0/users/0d51423a-8a62-4e4f-8d72-09baca8031fd/pictures/thumbnail HTTP/1.1
+> Host: localhost:8080
+> User-Agent: curl/7.65.1
+> Accept: */*
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 302 Found 
+< Content-Type: text/html;charset=utf-8
+< Location: https://randomuser.me/api/portraits/thumb/men/66.jpg
+< Content-Length: 0
+< X-Xss-Protection: 1; mode=block
+< X-Content-Type-Options: nosniff
+< X-Frame-Options: SAMEORIGIN
+< Server: WEBrick/1.4.2 (Ruby/2.6.3/2019-04-16)
+< Date: Sat, 16 May 2020 01:47:29 GMT
+< Connection: Keep-Alive
+< 
+* Connection #0 to host localhost left intact
 ```
 
 ## RDoc
