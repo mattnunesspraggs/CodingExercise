@@ -8,6 +8,8 @@ import UIKit
 
 extension UIStoryboard {
 
+    /// The main storyboard, i.e. with the name `"Main"`.
+
     static let main: UIStoryboard = {
         return UIStoryboard(name: "Main", bundle: nil)
     }()
@@ -16,9 +18,14 @@ extension UIStoryboard {
 
 protocol UIStoryboardInstatiable {
 
+    /// The `UIStoryboard` from which to instantiate the receiver.
     static var storyboard: UIStoryboard { get }
+
+    /// The `UIStoryboard` identifier with which to instantiate the receiver.
     static var storyboardIdentifier: String { get }
 
+    /// Returns an instance of the receiver instantiated from
+    /// `self.storyboard` with `self.storyboardIdentifier`.
     static func instantiateFromStoryboard() -> Self
 
 }

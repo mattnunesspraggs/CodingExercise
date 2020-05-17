@@ -23,15 +23,25 @@ class UserSearchCellViewModel {
 
     // MARK: - Public API
 
+    /// Returns the `User`'s display name.
     var displayName: String {
         return userDisplayNameFormatter.displayName(for: user)
     }
 
+
+    /// Returns the `User`'s username.
     var username: String {
         return user.username
     }
 
-    func loadThumbnail(_ completion: @escaping (Result<UIImage, Error>) -> ()) -> Progress {
+    /**
+     Loads the `User`'s thumbnail image.
+
+     - Parameter completion: A block which is run when the operation is complete, taking a single parameter:
+     - Parameter result: The `Result<UIImage, Error>` representing the result of the load operation.
+     - Returns: A cancellable `Progress` object which represents the underlying loading operation.
+     */
+    func loadThumbnail(_ completion: @escaping (_ result: Result<UIImage, Error>) -> ()) -> Progress {
         return dataProvider.image(size: .thumbnail, for: user, completion: completion)
     }
 

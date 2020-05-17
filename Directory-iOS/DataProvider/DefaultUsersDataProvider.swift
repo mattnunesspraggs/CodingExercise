@@ -35,7 +35,7 @@ class DefaultUsersDataProvider: UsersDataProvider {
     let usersService: UsersService
 
     #if os(iOS)
-    var imageCache = Cache<UIImage>()
+    var imageCache = ExpiringCache<UIImage>()
     #endif
 
     // MARK: - UsersDataProvider
@@ -72,7 +72,7 @@ class DefaultUsersDataProvider: UsersDataProvider {
     }
 
     private func cacheImage(image: UIImage, size: User.ImageSize, user: User) {
-        imageCache.cache(image, forKey: "\(user.id)::\(size.rawValue)",
+        imageCache.setObject(image, forKey: "\(user.id)::\(size.rawValue)",
             until: Constants.userImageCacheExpiration())
     }
     #endif

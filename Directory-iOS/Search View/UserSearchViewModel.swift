@@ -37,8 +37,10 @@ class UserSearchViewModel {
 
     // MARK: - Public Properties
 
+    /// The view model's delegate.
     weak var delegate: UserSearchViewModelDelegate? = nil
 
+    /// The current search text, or `nil`.
     var searchText: String? = nil {
         didSet {
             if oldValue != searchText {
@@ -47,19 +49,37 @@ class UserSearchViewModel {
         }
     }
 
+    /// The number of search results, after a search operation.
     var numberOfResults: Int {
         return results.count
     }
 
+    /// Returns whether a search is currently in progress.
     var isLoading: Bool {
         return currentSearchProgress != nil
     }
 
     // MARK: - Public API
 
+    /**
+     Returns a `UserSearchCellViewModel` for the search result at a
+     given index.
+
+     - Parameter index: An index into the search results.
+     - Returns: A `UserSearchCellViewModel`.
+     */
+
     func cellViewModelAtIndex(_ index: Int) -> UserSearchCellViewModel {
         return UserSearchCellViewModel(user: results[index], dataProvider: usersDataProvider)
     }
+
+    /**
+     Returns a `UserViewModel` for the search result at a
+     given index.
+
+     - Parameter index: An index into the search results.
+     - Returns: A `UserViewModel`.
+     */
 
     func userViewModelAtIndex(_ index: Int) -> UserViewModel {
         return UserViewModel(user: results[index], dataProvider: usersDataProvider)
@@ -107,7 +127,7 @@ class UserSearchViewModel {
     }
 
     private func handleError(_ error: Error) {
-        guard !error.isUrlCancelled else {
+        guard !error.isUrlCancelledError else {
             return
         }
 

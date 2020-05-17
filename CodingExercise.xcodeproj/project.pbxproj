@@ -14,13 +14,13 @@
 		3451399F246DFE8B00EE21D6 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3451399E246DFE8B00EE21D6 /* UserTableViewCell.swift */; };
 		345767A1246E604000322387 /* TimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345767A0246E604000322387 /* TimeZone.swift */; };
 		345A89FD246F6D79004676E0 /* User+ImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17AE2466163000CA873F /* User+ImageSize.swift */; };
-		345A8A012471E14A004676E0 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A8A002471E14A004676E0 /* Cache.swift */; };
+		345A8A012471E14A004676E0 /* ExpiringCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A8A002471E14A004676E0 /* ExpiringCache.swift */; };
 		345A8A032471E6EB004676E0 /* TimeZoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A8A022471E6EB004676E0 /* TimeZoneTests.swift */; };
 		345A8A042471E6FA004676E0 /* TimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345767A0246E604000322387 /* TimeZone.swift */; };
 		345A8A052471E6FC004676E0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EC17EB24663BE500CA873F /* Error.swift */; };
 		345A8A072471E705004676E0 /* ErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A8A062471E705004676E0 /* ErrorTests.swift */; };
-		345A8A092471EA83004676E0 /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A8A082471EA83004676E0 /* CacheTests.swift */; };
-		345A8A0A2471EA87004676E0 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A8A002471E14A004676E0 /* Cache.swift */; };
+		345A8A092471EA83004676E0 /* ExpiringCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A8A082471EA83004676E0 /* ExpiringCacheTests.swift */; };
+		345A8A0A2471EA87004676E0 /* ExpiringCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345A8A002471E14A004676E0 /* ExpiringCache.swift */; };
 		34E76ACC246F4CBF0030AE73 /* UserSearchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E76ACB246F4CBF0030AE73 /* UserSearchCellViewModel.swift */; };
 		34E76ACF246F4D380030AE73 /* User+PersonNameComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E76ACE246F4D380030AE73 /* User+PersonNameComponents.swift */; };
 		34E76AD1246F51EA0030AE73 /* User+PostalAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E76AD0246F51EA0030AE73 /* User+PostalAddress.swift */; };
@@ -80,10 +80,10 @@
 		3451399C246DDB6400EE21D6 /* UIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		3451399E246DFE8B00EE21D6 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		345767A0246E604000322387 /* TimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZone.swift; sourceTree = "<group>"; };
-		345A8A002471E14A004676E0 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		345A8A002471E14A004676E0 /* ExpiringCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiringCache.swift; sourceTree = "<group>"; };
 		345A8A022471E6EB004676E0 /* TimeZoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneTests.swift; sourceTree = "<group>"; };
 		345A8A062471E705004676E0 /* ErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTests.swift; sourceTree = "<group>"; };
-		345A8A082471EA83004676E0 /* CacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
+		345A8A082471EA83004676E0 /* ExpiringCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpiringCacheTests.swift; sourceTree = "<group>"; };
 		34E76ACB246F4CBF0030AE73 /* UserSearchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchCellViewModel.swift; sourceTree = "<group>"; };
 		34E76ACE246F4D380030AE73 /* User+PersonNameComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+PersonNameComponents.swift"; sourceTree = "<group>"; };
 		34E76AD0246F51EA0030AE73 /* User+PostalAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+PostalAddress.swift"; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 				34EC17D12466195400CA873F /* UserSearchResponseTests.swift */,
 				345A8A062471E705004676E0 /* ErrorTests.swift */,
 				345A8A022471E6EB004676E0 /* TimeZoneTests.swift */,
-				345A8A082471EA83004676E0 /* CacheTests.swift */,
+				345A8A082471EA83004676E0 /* ExpiringCacheTests.swift */,
 				34EC17C2246616F200CA873F /* Fixtures */,
 				34EC17BA246616D700CA873F /* Info.plist */,
 			);
@@ -279,7 +279,7 @@
 				340F5F49246E1F80008342F2 /* UIApplication.swift */,
 				340F5F4B246E21AE008342F2 /* TableViewCellAccessory.swift */,
 				34E76AD4246F5A460030AE73 /* UserDisplayNameFormatter.swift */,
-				345A8A002471E14A004676E0 /* Cache.swift */,
+				345A8A002471E14A004676E0 /* ExpiringCache.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -415,7 +415,7 @@
 				34EC178D2466066900CA873F /* AppDelegate.swift in Sources */,
 				34EC17F02469C3F800CA873F /* UserViewModel.swift in Sources */,
 				34EC17A7246613A400CA873F /* User.swift in Sources */,
-				345A8A012471E14A004676E0 /* Cache.swift in Sources */,
+				345A8A012471E14A004676E0 /* ExpiringCache.swift in Sources */,
 				34EC178F2466066900CA873F /* SceneDelegate.swift in Sources */,
 				34EC17B12466164500CA873F /* User+Nationality.swift in Sources */,
 				34EC17A9246615DE00CA873F /* User+Location.swift in Sources */,
@@ -430,8 +430,8 @@
 				34EC17CB2466186400CA873F /* User+Location.swift in Sources */,
 				34EC17D22466195400CA873F /* UserSearchResponseTests.swift in Sources */,
 				345A8A052471E6FC004676E0 /* Error.swift in Sources */,
-				345A8A092471EA83004676E0 /* CacheTests.swift in Sources */,
-				345A8A0A2471EA87004676E0 /* Cache.swift in Sources */,
+				345A8A092471EA83004676E0 /* ExpiringCacheTests.swift in Sources */,
+				345A8A0A2471EA87004676E0 /* ExpiringCache.swift in Sources */,
 				345A8A072471E705004676E0 /* ErrorTests.swift in Sources */,
 				34EC17C82466181D00CA873F /* UserTests.swift in Sources */,
 				34EC17CC2466186400CA873F /* User+PhoneNumbers.swift in Sources */,

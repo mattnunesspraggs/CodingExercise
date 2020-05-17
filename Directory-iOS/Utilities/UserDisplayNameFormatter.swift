@@ -6,6 +6,11 @@
 
 import Foundation
 
+/**
+ A formatter for generating a `User`'s display name from
+ the object's name components.
+ */
+
 struct UserDisplayNameFormatter {
 
     // MARK: - Static Properties

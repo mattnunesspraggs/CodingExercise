@@ -17,7 +17,7 @@ class ErrorTests: XCTestCase {
             case testError
         }
 
-        XCTAssertFalse(Errors.testError.isUrlCancelled)
+        XCTAssertFalse(Errors.testError.isUrlCancelledError)
 
     }
 
@@ -27,7 +27,7 @@ class ErrorTests: XCTestCase {
         // returns false.
 
         let notCancelledError = NSError(domain: "", code: 0, userInfo: nil)
-        XCTAssertFalse(notCancelledError.isUrlCancelled)
+        XCTAssertFalse(notCancelledError.isUrlCancelledError)
 
     }
 
@@ -40,7 +40,7 @@ class ErrorTests: XCTestCase {
         let cancelledError = NSError(domain: NSURLErrorDomain,
                                      code: NSURLErrorCancelled,
                                      userInfo: nil)
-        XCTAssert(cancelledError.isUrlCancelled)
+        XCTAssert(cancelledError.isUrlCancelledError)
 
     }
 
