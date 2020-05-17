@@ -13,5 +13,6 @@ import Foundation
 protocol UsersService {
 
     func search(query: String, completion: @escaping (Result<[User], Error>) -> ()) -> Progress
+    func imageData(size: User.ImageSize, for user: User, completion: @escaping (Result<Data, Error>) -> ()) -> Progress
 
 }

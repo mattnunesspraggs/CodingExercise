@@ -81,8 +81,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Directory Search" id="hE7-7Q-yJf"/>
+                    <connections>
+                        <outlet property="activityView" destination="wFU-9k-olL" id="ebV-hu-a4U"/>
+                        <outlet property="loadingTableHeaderView" destination="S2d-0n-gdl" id="81a-C9-lfi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4Z-qM-y7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="S2d-0n-gdl">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" id="wFU-9k-olL">
+                            <rect key="frame" x="0.0" y="12" width="414" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <viewLayoutGuide key="safeArea" id="FcX-rQ-W9M"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="939" y="735"/>
         </scene>
@@ -193,6 +209,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Display Name" id="KED-CX-5FD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="userImageView" destination="QhL-Jn-KmU" id="hbc-lG-GCS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lEO-z7-BAo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

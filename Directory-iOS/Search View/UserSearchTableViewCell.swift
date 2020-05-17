@@ -22,6 +22,7 @@ class UserSearchTableViewCell: UITableViewCell {
     private struct Constants {
         static let avatarImageHeight: CGFloat = 32
         static let avatarImageCornerRadius: CGFloat = (avatarImageHeight / 4)
+        static let avatarPlaceholderImage: UIImage = UIImage(systemName: "person.fill")!
         static let displayNameLabelColor: UIColor = .label
         static let displayNameLabelFont: UIFont = .boldSystemFont(ofSize: UIFont.systemFontSize)
         static let usernameLabelColor: UIColor = .secondaryLabel
@@ -56,6 +57,12 @@ class UserSearchTableViewCell: UITableViewCell {
         return label
     }()
 
+    private var avatarLoadingProgress: Progress? {
+        willSet {
+            avatarLoadingProgress?.cancel()
+        }
+    }
+
     // MARK: - Public Properties
 
     var viewModel: UserSearchCellViewModel? = nil {
@@ -88,7 +95,7 @@ class UserSearchTableViewCell: UITableViewCell {
 
     private func setupConstraints() {
         let avatarHeightConstraint = avatarImageView.heightAnchor.constraint(equalToConstant: Constants.avatarImageHeight)
-        avatarHeightConstraint.priority = .defaultHigh
+        avatarHeightConstraint.priority = .init(999)
 
         NSLayoutConstraint.activate([
             avatarHeightConstraint,
@@ -113,6 +120,24 @@ class UserSearchTableViewCell: UITableViewCell {
     private func viewModelDidChange(_ viewModel: UserSearchCellViewModel) {
         displayNameLabel.text = viewModel.displayName
         usernameLabel.text = viewModel.username
+
+        updateAvatarImage(Constants.avatarPlaceholderImage)
+        self.avatarLoadingProgress = viewModel.loadThumbnail { result in
+            guard viewModel == self.viewModel else {
+                return
+            }
+            _ = result.map { self.updateAvatarImage($0) }
+        }
+    }
+
+    private func updateAvatarImage(_ image: UIImage) {
+        guard Thread.current == Thread.main else {
+            return DispatchQueue.main.sync {
+                self.updateAvatarImage(image)
+            }
+        }
+
+        self.avatarImageView.image = image
     }
 
 }

@@ -17,18 +17,22 @@ class UserTableViewController: UITableViewController, UIStoryboardInstatiable {
         static let detailCellIdentifier = "DetailCell"
         static let phoneAccessoryImage = UIImage(systemName: "phone.circle")!
         static let emailAccessoryImage = UIImage(systemName: "envelope")!
+        static let userPlaceholderImage = UIImage(systemName: "person.fill")!
     }
 
     // MARK: - UIStoryboardInstantiable
 
     static var storyboardIdentifier: String { Constants.storyboardIdentifier }
 
+    // MARK: - IBOutlets
+
+    @IBOutlet weak var userImageView: UIImageView!
+
     // MARK: - Public Properties
 
     var userViewModel: UserViewModel? = nil {
         didSet {
-            navigationItem.title = userViewModel?.displayName ?? ""
-            self.sectionViewModels = userViewModel?.sectionViewModels ?? []
+            viewModelDidChange(userViewModel)
         }
     }
 
@@ -42,8 +46,21 @@ class UserTableViewController: UITableViewController, UIStoryboardInstatiable {
 
     private var periodicUpdateTimer: Timer? = nil
     private var indexPathsWantingPeriodicReload: [IndexPath] = []
+    private var avatarLoadingProgress: Progress? = nil {
+        willSet {
+            avatarLoadingProgress?.cancel()
+        }
+    }
 
     // MARK: - UIViewController
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        userImageView.layer.cornerRadius = 60
+        userImageView.layer.borderColor = UIColor.systemGray5.cgColor
+        userImageView.layer.borderWidth = 1
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -57,7 +74,30 @@ class UserTableViewController: UITableViewController, UIStoryboardInstatiable {
 
     // MARK: - Private API
 
-    func sectionViewModelsDidChange(_ sectionViewModels: [SectionViewModel]) {
+    private func viewModelDidChange(_ userViewModel: UserViewModel?) {
+        navigationItem.title = userViewModel?.displayName ?? ""
+        self.sectionViewModels = userViewModel?.sectionViewModels ?? []
+
+        updateAvatarImage(Constants.userPlaceholderImage)
+        self.avatarLoadingProgress = userViewModel?.loadImage { result in
+            guard self.userViewModel == userViewModel else {
+                return
+            }
+            _ = result.map { self.updateAvatarImage($0) }
+        }
+    }
+
+    private func updateAvatarImage(_ image: UIImage) {
+        guard Thread.current == Thread.main else {
+            return DispatchQueue.main.sync {
+                self.updateAvatarImage(image)
+            }
+        }
+
+        self.userImageView.image = image
+    }
+
+    private func sectionViewModelsDidChange(_ sectionViewModels: [SectionViewModel]) {
         indexPathsWantingPeriodicReload = []
         tableView.reloadData()
     }

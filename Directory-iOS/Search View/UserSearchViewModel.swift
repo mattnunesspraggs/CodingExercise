@@ -41,7 +41,9 @@ class UserSearchViewModel {
 
     var searchText: String? = nil {
         didSet {
-            searchTextDidUpdate(searchText)
+            if oldValue != searchText {
+                searchTextDidUpdate(searchText)
+            }
         }
     }
 
@@ -49,26 +51,35 @@ class UserSearchViewModel {
         return results.count
     }
 
+    var isLoading: Bool {
+        return currentSearchProgress != nil
+    }
+
     // MARK: - Public API
 
     func cellViewModelAtIndex(_ index: Int) -> UserSearchCellViewModel {
-        return UserSearchCellViewModel(user: results[index])
+        return UserSearchCellViewModel(user: results[index], dataProvider: usersDataProvider)
     }
 
     func userViewModelAtIndex(_ index: Int) -> UserViewModel {
-        return UserViewModel(user: results[index])
+        return UserViewModel(user: results[index], dataProvider: usersDataProvider)
     }
 
     // MARK: - Private API
 
     private func searchTextDidUpdate(_ searchText: String?) {
         currentSearchProgress?.cancel()
+
         guard let searchText = searchText, !searchText.isEmpty else {
             updateResults(withUsers: [])
             return
         }
 
         self.currentSearchProgress = usersDataProvider.search(query: searchText) { result in
+            guard searchText == self.searchText else {
+                return
+            }
+
             switch result {
             case .success(let users):
                 self.updateResults(withUsers: users)
@@ -81,13 +92,16 @@ class UserSearchViewModel {
     }
 
     private func updateResults(withUsers users: [User]) {
-        self.results = users.sorted() { (lhs, rhs) -> Bool in
-            let lhsName = userDisplayNameFormatter.displayName(for: lhs)
-            let rhsName = userDisplayNameFormatter.displayName(for: rhs)
-            return lhsName < rhsName
+        guard users != results else {
+            return
         }
 
         DispatchQueue.main.async {
+            self.results = users.sorted() { (lhs, rhs) -> Bool in
+                let lhsName = self.userDisplayNameFormatter.displayName(for: lhs)
+                let rhsName = self.userDisplayNameFormatter.displayName(for: rhs)
+                return lhsName < rhsName
+            }
             self.delegate?.userSearchViewModelHasUpdatedResults(self)
         }
     }

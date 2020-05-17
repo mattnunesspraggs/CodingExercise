@@ -8,7 +8,7 @@ import Foundation
 
 extension User {
 
-    struct PhoneNumbers: Codable {
+    struct PhoneNumbers: Codable, Equatable {
         let home: String
         let cell: String
     }

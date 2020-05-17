@@ -8,7 +8,7 @@ import Foundation
 
 extension User {
 
-    struct Location: Codable {
+    struct Location: Codable, Equatable {
 
         // MARK: - Custom Coding Keys
 

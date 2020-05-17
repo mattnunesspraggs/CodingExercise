@@ -53,7 +53,21 @@ class HerokuV1UsersService: UsersService {
         }
     }
 
+    func imageData(size: User.ImageSize, for user: User, completion: @escaping (Result<Data, Error>) -> ()) -> Progress {
+        let request = urlRequestForImage(size: size, for: user)
+        return submitDataRequest(request) { result in
+            // throw away the `URLResponse?`
+            completion(result.map { $0.0 })
+        }
+    }
+
     // MARK: - Private API
+
+    private func urlRequestForImage(size: User.ImageSize, for user: User) -> URLRequest {
+        let components = URLComponents(string: "/1.0/users/" + user.id + "/pictures/" + size.rawValue)!
+        let url = components.url(relativeTo: configuration.baseUrl)!
+        return URLRequest(url: url)
+    }
 
     private func urlRequestForQuery(_ query: String) -> URLRequest {
         var components = URLComponents(string: "/1.0/users/search")!
@@ -67,8 +81,8 @@ class HerokuV1UsersService: UsersService {
         return request
     }
 
-    private func submitRequest<ResultType: Codable>(_ request: URLRequest,
-                                                    completion: @escaping (Result<ResultType, Error>) -> ()) -> Progress {
+    private func submitDataRequest(_ request: URLRequest,
+                                   completion: @escaping (Result<(Data, URLResponse?), Error>) -> ()) -> Progress {
         let task = configuration.urlSession.dataTask(with: request) { (maybeData, maybeResponse, maybeError) in
             // 1. If error != nil, then we've encounterd some kind of networking error.
             if let error = maybeError {
@@ -88,17 +102,27 @@ class HerokuV1UsersService: UsersService {
                 return completion(.failure(error))
             }
 
-            // 4. Finally, attempt to decode the data into ResultType.
-            do {
-                let result = try self.jsonDecoder.decode(ResultType.self, from: data)
-                completion(.success(result))
-            } catch {
-                completion(.failure(error))
-            }
+            // 4. Return the data and the response
+            completion(.success((data, maybeResponse)))
         }
 
         task.resume()
         return task.progress
+    }
+
+    private func submitRequest<ResultType: Codable>(_ request: URLRequest,
+                                                    completion: @escaping (Result<ResultType, Error>) -> ()) -> Progress {
+        return submitDataRequest(request) { result in
+            let transformedResult = result.flatMap { (data, args) -> Result<ResultType, Error> in
+                do {
+                    let result = try self.jsonDecoder.decode(ResultType.self, from: data)
+                    return .success(result)
+                } catch {
+                    return .failure(error)
+                }
+            }
+            completion(transformedResult)
+        }
     }
 
 }

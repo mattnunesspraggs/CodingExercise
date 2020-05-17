@@ -6,7 +6,7 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Equatable {
 
     // MARK: - Custom Coding Keys
 
@@ -17,7 +17,6 @@ struct User: Codable {
         case location
         case email
         case phoneNumbers = "phone_numbers"
-        case pictures
         case nationality
     }
 
@@ -29,7 +28,6 @@ struct User: Codable {
     let location: Location
     let email: String
     let phoneNumbers: PhoneNumbers
-    let pictures: Pictures
     let nationality: Nationality
 
 }

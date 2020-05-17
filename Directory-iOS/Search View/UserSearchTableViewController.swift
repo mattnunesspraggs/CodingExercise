@@ -29,6 +29,12 @@ class UserSearchTableViewController: UITableViewController {
         return searchController
     }()
 
+    // MARK: - IBOutlets
+
+    @IBOutlet var loadingTableHeaderView: UIView!
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
+
+
     // MARK: - UIViewController
 
     override func viewDidLoad() {
@@ -60,11 +66,8 @@ class UserSearchTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.searchUserCellIdentifier,
-                                                       for: indexPath) as? UserSearchTableViewCell else {
-            fatalError("Unable to dequeue cell")
-        }
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.searchUserCellIdentifier,
+                                                 for: indexPath) as! UserSearchTableViewCell
         cell.viewModel = searchViewModel.cellViewModelAtIndex(indexPath.row)
         cell.accessoryType = .disclosureIndicator
         return cell
@@ -114,6 +117,10 @@ extension UserSearchTableViewController: UISearchResultsUpdating {
 
     func updateSearchResults(for searchController: UISearchController) {
         searchViewModel.searchText = searchController.searchBar.text
+
+        if searchViewModel.isLoading {
+            tableView.tableHeaderView = loadingTableHeaderView
+        }
     }
 
 }
@@ -123,6 +130,9 @@ extension UserSearchTableViewController: UISearchResultsUpdating {
 extension UserSearchTableViewController: UserSearchViewModelDelegate {
 
     func userSearchViewModelHasUpdatedResults(_ viewModel: UserSearchViewModel) {
+        if !searchViewModel.isLoading {
+            tableView.tableHeaderView = nil
+        }
         tableView.reloadData()
     }
 

@@ -8,7 +8,7 @@ import Foundation
 
 extension User {
 
-    enum Nationality: String, Codable {
+    enum Nationality: String, Codable, Equatable {
         case australia = "AU"
         case brazil = "BR"
         case canada = "CA"

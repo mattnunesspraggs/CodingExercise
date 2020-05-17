@@ -4,7 +4,7 @@
 //
 
 
-import Foundation
+import UIKit
 import Contacts
 
 class UserViewModel {
@@ -16,12 +16,14 @@ class UserViewModel {
     // MARK: - Private Properties
 
     private let user: User
+    private let dataProvider: UsersDataProvider
     private let userDisplayNameFormatter = UserDisplayNameFormatter()
 
     // MARK: - Initializers
 
-    init(user: User) {
+    init(user: User, dataProvider: UsersDataProvider) {
         self.user = user
+        self.dataProvider = dataProvider
     }
 
     // MARK: - Public API
@@ -79,6 +81,10 @@ class UserViewModel {
         }
 
         return sections
+    }
+
+    func loadImage(completion: @escaping (Result<UIImage, Error>) -> ()) -> Progress {
+        return dataProvider.image(size: .large, for: user, completion: completion)
     }
 
     // MARK: - Private API
@@ -193,6 +199,14 @@ class UserViewModel {
                 return string
             }
         }
+    }
+
+}
+
+extension UserViewModel: Equatable {
+
+    static func == (lhs: UserViewModel, rhs: UserViewModel) -> Bool {
+        return lhs.user == rhs.user
     }
 
 }

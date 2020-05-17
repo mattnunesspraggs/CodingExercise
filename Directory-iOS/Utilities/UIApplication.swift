@@ -12,14 +12,24 @@ extension UIApplication {
         guard let url = URL(string: "mailto:") else {
             return false
         }
+
+        #if targetEnvironment(simulator)
+        return false
+        #else
         return canOpenURL(url)
+        #endif
     }
 
     var canOpenTelLinks: Bool {
         guard let url = URL(string: "tel:") else {
             return false
         }
+
+        #if targetEnvironment(simulator)
+        return false
+        #else
         return canOpenURL(url)
+        #endif
     }
 
     func openMailTo(_ address: String, options: [OpenExternalURLOptionsKey: Any] = [:], completionHandler: ((Bool) -> ())? = nil) {
