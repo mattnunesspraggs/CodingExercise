@@ -8,11 +8,21 @@ import Foundation
 
 struct UserDisplayNameFormatter {
 
-    let personNameComponentsFormatter: PersonNameComponentsFormatter
+    // MARK: - Static Properties
+
+    static let shared = UserDisplayNameFormatter()
+
+    // MARK: - Private Properties
+
+    private let personNameComponentsFormatter: PersonNameComponentsFormatter
+
+    // MARK: - Initializers
 
     init(personNameComponentsFormatter: PersonNameComponentsFormatter = .init()) {
         self.personNameComponentsFormatter = personNameComponentsFormatter
     }
+
+    // MARK: - Public API
 
     func displayName(for user: User) -> String {
         return personNameComponentsFormatter.string(from: user.personNameComponents)

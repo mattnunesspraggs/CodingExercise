@@ -30,7 +30,7 @@ class UserSearchViewModel {
 
     // MARK: - Private Properties
 
-    private let userDisplayNameFormatter = UserDisplayNameFormatter()
+    private let userDisplayNameFormatter: UserDisplayNameFormatter = .shared
     private let usersDataProvider: UsersDataProvider
     private var currentSearchProgress: Progress?
     private var results: [User] = []

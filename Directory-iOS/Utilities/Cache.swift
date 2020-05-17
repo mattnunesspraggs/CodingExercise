@@ -1,5 +1,5 @@
 //
-// UserImageCache.swift
+// Cache.swift
 // Copyright © 2020 Matt Nunes-Spraggs
 //
 
@@ -8,7 +8,9 @@ import UIKit
 
 class Cache<Payload> {
 
-    class Entry {
+    // MARK: - Types
+
+    private class Entry {
         let expires: Date?
         let payload: Payload
 
@@ -18,7 +20,11 @@ class Cache<Payload> {
         }
     }
 
+    // MARK: - Private API
+
     private let cache = NSCache<NSString, Entry>()
+
+    // MARK: - Public API
 
     func cache(_ object: Payload, forKey key: String, until expires: Date? = nil) {
         let entry = Entry(expires: expires, payload: object)
@@ -40,6 +46,10 @@ class Cache<Payload> {
 
     func removeObject(for key: String) {
         cache.removeObject(forKey: key as NSString)
+    }
+
+    func removeAllObjects() {
+        cache.removeAllObjects()
     }
 
 }

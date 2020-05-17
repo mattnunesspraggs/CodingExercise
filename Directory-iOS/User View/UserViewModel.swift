@@ -17,7 +17,7 @@ class UserViewModel {
 
     private let user: User
     private let dataProvider: UsersDataProvider
-    private let userDisplayNameFormatter = UserDisplayNameFormatter()
+    private let userDisplayNameFormatter: UserDisplayNameFormatter = .shared
 
     // MARK: - Initializers
 
